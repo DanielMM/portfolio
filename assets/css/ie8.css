@@ -1,0 +1,23 @@
+#logo_bar{
+	width: 983px;
+}
+#projects>ul>li{
+	padding-bottom: 10px;
+}
+.pagination>ul>li{
+	padding-bottom: 5px;
+}
+.pagination>ul>li.prev,
+.pagination>ul>li.next{
+	background: #99BE69;
+}
+.pagination>ul>li.prev:hover,
+.pagination>ul>li.next:hover{
+	background: #324B10;
+}
+#social_media li a img{
+	margin: 0 0 0 2px;
+}
+#social_media li a img:hover{
+	margin: 0;
+}

@@ -1,0 +1,315 @@
+/*
+|--------------------------------------------------------------------------
+| CSS 2.0/3.0
+|--------------------------------------------------------------------------
+|@author	Daniel Mois
+|@date		06.10.2011
+|
+|--------------------------------------------------------------------------
+| COLORS
+|--------------------------------------------------------------------------
+|	#737a7f						#343434
+|	#99be69						#f6f9f9
+|	#4d4e53						#e6e6e6
+|	#84878f						#abc884
+|	#f1f2f2						#324b10
+|	#616265
+|--------------------------------------------------------------------------
+|FONTS
+|--------------------------------------------------------------------------
+|	font-family: 'Muli', sans-serif;
+|	font-family: 'Open Sans', sans-serif;
+|
+*/
+html{
+	background: rgba(176,224,23,0.3);
+	background: rgba(255,255,255,1.0);
+	background: rgba(176,224,23,0.3);
+}
+body{
+	background: url('../images/body_bg.png') repeat;
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, .special{
+	font-family: 'Open Sans', sans-serif;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+p{
+	line-height: 1.5;
+}
+
+a{border-width: 0; text-decoration: none;}
+
+.special{
+	color: rgba(153,190,105,1);
+}
+#header{
+	/* background: #4d4e53; */
+	background: rgba(77,78,83,0.6);
+	background: url('../images/header_bg4.png') repeat-x;
+}
+#logo_bar{
+	color: #f1f2f2;
+}
+#logo_bar a{
+	color: #F1F2F2;
+}
+#logo_bar li{
+	float: left;
+	height: 115px;
+	margin: 5px 0;
+	text-align: center;
+	width: 318px;
+}
+/* #logo_bar .first,
+#logo_bar .last{
+	border-left: 1px solid #616265;
+	border-right: 1px solid #616265;
+} */
+#logo_bar li h1{
+	font-weight: 500;
+	margin: 0;
+}
+#logo_bar li>h1{
+	font-size: 34px;
+}
+#logo_bar li>h2,
+#logo_bar li>h3,
+#logo_bar li>h4{
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0;
+}
+#projects{
+	background: rgba(176,224,230, 0.7);
+}
+#projects p, #project p{
+	line-height: 1.7;
+}
+#projects p, #projects h2{
+	margin-left: 210px;
+}
+#projects li h2 a, #last_project h2>a{
+	color: rgba(153,190,105, 0.5);
+	color: rgba(50,75,16, 0.7);
+	display: inline;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	margin: 10px 15px 10px 0;
+}
+#projects li h2 a:hover, #last_project h2>a:hover{
+	color: rgba(50,75,16, 0.3);
+	color: rgba(250,250,250, 0.9);
+}
+#projects>ul>li{
+	/* background: url('../images/border.png') repeat-x 0 100%; */
+	border-bottom: 2px solid rgba(153,190,105, 1.0);
+	/* background: rgba(171,200,132, 0.3); */
+	border-radius: 3px;
+	overflow: hidden;
+	-moz-border-radius: 3px;
+	padding: 35px 15px 15px 0;
+}
+#projects li.first{
+	padding-top: 10px;
+}
+#projects>ul>li:nth-child(2n){
+/* 	background: rgba(255,255,255,1);
+	background: rgba(176,224,23,0.3); */
+	background: rgba(192,230,173,1.0);
+}
+#projects li.last{
+	border-bottom: 0 solid rgba(153,190,105, 1.0);
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-radius: 3px 3px 0 0;
+}
+#projects li img.thumb, #project img.thumb, #last_project img.thumb{
+	display: block;
+	float: left;
+	margin: 10px;
+	width: 170px;
+}
+#projects li h2{
+	margin-bottom: 10px;
+}
+#projects .read_more, #last_project .read_more{
+	display: block;
+	margin-top: 15px;
+}
+.read_more a{
+	background: #99be69;
+	color: #324B10;
+	float: right;
+	padding: 4px;
+}
+.read_more a:hover{
+	background: rgba(50,74,16,0.9);
+	color: rgba(241,242,242,1.0);
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#categories, #social_me, #personal_info{
+	/* background: #F1F2F2; */
+	background: rgba(255,255,255, 1.0);
+	background: rgba(192,230,173,1.0);
+	margin-left: 10px;
+}
+#categories ul{
+	margin: 0 5px;
+}
+#categories ul li{
+	background: #99be69;
+	margin: 6px 0;
+	overflow: hidden;
+}
+#categories li:hover{
+	background: #ABC884;
+	background: rgba(50,74,16,0.9);
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#categories li a{
+	color: #324B10;
+	height: 20px;
+	padding: 8px 5px 8px 20px;
+	float: left;
+	width: 145px;
+}
+#categories li a:hover{
+	color: #F1F2F2;
+}
+#categories span.count{
+	background: #324b10;
+	color: #99be69;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	float: right;
+	margin: 8px 8px 0 0;
+	padding: 0 2px 1px;
+	text-align: center;
+	min-width: 26px;
+}
+#download{
+	height: 100px;
+	margin-bottom: 20px;
+}
+#project, #download{
+	background: rgba(176,224,23,0.3);
+	background: rgba(241,242,242,0.9);
+	padding: 10px 20px;
+}
+#project h1{
+	color: #99BE69;
+	display: inline;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	margin: 10px 15px;
+	width: 500px;	
+}
+#project p{
+	display: inline-block;
+	margin-top: 20px;
+}
+#related_content{
+	background: #E3E3E3;
+}
+#related_content li{
+	width: 100px;
+	height: 150px;
+	padding: 10px;
+}
+.pagination{
+	/* background: rgba(171,200, 132, 0.6); */
+	overflow: hidden;
+	border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+}
+.pagination ul{
+	height: 32px;
+	margin: 10px auto;
+	padding-top: 13px;
+	width: 420px;
+}
+
+.pagination>ul>li{
+	background: #99BE69;
+	display: inline;
+	margin-right: 10px;
+	border: 1px solid #E6E6E6;
+	padding: 5px 0;
+}
+.pagination>ul>li:hover, .pagination li.active{
+	color: #F1F2F2;
+	background: #324B10;
+}
+.pagination>ul>li:first-child,
+.pagination>ul>li:last-child{
+	
+}
+.pagination>ul>li:first-child:hover,
+.pagination>ul>li:last-child:hover{
+	background: #324B10;
+	cursor: pointer;
+}
+
+.pagination>ul>li, li.prev, li.next{
+	color: #000;
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+}
+.pagination>ul>li>a{
+	color: #000;
+	padding: 10px;
+}
+.pagination>ul>li.active a{
+	color: #F1F2F2;
+}
+.pagination>ul>li>a:hover{
+	color: #F1F2F2;
+}
+#social_media{
+	background: #4D4E53;
+	-moz-border-radius: 5px;
+	border-radius: 5px 0 0 5px;
+}
+#social_media:hover{
+	width: 58px;
+}
+#social_media li:hover{
+	margin-right: 2px;
+	width: 52px;
+}
+#footer{
+	background: url('../images/texture2.png') repeat-x;
+}
+#intro, #last_project, #personal, #personal_info{
+	background: rgba(241,242,242,0.9);
+	margin-bottom: 15px;
+}
+#intro p, #last_project p, #social_me p, #personal p, #personal_info p{
+	padding: 0 10px 10px;
+}
+#last_project{
+	overflow: hidden;
+}
+#wrapper div{
+	/* background: url('../images/html_grid3.png') repeat; */
+}
+.widget h3, .widget h4, .section_header{
+	background: rgba(153,190,105, 1.0);
+	color: #324B10;
+	margin-bottom: 15px;
+	padding: 10px;
+	text-transform: uppercase;
+}
+.section_header{
+	text-transform: inherit;
+}
