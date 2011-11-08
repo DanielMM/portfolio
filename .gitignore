@@ -1,0 +1,12 @@
+#Application
+application/cache
+application/config
+application/logs
+
+#Assets
+assets/images
+assets/download
+
+#Miscellanious
+.htaccess
+db_structure.txt
