@@ -17,6 +17,45 @@
 		<![endif]-->
 		<link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:600,700' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"/>
+		<script src="<?php echo asset_url('js'); ?>slides.min.jquery.js"/>
+		<script>
+			$(function(){
+				$('#slides').slides({
+					preload: true,
+					preloadImage: '<?php echo asset_url('img');?>loading.gif',
+					play: 5000,
+					effect: 'fade',
+					generatePagination: false,
+					fadeSpeed: 800,
+					crossfade: true,
+					hoverPause: true,
+					animationStart: function(current){
+						$('.caption').animate({
+							bottom:-35
+						},100);
+						if (window.console && console.log) {
+							// example return of current slide number
+							console.log('animationStart on slide: ', current);
+						};
+					},
+					animationComplete: function(current){
+						$('.caption').animate({
+							bottom:0
+						},200);
+						if (window.console && console.log) {
+							// example return of current slide number
+							console.log('animationComplete on slide: ', current);
+						};
+					},
+					slidesLoaded: function() {
+						$('.caption').animate({
+							bottom:0
+						},200);
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="header_wrapp">
@@ -28,7 +67,7 @@
 				</div><!--logo-->
 				<nav>
 					<ul>
-						<li class="first">
+						<li>
 							<h3>
 								<a href="<?php echo site_url(); ?>project">Work</a>
 							</h3>
@@ -43,7 +82,7 @@
 								<a href="<?php echo site_url(); ?>about">About</a>
 							</h3>
 						</li>
-						<li class="last">
+						<li>
 							<h3>
 								<a href="<?php echo site_url(); ?>contact">Contact</a>
 							</h3>

@@ -21,3 +21,44 @@
 |	font-family: 'Open Sans', sans-serif;
 |
 */
+li	{list-style: none;}
+
+#content>article	{float: left; width: 360px;}
+#content>aside		{clear:both; width: 100%;}
+#slider				{float: right; position: relative; width: 600px;}
+/* #slides		{left: 4px; position: absolute; top:15px; z-index: 100;} */
+#frame {
+	position:absolute;
+	z-index:0;
+	width:739px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+.slides_container {
+	width:570px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.slides_container div.slide {
+	width:570px;
+	height:270px;
+	display:block;
+}
+.caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:30px;
+	padding:5px 20px 0 20px;
+	background:#000;
+	background:rgba(0,0,0,.5);
+	width:540px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+	border-top:1px solid #000;
+	text-shadow:none;
+}

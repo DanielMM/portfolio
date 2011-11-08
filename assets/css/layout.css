@@ -1,5 +1,17 @@
 ﻿/* 
 	LAYOUT SETTINGS
  */
- /* #wrapper			{background: url('../images/html_grid2.png') repeat;} */
- 
+#header_wrapp	{background: rgba(120,120,120,1);}
+header, 
+footer, 
+#content		{background: url('../images/html_grid2.png') repeat; height: auto; overflow: hidden; margin: 0 auto; width: 960px;}
+header			{height: 300px; padding-top: 10px;}
+#logo			{float: left;}
+nav				{float: right;}
+nav>ul			{overflow: hidden;}
+nav>ul>li		{float: left;}
+
+#content		{margin-top: -150px;}
+#content aside>ul	{margin: 20px; padding: 10px 0; overflow: hidden;}
+#content aside>ul>li{float: left; height: 100px; outline: 1px dotted blue; width: 300px;}
+li.space			{margin-left: 10px;}

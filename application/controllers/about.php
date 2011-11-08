@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Personal extends CI_Controller {
+class About extends CI_Controller {
 
 	public function index()
 	{
@@ -8,7 +8,7 @@ class Personal extends CI_Controller {
 		$data['age'] 	= date('Y') - 1987;
 		
 		$this->load->view('header_view', $data);
-		$this->load->view('personal_view', $data);
+		$this->load->view('about_view', $data);
 		$this->load->view('footer_view');
 	}
 }
