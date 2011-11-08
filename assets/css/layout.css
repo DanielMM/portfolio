@@ -3,21 +3,3 @@
  */
  /* #wrapper			{background: url('../images/html_grid2.png') repeat;} */
  
- #wrapper			{height: auto; margin: 0 auto; overflow: hidden; padding: 10px 10px 0; width: 940px;} 
- 
-#header				{height: 125px; width: 99.999%;}
-
-#logo_bar			{height: 125px; overflow: hidden;	margin: 0 auto;	width: 960px;}
-
-#main, 
-#sidebar			{float: left;	height: auto;}
-
-#main				{width: 700px;}
-
-#sidebar			{float: right; width: 230px;}
-
-#social_media		{height: 225px; padding: 5px 0; position: fixed; bottom: 252px; right: 0; width: 36px;}
-
-#social_media li	{float: right; height: 52px; margin: 0 0 5px 2px; width: 32px;}
-
-#footer				{clear: both; height: 250px;	margin: 20px 0 1px;}
