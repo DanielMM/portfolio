@@ -1,7 +1,7 @@
 <div id="content_wrapp">
 	<div id="content">
 		<article>
-			This is what I do.
+			<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
 		</article>
 		<div id="slider">
 			<div id="slides">
@@ -33,11 +33,27 @@
 				</div>
 			</div><!--slides-->
 		</div><!--slider-->
+		<span class="spacer"></span>
 		<aside>
 			<ul>
-				<li>website</li>
-				<li class="space" >concepts</li>
-				<li class="space" >articles</li>
+				<li>
+					<h4>Web</h4>
+					<?php
+						$img = "<img src=\"http://localhost/portfolio/assets/images/img.png\" width=\"300\" height=\"110\" />";
+					?>
+					<?php echo anchor('project/category/websites',$img ,'title="websites"'); ?>
+					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+				</li>
+				<li class="space">
+					<h4>Concepts</h4>
+					<?php echo anchor('project/category/concepts','concepts','title="concepts"'); ?>
+					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+				</li>
+				<li class="space">
+					<h4>Articles</h4>
+					<?php echo anchor('blog/articles','articles','title="Articles"'); ?>
+					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+				</li>
 			</ul>
 		</aside>
 	</div><!--content-->

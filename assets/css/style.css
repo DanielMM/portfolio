@@ -21,29 +21,17 @@
 |	font-family: 'Open Sans', sans-serif;
 |
 */
+p		{line-height: 1.6em;}
 li	{list-style: none;}
-
-#content>article	{float: left; width: 360px;}
-#content>aside		{clear:both; width: 100%;}
-#slider				{float: right; position: relative; width: 600px;}
-/* #slides		{left: 4px; position: absolute; top:15px; z-index: 100;} */
-#frame {
-	position:absolute;
-	z-index:0;
-	width:739px;
-	height:341px;
-	top:-3px;
-	left:-80px;
-}
 .slides_container {
-	width:570px;
+	width:580px;
 	overflow:hidden;
 	position:relative;
 	display:none;
 }
 .slides_container div.slide {
-	width:570px;
-	height:270px;
+	width:580px;
+	height:275px;
 	display:block;
 }
 .caption {

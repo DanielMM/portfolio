@@ -1,17 +1,39 @@
 ﻿/* 
 	LAYOUT SETTINGS
  */
-#header_wrapp	{background: rgba(120,120,120,1);}
+.spacer			{background: rgba(230,230,230,1); clear: both; display: block; height: 1px; width: 100%;}
+#header_wrapp	{background: url('../images/header_bg8.png') repeat-x;}
 header, 
 footer, 
-#content		{background: url('../images/html_grid2.png') repeat; height: auto; overflow: hidden; margin: 0 auto; width: 960px;}
-header			{height: 300px; padding-top: 10px;}
-#logo			{float: left;}
-nav				{float: right;}
-nav>ul			{overflow: hidden;}
-nav>ul>li		{float: left;}
+#content		{background: url('../images/html_gri.png') repeat; height: auto; overflow: hidden; margin: 0 auto; width: 960px;}
 
-#content		{margin-top: -150px;}
-#content aside>ul	{margin: 20px; padding: 10px 0; overflow: hidden;}
-#content aside>ul>li{float: left; height: 100px; outline: 1px dotted blue; width: 300px;}
-li.space			{margin-left: 10px;}
+header					{height: 300px; padding-top: 10px;}
+
+#logo					{float: left; width: 300px;}
+#logo h1>a				{font-size: 2.7em;}
+#logo h1>a .special		{color: rgba(153,190,105,1);}
+#logo h2				{font-size: 2.1em;}
+#logo h1>a,
+#logo h2>a				{color: rgba(254,254,254,1); text-decoration: none;}
+
+nav						{float: right;}
+nav>ul					{overflow: hidden;}
+nav>ul>li				{float: left;}
+
+#content				{background: rgba(242,242,242,0.8); margin-top: -150px; padding-top: 10px; position: relative; z-index: 100;}
+#content>article		{margin: 0 0 0 10px; float: left; width: 340px;}
+#content>article>p		{font-size: 1.6em; margin: 10px 0;}
+
+#content #slider		{float: right; margin: 0 10px 0 0; position: relative; width: 580px;}
+
+#content>aside					{clear:both; width: 100%;}
+#content aside>ul				{margin: 10px 10px 60px; padding: 10px 0; overflow: hidden;}
+#content aside>ul>li			{float: left; outline: 1px dotted blue; width: 300px;}
+#content aside>ul>li>h4			{font-size: 1.2em;padding: 5px 0; text-transform: uppercase;}
+#content aside>ul>li>a			{display: inline-block; height: 110px; outline: 1px dotted green; width: 300px;}
+#content aside>ul>li.space		{margin-left: 20px;}
+
+#footer_wrapp			{background: url('../images/header_bg8.png') repeat-x; color: rgba(252,252,252,1);}
+footer					{height: 290px; margin-top: -50px; padding-top: 10px;}
+#copyright				{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; text-align: center;}
+/* *{outline: 1px dotted blue;} */
