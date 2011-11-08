@@ -41,7 +41,7 @@
 					<?php
 						$img = "<img src=\"http://localhost/portfolio/assets/images/img.png\" width=\"300\" height=\"110\" />";
 					?>
-					<?php echo anchor('project/category/websites',$img ,'title="websites"'); ?>
+					<?php echo anchor('project/category/websites','websites','title="websites"'); ?>
 					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
 				</li>
 				<li class="space">
