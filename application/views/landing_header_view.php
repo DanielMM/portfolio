@@ -87,10 +87,11 @@
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>contact">Contact</a>
+								<a href="<?php echo site_url(); ?>contact" class="last">Contact</a>
 							</h3>
 						</li>
 					</ul>
 				</nav>
+				<div id="bg"></div>
 			</header>
 		</div><!--header_wrapp-->		
