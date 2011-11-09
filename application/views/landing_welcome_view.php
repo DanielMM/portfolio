@@ -9,7 +9,8 @@
 					<div class="slide">
 						<a href="" title=""><img src="<?php echo asset_url('img'); ?>slides/slide-1.jpg" alt="Slide 1"></a>
 						<div class="caption" style="bottom:0">
-							<p>Happy Bokeh Thursday!</p>
+							<p>Happy Bokeh Thursday!<span>more &raquo;</span></p>
+							
 						</div>
 					</div>
 					<div class="slide">

@@ -29,7 +29,7 @@
 					generatePagination: false,
 					fadeSpeed: 800,
 					crossfade: true,
-					hoverPause: true,
+					hoverPause: false,
 					animationStart: function(current){
 						$('.caption').animate({
 							bottom:-35

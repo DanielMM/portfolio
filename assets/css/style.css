@@ -40,13 +40,15 @@ li	{list-style: none;}
 	bottom:-35px;
 	left:0;
 	height:30px;
-	padding:5px 20px 0 20px;
+	padding:5px 10px 0 20px;
 	background:#000;
 	background:rgba(0,0,0,.5);
-	width:540px;
+	width:550px;
 	font-size:1.3em;
 	line-height:1.33;
 	color:#fff;
 	border-top:1px solid #000;
 	text-shadow:none;
 }
+.caption p span	{display: inline-block; float: right; font-size: 0.66em; height: 27px; text-transform: capitalize; margin-bottom: 3px;}
+.caption p span:hover	{background: rgba(153,190,105,1);}
