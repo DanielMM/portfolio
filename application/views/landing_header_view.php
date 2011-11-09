@@ -15,7 +15,7 @@
 		<!--[if lte IE 7]>
 			<link href="<?php echo asset_url('css'); ?>ie7.css" type="text/css" rel="stylesheet" media="screen">
 		<![endif]-->
-		<link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"/>
 		<script src="<?php echo asset_url('js'); ?>slides.min.jquery.js"/>
