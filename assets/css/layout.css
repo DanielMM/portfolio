@@ -39,8 +39,8 @@ nav>ul>li>h3>a:hover	{background: rgba(3,3,3,1); border-top: 5px solid rgba(153,
 #content aside>ul>li>a			{display: inline-block; height: 110px; outline: 0px dotted green; width: 300px;}
 #content aside>ul>li.space		{margin-left: 60px;}
 
-#footer_wrapp			{background: url('../images/header_bg8.png') repeat-x; color: rgba(252,252,252,1);}
-footer					{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); height: 290px; padding-top: 0px; position: relative;}
+#footer_wrapp			{background: url('../images/header_bg8.png') repeat-x; }
+footer					{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); color: rgba(252,252,252,1);  height: 290px; padding-top: 0px; position: relative;}
 
 footer>article			{float: left; outline: 0px dotted blue; margin-left: 60px; width: 240px;}
 footer>article>h4		{font-size: 1.2em; margin: 5px 0;}
@@ -53,8 +53,8 @@ footer>article>h4		{font-size: 1.2em; margin: 5px 0;}
 
 #social_media			{position: absolute; top: 20px; right: 0; width: 36px;}
 #social_media li		{float: right; height: 52px; margin: 0 0 15px 2px; width: 32px;}
-#social_media li>a		{height: 52px; width: 55px;}
-#social_media li:hover	{margin-right: 2px; width: 52px;}
+#social_media li>a		{height: 52px; width: 52px;}
+#social_media li:hover	{margin-right: 1px; width: 52px;}
 
 #copyleft				{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; margin-top: 1px; text-align: center;}
 #copyleft a				{color: rgba(80,80,80,1); text-decoration: none;}

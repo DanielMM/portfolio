@@ -10,10 +10,13 @@
 		<!--[if IE 9]>
 		<![endif]-->
 		<!--[if IE 8]>
-			<link href="<?php echo asset_url('css'); ?>ie8.css" type="text/css" rel="stylesheet" media="screen">
+			<link href="<?php echo asset_url('css'); ?>ie7.css" type="text/css" rel="stylesheet" media="screen">
 		<![endif]-->
 		<!--[if lte IE 7]>
 			<link href="<?php echo asset_url('css'); ?>ie7.css" type="text/css" rel="stylesheet" media="screen">
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
