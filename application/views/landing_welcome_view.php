@@ -40,26 +40,26 @@
 				<li>
 					<h4>Web</h4>
 					<?php
-						$img = "<img src=\"http://localhost/portfolio/assets/images/car.jpg\" width=\"240\" height=\"100\" />";
+						$img = "<img src=\"". asset_url('img')."car.jpg\"  width=\"240\" height=\"100\" />";
 					?>
 					<?php echo anchor('project/category/websites',$img,'title="Websites"'); ?>
-					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+					<h6>View the projects that I've done on the web and a detailed insight on how they came to life.</h6>
 				</li>
 				<li class="space">
 					<h4>Concepts</h4>
 					<?php
-						$img = "<img src=\"http://localhost/portfolio/assets/images/light.jpg\" width=\"240\" height=\"100\" />";
+						$img = "<img src=\"". asset_url('img')."light.jpg\"  width=\"240\" height=\"100\" />";
 					?>
-					<?php echo anchor('project/category/websites',$img,'title="Concepts"'); ?>
-					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+					<?php echo anchor('project/category/concepts',$img,'title="Concepts"'); ?>
+					<h6>A collection of  concepts and ideas that I've been working on in my spare time in different stages of development and evolution.</h6>
 				</li>
 				<li class="space">
 					<h4>Articles</h4>
 					<?php
-						$img = "<img src=\"http://localhost/portfolio/assets/images/church.jpg\" width=\"240\" height=\"100\" />";
+						$img = "<img src=\"". asset_url('img')."church.jpg\"  width=\"240\" height=\"100\" />";
 					?>
-					<?php echo anchor('project/category/websites',$img,'title="Articles"'); ?>
-					<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+					<?php echo anchor('blog',$img,'title="Articles"'); ?>
+					<h6>Articles that I have written on web related topics in regards to theory and practice and how to successfuly mix the two.</h6>
 				</li>
 			</ul>
 		</aside>

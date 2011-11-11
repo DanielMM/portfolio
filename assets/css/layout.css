@@ -13,6 +13,15 @@ article,
 
 #header_wrapp			{background: url('../images/header_bg9.png') repeat-x; overflow: hidden;}
 
+#content_wrapp			{clear: both;}
+
+#content				{background: rgba(242,242,242,0.9); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; z-index: 100;}
+#content>article		{float: left; padding: 0 0 0 10px; width: 710px;}
+#content>article p		{margin-bottom: 20px; padding: 0 10px;}
+#content>article p:last-child		{margin-bottom: 40px;}
+
+#content>aside.sidebar	{background: rgba(200,200,200,0.5); float: right; padding: 0 10px 20px; width: 220px;}
+
 header					{height: 300px; position: relative;}
 
 #logo					{float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
@@ -32,20 +41,6 @@ nav>ul>li>h3>a:hover	{background: rgba(3,3,3,1); border-top: 5px solid rgba(153,
 
 #bg						{background: rgba(10,10,10,0.9); height: 100px; position: absolute; top: 2px; width: 100%; z-index: 1;}
 
-#content_wrapp			{clear: both;}
-#content				{background: rgba(242,242,242,0.9); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; z-index: 100;}
-#content>article		{margin: 0 0 0 10px; float: left; width: 340px;}
-#content>article>p		{font-size: 1.6em; margin: 10px 0;}
-
-#content #slider		{float: right; margin: 0 10px 0 0; position: relative; width: 580px;}
-
-#content aside					{clear:both; width: 100%;}
-#content aside>ul				{margin: 10px 60px 60px; overflow: hidden;}
-#content aside>ul>li			{float: left;  width: 240px;}
-#content aside>ul>li>h4			{font-size: 1.2em;padding: 5px 0; text-transform: uppercase;}
-#content aside>ul>li>a			{display: inline-block; height: 100px; margin: 5px 0; outline: 0px dotted green; width: 240px;}
-#content aside>ul>li.space		{margin-left: 60px;}
-
 #footer_wrapp			{background: url('../images/header_bg8.png') repeat-x; }
 footer					{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); color: rgba(252,252,252,1);  height: 290px; padding-top: 0px; position: relative;}
 
@@ -54,7 +49,7 @@ footer>article>h4		{font-size: 1.2em; margin: 5px 0;}
 
 #tweets					{ display: block; height: 250px; width: 240px;}
 #tweets>li				{background: rgba(30,30,30,0.8); margin-bottom: 5px; outline: 1px solid rgba(100,100,100,0.2); padding: 2px;}
-#tweets>li:hover		{outline: 2px solid rgba(140,39,220,0.25);}
+/* #tweets>li:hover		{outline: 2px solid rgba(140,39,220,0.25);} */
 #tweets>li>h6			{font-size: 0.8em; margin: 2px 0; position: relative;}
 #tweets>li>p			{font-size: 0.8em; line-height: 1em; margin: 3px 0;}
 #tweets>li>h6>span		{font-size: 0.9em; font-weight: normal; position:absolute; right: 1px; text-align: right; top: 2px;}

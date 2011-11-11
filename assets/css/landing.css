@@ -1,0 +1,23 @@
+﻿/* 
+	LANDING PAGE STYLES
+ */
+
+#content>article		{margin: 0 0 0 10px; float: left; width: 340px;}
+#content>article>p		{font-size: 1.6em; margin: 10px 0;}
+
+#content #slider		{float: right; margin: 0 10px 0 0; position: relative; width: 580px;}
+
+#content aside					{clear:both; width: 100%;}
+#content aside>ul				{margin: 30px 60px 60px; overflow: hidden;}
+#content aside>ul>li			{float: left;  width: 240px;}
+#content aside>ul>li>h4			{font-size: 1.2em;padding: 5px 0; text-transform: uppercase;}
+#content aside>ul>li>a			{display: inline-block; height: 100px; margin: 5px 0; outline: 0px dotted green; width: 240px;}
+#content aside>ul>li>h6			{font-weight: normal;}
+#content aside>ul>li.space		{margin-left: 60px;}
+
+/* Slider */
+.slides_container 				{display:none; position:relative; overflow:hidden; width:580px;}
+.slides_container div.slide 	{display:block; height:275px; width:580px;}
+.caption 						{background:#000; background:rgba(0,0,0,.5); border-top:1px solid #000; bottom:-35px; color:#fff; font-size:1.3em; height:30px; left:0; line-height:1.33; padding:5px 10px 0 20px; position:absolute; text-shadow:none; width:550px; z-index:500;}
+.caption p span					{display: inline-block; float: right; font-size: 0.66em; height: 27px; text-transform: capitalize; margin-bottom: 3px;}
+.caption p span:hover			{background: rgba(153,190,105,1);}
