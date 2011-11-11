@@ -1,3 +1,4 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div id="content_wrapp">
 	<div id="content">
 		<article class="project">

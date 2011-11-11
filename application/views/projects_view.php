@@ -1,15 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-		<div id="wrapper">
-			<section id="main">
-				<div id="intro">
-					<h1 class="section_header" >Hey there and welcome to my portfolio!</h1>
-					<p>
+	<div id="content_wrapp">
+		<div id="content">
+			<section id="intro">
+				<h1 class="section_heading">Hey there and welcome to my portfolio!</h1>
+				<p>
 					Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis. Commodo enim aliquam suspendisse tortor cum diam, commodo facilisis, rutrum et duis nisl porttitor, vel eleifend odio ultricies ut, orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero. Etiam vestibulum at lectus.
 					Donec vivamus. Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec, tempor cursus vitae sit aliquet neque purus.
-					</p>
-				</div>
-				<div id="projects">
-					<h1 class="section_header">Projects</h1>
+				</p>
+			</section>
+				<section id="projects">
+					<h1 class="section_heading">Projects</h1>
 					<ul>
 						<li class="first">
 							<a href="<?php echo site_url('project/second'); ?>" title="">
@@ -83,18 +83,17 @@
 							<li class="next" ><a href="">&raquo;</a></li>
 						</ul>
 					</div>
-				</div>
-			</section>
-			<aside id="sidebar">
-				<div id="categories" class="widget">
-					<h3>Categories</h3>
-					<ul>
-						<li><a href="<?php echo site_url(); ?>project/category/cms">CMS</a><span class="count">456</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">321</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">22</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">00</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">0</span></li>
-					</ul>
-				</div>
+				</section>
+			<aside class="sidebar">
+				<section id="categories" class="widget">
+				<h3 class="section_heading">Categories</h3>
+				<ul>
+					<li><?php echo anchor('project/category/cms','CMS<span class="count">3</span>','title="CMS category"'); ?></li>
+					<li><a href="#">Lorem ipsum dolor<span class="count">2</span></a></li>
+					<li><a href="#">Lorem ipsum dolor<span class="count">1</span></a></li>
+					<li><a href="#">Lorem ipsum dolor<span class="count">0</span></a></li>
+				</ul>
+				</section>
 			</aside>
 		</div>
+	</div>
