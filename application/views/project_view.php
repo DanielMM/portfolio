@@ -1,9 +1,9 @@
 <div id="content_wrapp">
 	<div id="content">
-		<article>
-			<div id="project">
-				<section>
-					<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="<?php if(isset($title)){	echo $title;	}?>" title="<?php if(isset($title)){	echo $title;	}?>" height="170" width="170" />
+		<article class="project">
+			<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="<?php if(isset($title)){	echo $title;	}?>" title="<?php if(isset($title)){	echo $title;	}?>" height="170" width="170" />
+			<section class="project_header">	
+				<section class="project_title">
 					<h1 title="<?php if(isset($title)){echo $title;}?>">
 						<?php
 							//Title should not be retrived from the URL, but instead from the DB and set as the title
@@ -13,27 +13,38 @@
 						?>
 					</h1>
 				</section>
-				<section>
-					<ul class="project_details">
-						<li class="category">Category</li>
-						<li class="client">Client</li>
-						<li class="link">Link</li>
-					</ul>
+				<section class="project_meta">
+					<dl>
+						<dt class="category">Link:</dt>
+							<dd>http://www.example.com</dd>
+						<dt class="client">Client:</dt>
+							<dd>Example Ltd. Co</dd>
+						<dt class="link">Category:</dt>
+							<dd>CMS</dd>
+						<dt class="link">Tags:</dt>
+							<dd>
+								
+								<span class="tag"><?php echo anchor('project/tags/HTML5','HTML5','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/HTML5','PHP','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/HTML5','MySQL','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/HTML5','jQuery','title="HTML5"'); ?></span>
+							</dd>
+					</dl>
 				</section>
-				<section>
-					<p>
-						Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. 
-					</p>
-					<p>Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.</p>
-					<p>	
-						Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
-						Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
-					</p>
-					<p>
-						Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.
-					</p>
-				</section>
-			</div>
+			</section>
+			<section class="project_body">
+				<p>
+					Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. 
+				</p>
+				<p>Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.</p>
+				<p>	
+					Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
+					Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
+				</p>
+				<p>
+					Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.
+				</p>
+			</section>
 		</article>
 		<aside class="sidebar">
 			<section id="related" class="widget">

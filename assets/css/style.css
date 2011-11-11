@@ -21,6 +21,21 @@
 |	font-family: 'Open Sans', sans-serif;
 |
 */
+/* PROJECT */
+article.project					{position: relative;}
+.project .project_header		{height: 170px; left: 200px; position: absolute; top: -2px;}
+.project .project_title			{display: block;  margin:  0 10px 10px 0;}
+.project .project_title h1		{color: rgba(50,75,16, 0.7); font-family: 'Open Sans', sans-serif; font-size: 2em;}
+.project .project_meta dt,
+.project .project_meta dd		{display: inline-block; margin: 5px 0;}
+.project .project_meta dt		{width: 70px;}
+.project .project_meta dd		{width: 400px;}
+
+.project .project_meta dd>span.tag a		{color: rgb(222,222,222); display: inline-block; padding: 3px 5px;}
+.project .project_meta dd>span.tag a		{background: rgb(153,190,105);}
+.project .project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
+
+.project .project_body			{display: inline-block; margin-top: 20px;}
 
 /* SECTION HEADER */
 
