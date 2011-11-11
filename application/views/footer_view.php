@@ -21,16 +21,16 @@
 				<article class="space">
 					<h4>Something</h4>
 					<ul id="favorites">
-						<li><?php echo anchor('http://net.tutsplus.com/','Nettuts+','title="Nettuts+" target="_blanck"');?></li>
-						<li><?php echo anchor('http://webdesign.tutsplus.com/','Webdesigntuts+','title="Webdesigntuts+" target="_blanck"');?></li>
-						<li><?php echo anchor('http://sixrevisions.com/','Six Revisions','title="Six Revisions" target="_blanck"');?></li>
-						<li><?php echo anchor('http://www.alistapart.com/','A List Apart','title="A List Apart" target="_blanck"');?></li>
-						<li><?php echo anchor('http://www.webresourcesdepot.com/','Web Resources Depot','title="Web Resources Depot" target="_blanck"');?></li>
-						<li><?php echo anchor('http://www.webdesignerdepot.com/','Web Designer Depot','title="Web Designer Depot" target="_blanck"');?></li>
-						<li><?php echo anchor('http://webdesignledger.com/','Web Design Ledger','title="Web Design Ledger" target="_blanck"');?></li>
-						<li><?php echo anchor('http://37signals.com/svn','37 Signals','title="37 Signals" target="_blanck"');?></li>
-						<li><?php echo anchor('http://php.net/','PHP.net','title="PHP.net" target="_blanck"');?></li>
-						<li><?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blanck"');?></li>
+						<li><?php echo anchor('http://net.tutsplus.com/','Nettuts+','title="Nettuts+" target="_blank"');?></li>
+						<li><?php echo anchor('http://webdesign.tutsplus.com/','Webdesigntuts+','title="Webdesigntuts+" target="_blank"');?></li>
+						<li><?php echo anchor('http://sixrevisions.com/','Six Revisions','title="Six Revisions" target="_blank"');?></li>
+						<li><?php echo anchor('http://www.alistapart.com/','A List Apart','title="A List Apart" target="_blank"');?></li>
+						<li><?php echo anchor('http://www.webresourcesdepot.com/','Web Resources Depot','title="Web Resources Depot" target="_blank"');?></li>
+						<li><?php echo anchor('http://www.webdesignerdepot.com/','Web Designer Depot','title="Web Designer Depot" target="_blank"');?></li>
+						<li><?php echo anchor('http://webdesignledger.com/','Web Design Ledger','title="Web Design Ledger" target="_blank"');?></li>
+						<li><?php echo anchor('http://37signals.com/svn','37 Signals','title="37 Signals" target="_blank"');?></li>
+						<li><?php echo anchor('http://php.net/','PHP.net','title="PHP.net" target="_blank"');?></li>
+						<li><?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blank"');?></li>
 					</ul>
 				</article>
 				<article class="space">

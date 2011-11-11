@@ -9,10 +9,10 @@
 | COLORS
 |--------------------------------------------------------------------------
 |	#737a7f						#343434
-|	#99be69						#f6f9f9
+|	rgb(153,190,105)			#f6f9f9
 |	#4d4e53						#e6e6e6
 |	#84878f						#abc884
-|	#f1f2f2						#324b10
+|	rgb(252,252,252)						rgb(50,75,16)
 |	#616265
 |--------------------------------------------------------------------------
 |FONTS
@@ -21,14 +21,20 @@
 |	font-family: 'Open Sans', sans-serif;
 |
 */
-/* GENERAL */
-
-p	{line-height: 1.6em;}
-li	{list-style: none;}
 
 /* SECTION HEADER */
 
-.section_header			{background: rgba(153,190,105, 0.7); color: #324B10;	margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
+.section_heading				{background: rgb(153,190,105); color: rgb(50,75,16);	margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
 
+#categories.widget li			{background: rgb(153,190,105); margin: 6px 5px; overflow: hidden;}
+#categories.widget li:hover		{background: rgba(50,74,16,0.9); /* -moz-border-radius: 3px; border-radius: 3px; */}
+#categories.widget li a			{color: rgb(50,75,16); height: 20px; padding: 8px 5px 8px 10px; float: left; width: 100%;}
+#categories.widget li a:hover	{color: rgb(252,252,252);}
 
+#categories.widget li a span.count			{background: rgb(50,75,16); color: rgb(153,190,105); -moz-border-radius: 20px; border-radius: 20px; float: right; margin: 0 15px 0 0;	padding: 0 2px 1px;	text-align: center;	min-width: 26px;}
+#categories.widget li a:hover span.count	{background: rgb(153,190,105); color: rgb(252,252,252);}
 
+#related.widget li 			{background: rgb(153,190,105);height: 60px; margin: 6px 5px; }
+#related.widget li a		{color: rgb(50,75,16); display:block; height: 40px; padding: 10px 5px;}
+#related.widget li a:hover	{color: rgb(252,252,252);}
+#related.widget li:hover	{background: rgba(50,74,16,0.9);}
