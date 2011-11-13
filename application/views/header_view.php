@@ -4,7 +4,7 @@
 	<head>
 		<title><?php if(isset($title)){echo $title;}?> - Daniel Mois - Web Developer</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-		<link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>reset.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>layout.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>style.css" media="screen" />

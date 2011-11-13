@@ -25,7 +25,7 @@
 /* PROJECTS LIST */
 
 #projects h1					{margin-bottom: 20px;}
-#projects>ul>li					{margin: 0 0 40px; padding: 10px 0 0;}
+#projects>ul>li					{margin: 0 0 40px; overflow: hidden; padding: 10px 0 0;}
 
 #projects section				{overflow: hidden;}
 #projects section a.thumb		{float: left; height: 170px; width: 170px;}
@@ -39,24 +39,26 @@
 #projects section .summary .read_more a			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
 #projects section .summary .read_more a:hover	{background: rgb(50,74,16); color: rgb(241,242,242);}
 
+/* PAGINATION */
 
- .pagination						{clear: both;}
- .pagination						{overflow: hidden;}
- .pagination>ul					{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
 
-  .pagination>ul>li				{background: rgb(153,190,105); display: inline; margin-right: 10px; border: 1px solid rgb(241,242,242); padding: 5px 0;}
+.pagination						{clear: both;}
+.pagination						{overflow: hidden;}
+.pagination>ul					{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
 
- .pagination>ul>li:hover, 
- .pagination>ul>li.active		{color: rgb(252,252,252); background: rgb(50,75,16);}
+.pagination>ul>li				{background: rgb(153,190,105); display: inline; margin-right: 10px; border: 1px solid rgb(241,242,242); padding: 5px 0;}
 
- .pagination>ul>li:first-child:hover,
- .pagination>ul>li:last-child:hover
+.pagination>ul>li:hover, 
+.pagination>ul>li.active		{color: rgb(252,252,252); background: rgb(50,75,16);}
+
+.pagination>ul>li:first-child:hover,
+.pagination>ul>li:last-child:hover
 /*  .pagination>ul>li.prev:hover, 
  .pagination>ul>li.next:hover */	{background: rgb(50,75,16); cursor: pointer;}
  
 .pagination>ul>li,
 .pagination>ul>li.prev,
-.pagination>ul>li.next			{color: #000; display: inline-block; text-align: center; width: 30px;}
+.pagination>ul>li.next			{color: #000; text-align: center; width: 30px;}
 
 .pagination>ul>li>a				{color: #000; padding: 10px;}
 .pagination>ul>li.active a,
