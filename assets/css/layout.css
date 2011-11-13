@@ -8,7 +8,6 @@ h1,h2,h3,h4,h5,h6			{font-weight: 700;}
 p	{line-height: 1.6em;}
 li	{list-style: none;}
 
-
 header,
 footer, 
 #content				{margin: 0 auto; overflow: hidden; width: 960px;}
@@ -24,8 +23,7 @@ article,
 
 #content				{background: rgba(242,242,242,0.9); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; position: relative; z-index: 100;}
 #content>article		{float: left; padding: 0 0 0 10px; width: 710px;}
-#content>article p		{margin-bottom: 20px; padding: 0 10px;}
-#content>article p:last-child		{margin-bottom: 40px;}
+		article p		{margin-bottom: 20px; padding: 0 10px;}
 
 #content>aside.sidebar	{float: right; margin-right: 10px; padding: 0 0 20px 0; width: 220px;}
 
@@ -33,10 +31,10 @@ header					{height: 300px; position: relative;}
 
 #logo					{float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
 #logo h1>a				{font-size: 2.5em;}
-#logo h1>a .special		{color: rgba(153,190,105,1);}
+#logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
 #logo h2				{font-size: 1.85em; padding: 0 2px;}
 #logo h1>a,
-#logo h2>a				{color: rgba(254,254,254,1); font-family: 'Open Sans', sans-serif; text-decoration: none;}
+#logo h2>a				{color: rgba(254,254,254,1); font-family: 'Open Sans', sans-serif; font-weight: 700; text-decoration: none;}
 
 nav						{float: right; margin: 0 10px 0 0; position: relative; z-index: 110;}
 nav>ul					{overflow: hidden;}

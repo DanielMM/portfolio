@@ -21,7 +21,49 @@
 |	font-family: 'Open Sans', sans-serif;
 |
 */
+
+/* PROJECTS LIST */
+
+#projects h1					{margin-bottom: 20px;}
+#projects>ul>li					{margin: 0 0 40px; padding: 10px 0 0;}
+
+#projects section				{overflow: hidden;}
+#projects section a.thumb		{float: left; height: 170px; width: 170px;}
+#projects section .summary		{float: left; min-height: 170px; position: relative; width: 540px;}
+#projects section .summary h2	{font-size: 1.9em; margin: -10px 0 10px 10px;}
+#projects section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; padding: 0;}
+
+#projects section .summary h2 a:hover			{color: rgb(50,75,16);}
+
+#projects section .summary .read_more			{display: block; float: right; margin: 40px 10px 0 0;}
+#projects section .summary .read_more a			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
+#projects section .summary .read_more a:hover	{background: rgb(50,74,16); color: rgb(241,242,242);}
+
+
+ .pagination						{clear: both;}
+ .pagination						{overflow: hidden;}
+ .pagination>ul					{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
+
+  .pagination>ul>li				{background: rgb(153,190,105); display: inline; margin-right: 10px; border: 1px solid rgb(241,242,242); padding: 5px 0;}
+
+ .pagination>ul>li:hover, 
+ .pagination>ul>li.active		{color: rgb(252,252,252); background: rgb(50,75,16);}
+
+ .pagination>ul>li:first-child:hover,
+ .pagination>ul>li:last-child:hover
+/*  .pagination>ul>li.prev:hover, 
+ .pagination>ul>li.next:hover */	{background: rgb(50,75,16); cursor: pointer;}
+ 
+.pagination>ul>li,
+.pagination>ul>li.prev,
+.pagination>ul>li.next			{color: #000; display: inline-block; text-align: center; width: 30px;}
+
+.pagination>ul>li>a				{color: #000; padding: 10px;}
+.pagination>ul>li.active a,
+.pagination>ul>li>a:hover		{color: rgb(252,252,252);}
+
 /* PROJECT */
+
 article.project					{position: relative;}
 .project .project_header		{height: 170px; left: 200px; position: absolute; top: -2px;}
 .project .project_title			{display: block;  margin:  0 10px 10px 0;}
@@ -36,6 +78,8 @@ article.project					{position: relative;}
 .project .project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
 
 .project .project_body			{display: inline-block; margin-top: 20px;}
+.project_body>p:last-child		{margin-bottom: 40px;}
+
 
 /* SECTION HEADER */
 

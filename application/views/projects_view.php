@@ -8,82 +8,98 @@
 					Donec vivamus. Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec, tempor cursus vitae sit aliquet neque purus.
 				</p>
 			</section>
-				<section id="projects">
-					<h1 class="section_heading">Projects</h1>
+			<article id="projects">
+				<h1 class="section_heading">Projects</h1>
+				<ul>
+					<li class="first">
+						<section>
+							<a href="<?php echo site_url('project/second'); ?>" title="" class="thumb">
+								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+							</a>
+							<div class="summary">
+								<h2>
+									<?php
+										$title = "Second project so on";
+										$title = url_title($title);
+										echo anchor("project/$title", "Second project so on", 'title="Second project so on"');
+									?>
+								</h2>
+								<p>
+									Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. 
+									<span class="read_more"><?php echo anchor("project/$title", "Continue &raquo;",'title="$title"');?></span>
+								</p>
+							</div>
+						</section>
+					</li>
+					<li>
+						<section>
+							<a href="" title="" class="thumb">
+								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+							</a>
+							<div class="summary">
+								<h2>
+									<?php
+										echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
+									?>
+								</h2>
+								<p>
+									Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
+									<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
+								</p>
+							</div>
+						</section>
+					</li>
+					<li>
+						<section>
+							<a href="" title="" class="thumb">
+								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+							</a>
+							<div class="summary">
+								<h2>
+									<?php
+											echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
+									?>
+								</h2>
+								<p>
+									Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. 
+									<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
+								</p>
+							</div>
+						</section>
+					</li>
+					<li class="last">
+						<section>
+							<a href="" title="" class="thumb">
+								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+							</a>
+							<div class="summary">
+								<h2>
+									<?php
+											echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
+									?>
+								</h2>
+								<p>
+									Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. 
+									<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
+								</p>
+							</div>
+						</section>
+					</li>
+				</ul>
+				<div class="pagination">
 					<ul>
-						<li class="first">
-							<a href="<?php echo site_url('project/second'); ?>" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-								$title = "Second project so on";
-								$title = url_title($title);
-								echo anchor("project/$title", "Second project so on", 'title="Second project so on"');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. 
-								<span class="read_more"><?php echo anchor("project/$title", "Continue &raquo;",'title="$title"');?></span>
-							</p>
-						</li>
-						<li>
-							<a href="" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-								echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
-								<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
-							</p>
-						</li>
-						<li>
-							<a href="" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-									echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. 
-								<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
-							</p>
-						</li>
-						<li class="last">
-							<a href="" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-									echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. 
-								<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
-							</p>
-						</li>
+						<li class="prev" ><a href="">&laquo;</a></li>
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li class="active"><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li class="next" ><a href="">&raquo;</a></li>
 					</ul>
-					<div class="pagination">
-						<ul>
-							<li class="prev" ><a href="">&laquo;</a></li>
-							<li><a href="">1</a></li>
-							<li><a href="">2</a></li>
-							<li><a href="">3</a></li>
-							<li class="active"><a href="">4</a></li>
-							<li><a href="">5</a></li>
-							<li><a href="">6</a></li>
-							<li><a href="">7</a></li>
-							<li class="next" ><a href="">&raquo;</a></li>
-						</ul>
-					</div>
-				</section>
+				</div>
+			</article>
 			<aside class="sidebar">
 				<section id="categories" class="widget">
 				<h3 class="section_heading">Categories</h3>
