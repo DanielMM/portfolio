@@ -26,9 +26,9 @@
 							<dd>
 								
 								<span class="tag"><?php echo anchor('project/tags/HTML5','HTML5','title="HTML5"'); ?></span>
-								<span class="tag"><?php echo anchor('project/tags/HTML5','PHP','title="HTML5"'); ?></span>
-								<span class="tag"><?php echo anchor('project/tags/HTML5','MySQL','title="HTML5"'); ?></span>
-								<span class="tag"><?php echo anchor('project/tags/HTML5','jQuery','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/PHP','PHP','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/MySQL','MySQL','title="HTML5"'); ?></span>
+								<span class="tag"><?php echo anchor('project/tags/jQuery','jQuery','title="HTML5"'); ?></span>
 							</dd>
 					</dl>
 				</section>

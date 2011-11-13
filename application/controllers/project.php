@@ -28,6 +28,15 @@ class Project extends CI_Controller {
 		$this->load->view('footer_view');
 	}
 	
+	public function tag($tag)
+	{
+		//Select all projects beloging to one category
+		$data['title'] = $tag;
+		$this->load->view('header_view', $data);
+		$this->load->view('tag_view', $data);
+		$this->load->view('footer_view');
+	}
+	
 }
 
 /* End of file project.php */
