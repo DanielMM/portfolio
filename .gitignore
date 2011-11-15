@@ -9,6 +9,6 @@ assets/download
 
 #Miscellanious
 .htaccess
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 db_structure.txt
