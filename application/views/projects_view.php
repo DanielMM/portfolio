@@ -13,6 +13,7 @@
 				<ul>
 					<li class="first">
 						<section>
+							<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
 							<a href="<?php echo site_url('project/second'); ?>" title="" class="thumb">
 								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
 							</a>
@@ -33,6 +34,7 @@
 					</li>
 					<li>
 						<section>
+							<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
 							<a href="" title="" class="thumb">
 								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
 							</a>
@@ -51,6 +53,7 @@
 					</li>
 					<li>
 						<section>
+							<div class="date"><span class="day">02</span> <span class="month">Nov</span><span class="year">2011</span><span class="ribbon"></span></div>
 							<a href="" title="" class="thumb">
 								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
 							</a>
@@ -69,6 +72,7 @@
 					</li>
 					<li class="last">
 						<section>
+							<div class="date"><span class="day">23</span> <span class="month">Apr</span><span class="year">2011</span><span class="ribbon"></span></div>
 							<a href="" title="" class="thumb">
 								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
 							</a>

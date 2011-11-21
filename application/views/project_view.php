@@ -3,7 +3,8 @@
 	<div id="content">
 		<article class="project">
 			<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="<?php if(isset($title)){	echo $title;	}?>" title="<?php if(isset($title)){	echo $title;	}?>" height="170" width="170" />
-			<section class="project_header">	
+			<section class="project_header">
+				<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
 				<section class="project_title">
 					<h1 title="<?php if(isset($title)){echo $title;}?>">
 						<?php
