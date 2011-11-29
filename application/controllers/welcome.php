@@ -4,7 +4,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{	
-		$data['title'] = "Welcome to my portfolio";
+		$data['title'] = "Portfolio";
 		$this->load->view('landing_header_view', $data);
 		$this->load->view('landing_welcome_view');
 		$this->load->view('footer_view');

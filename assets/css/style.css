@@ -18,6 +18,7 @@
 |FONTS
 |--------------------------------------------------------------------------
 |	font-family: 'Muli', sans-serif;
+	font-family: helvetica, arial, sans-serif;
 |	font-family: 'Open Sans', sans-serif;
 |
 */
@@ -25,14 +26,15 @@
 /* PROJECTS LIST */
 
 #projects h1					{margin-bottom: 20px;}
+#projects a 					{text-decoration: none;}
 #projects>ul>li					{margin: 0 0 30px; overflow: hidden; padding: 10px 0 0;}
 
 #projects section				{overflow: hidden; position: relative;}
 #projects section a.thumb		{float: left; height: 170px; width: 170px;}
 
 #projects section .summary		{float: left; min-height: 170px; position: relative; width: 540px;}
-#projects section .summary h2	{font-size: 1.9em; margin: -10px 10px 20px 10px; width: 475px;}
-#projects section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; padding: 0;}
+#projects section .summary h2	{font-size: 1.9em; margin: -6px 10px 20px 10px; width: 475px;}
+#projects section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; font-family: 'Open Sans', sans-serif; padding: 0;}
 
 #projects section .summary h2 a:hover			{color: rgb(50,75,16);}
 
@@ -88,10 +90,10 @@ article.project					{position: relative;}
 
 section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 45px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 38px;}
 section .date span		{display: block; text-align: center;}
-section .date .day		{border-top: 1px dashed rgba(252,252,252,0.7); font-size: 1em; padding-top: 1px;}
-section .date .month	{font-size: 1.1em; text-transform: uppercase;}
+section .date .day		{border-top: 1px dashed rgba(252,252,252,0.7); font-size: 1em; padding-top: 3px;}
+section .date .month	{font-size: 1.1em; text-transform: uppercase; padding: 2px 0;}
 section .date .year		{font-size: 0.7em;}
-section .date .ribbon	{width: 0;height: 0;/*  border-left: 45px solid transparent; border-right: 45px solid transparent; border-bottom: 45px solid black; */}
+section .date .ribbon	{width: 0;height: 0;}
 section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(243,243,243) rgb(50,74,16); border-width: 0 19px 19px 19px;}
 
 .project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
@@ -107,7 +109,7 @@ section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,7
 #categories.widget li a			{color: rgb(50,75,16); height: 20px; padding: 8px 5px 8px 10px; float: left; width: 100%;}
 #categories.widget li a:hover	{color: rgb(252,252,252);}
 
-#categories.widget li a span.count			{background: rgb(50,75,16); color: rgb(153,190,105); -moz-border-radius: 20px; border-radius: 20px; float: right; margin: 0 15px 0 0;	padding: 0 2px 1px;	text-align: center;	min-width: 26px;}
+#categories.widget li a span.count			{background: rgb(50,75,16); color: rgb(153,190,105); -moz-border-radius: 20px; border-radius: 20px; float: right; margin: 0 15px 0 0;	padding: 1px 2px 0;	text-align: center;	min-width: 26px;}
 #categories.widget li a:hover span.count	{background: rgb(153,190,105); color: rgb(252,252,252);}
 
 #related.widget li 			{background: rgb(153,190,105);height: 60px; margin: 6px 5px; }

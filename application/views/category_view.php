@@ -1,52 +1,50 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-		<div id="wrapper">
-			<div id="main">
-				<div id="projects">
+		<div id="content_wrapp">
+			<div id="content">
+				<article id="projects">
 					<h1 class="section_header" >Category - <?php if(isset($title)){echo $title;}?></h1>
 					<ul>
 						<li class="first">
-							<a href="<?php echo site_url('project/second'); ?>" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-								$title = "Second project so on";
-								$title = url_title($title);
-								echo anchor("project/$title", "Second project so on", 'title="Second project so on"');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. 
-								<span class="read_more"><?php echo anchor("project/$title", "Continue &raquo;",'title="$title"');?></span>
-							</p>
+							<section>
+								<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
+								<a href="<?php echo site_url('project/second'); ?>" title="" class="thumb">
+									<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+								</a>
+								<div class="summary">
+									<h2>
+										<?php
+											$title = "Second project so on";
+											$title = url_title($title);
+											echo anchor("project/$title", "Second project so on", 'title="Second project so on"');
+										?>
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. 
+										<span class="read_more"><?php echo anchor("project/$title", "Continue &raquo;",'title="$title"');?></span>
+									</p>
+								</div>
+							</section>
 						</li>
-						<li>
-							<a href="" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-									echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. 
-								<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
-							</p>
-						</li>
-						<li class="last">
-							<a href="" title="">
-								<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
-							</a>
-							<h2>
-							<?php
-									echo anchor("", "Lorem ipsum dolor sit amet, lugens quia", 'title=""');
-							?>
-							</h2>
-							<p>
-								Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. 
-								<span class="read_more"><a href="" title="">Continue &raquo;</a></span>
-							</p>
+						<li class="first">
+							<section>
+								<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
+								<a href="<?php echo site_url('project/second'); ?>" title="" class="thumb">
+									<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="" title="" height="170" width="170" />
+								</a>
+								<div class="summary">
+									<h2>
+										<?php
+											$title = "Second project so on";
+											$title = url_title($title);
+											echo anchor("project/$title", "Second project so on", 'title="Second project so on"');
+										?>
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. 
+										<span class="read_more"><?php echo anchor("project/$title", "Continue &raquo;",'title="$title"');?></span>
+									</p>
+								</div>
+							</section>
 						</li>
 					</ul>
 					<div class="pagination">
@@ -62,18 +60,17 @@
 							<li class="next" ><a href="">&raquo;</a></li>
 						</ul>
 					</div>
-				</div>
-			</div>
-			<div id="sidebar">
-				<div id="categories" class="widget" >
-					<h3>Categories</h3>
+				</article>
+				<aside class="sidebar">
+					<section id="categories" class="widget">
+					<h3 class="section_heading">Categories</h3>
 					<ul>
-						<li><a href="<?php echo site_url(); ?>project/category/cms">CMS</a><span class="count">456</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">321</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">22</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">00</span></li>
-						<li><a href="">Lorem ipsum dolor</a><span class="count">0</span></li>
+						<li><?php echo anchor('project/category/cms','CMS<span class="count">3</span>','title="CMS category"'); ?></li>
+						<li><a href="#">Lorem ipsum dolor<span class="count">2</span></a></li>
+						<li><a href="#">Lorem ipsum dolor<span class="count">1</span></a></li>
+						<li><a href="#">Lorem ipsum dolor<span class="count">0</span></a></li>
 					</ul>
-				</div>
+					</section>
+				</aside>
 			</div>
 		</div>

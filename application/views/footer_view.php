@@ -65,8 +65,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" title="Google+ - Join my circle">
-							<img src="<?php echo asset_url('img'); ?>gmail.png" alt="Google+ - Join my circle" title="Google+ - Join my circle" height="52" width="52" />
+						<a href="#" title="Google+ - Join my circles">
+							<img src="<?php echo asset_url('img'); ?>gmail.png" alt="Google+ - Join my circle" title="Google+ - Join my circles" height="52" width="52" />
 						</a>
 					</li>
 				</ul>
