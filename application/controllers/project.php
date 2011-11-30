@@ -32,7 +32,31 @@ class Project extends CI_Controller {
 	{
 		//Select project by title
 		$data['page_title'] = str_replace("_"," ",$title);
-		//$data['title'] = str_replace("_"," ",$title);
+
+		$data['project']['date']['day'] = 10;
+		$data['project']['date']['month'] = "sep";
+		$data['project']['date']['year'] = 2010;
+
+		$data['project']['meta']['id'] = 3;
+		$data['project']['meta']['link'] = "http://www.example.com";
+		$data['project']['meta']['category'] = "CMS";
+		$data['project']['meta']['client'] = "Example Ltd. Co";
+		$data['project']['meta']['tags'][] = "HTML5";
+		$data['project']['meta']['tags'][] = "PHP";
+		$data['project']['meta']['tags'][] = "MySQL";
+		$data['project']['meta']['tags'][] = "jQuery";
+
+		$data['project']['data']['teaser'] = "<p>est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magnailla eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.Ecclesiam consuetudinem viginti seu ad quia</p>";
+
+		$data['project']['data']['body'] = "<p>Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.</p>
+				<p>	
+					Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
+					Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.Lorem ipsum dolor sit amet, lugens quia quod non coepit. Adhibitis amor ea rege quem est amet coram me, quique non dum miror puella. Famulus sui Care genitorem ipsam consistit ait Cumque materia amicis in. Habere matrem Domini in modo. Diana praesentatis ne videret famis libet regio hinc ad quia iuvenis ut libertatem petitiones tulit. Admiratur filiam vel ita ideo illa eius est in. Amen ad suis alteri ad suis alteri formam. Ecclesiam consuetudinem viginti seu ad quia ei, permansit cum magna anima interim eam est Apollonius.
+				</p>
+				<p>
+					Me testatur in modo ad nomine Piscatore mihi servitute coniunx minus huius tuo est Apollonius. Manu duas particularis dedit beneficio uxor puella ut diem derelinquere patris Tyrius tu tu illum vero rex Dionysiadi rex! Arola iubet comprehenderent in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut a civitas exulto haec. Remedium enim formam unitas reddere nominabat princeps ibi non ait mea Christianis aedificatur ergo est in. Scitote si non dum est se vero diam dominum vidit ad nomine, amet constanter determinatio debitis torporis quin virgo. Nescimus de ascendit neque capite diademate constituit mulier autem est cum autem est Apollonius non solutionem invenerunt.
+				</p>";
+
 		$this->load->view('header_view', $data);
 		$this->load->view('project_view', $data);
 		$this->load->view('footer_view');
