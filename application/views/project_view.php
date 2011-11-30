@@ -6,14 +6,7 @@
 			<section class="project_header">
 				<div class="date"><span class="day">16</span> <span class="month">0ct</span><span class="year">2011</span><span class="ribbon"></span></div>
 				<section class="project_title">
-					<h1 title="<?php if(isset($title)){echo $title;}?>">
-						<?php
-							//Title should not be retrived from the URL, but instead from the DB and set as the title
-							if(isset($title)){
-								echo str_replace("-"," ",$title);
-							}
-						?>
-					</h1>
+					<h1 title="<?php if(isset($title)){echo $title;}?>"><?php if(isset($page_title)){echo $page_title;}else{echo " ";}?></h1>
 				</section>
 				<section class="project_meta">
 					<dl>
@@ -25,7 +18,6 @@
 							<dd>CMS</dd>
 						<dt class="link">Tags:</dt>
 							<dd>
-								
 								<span class="tag"><?php echo anchor('project/tags/HTML5','HTML5','title="HTML5"'); ?></span>
 								<span class="tag"><?php echo anchor('project/tags/PHP','PHP','title="HTML5"'); ?></span>
 								<span class="tag"><?php echo anchor('project/tags/MySQL','MySQL','title="HTML5"'); ?></span>

@@ -27,7 +27,7 @@
 
 #projects h1					{margin-bottom: 20px;}
 #projects a 					{text-decoration: none;}
-#projects>ul>li					{margin: 0 0 30px; overflow: hidden; padding: 10px 0 0;}
+#projects>ul>li					{margin: 0 0 40px; overflow: hidden; padding: 10px 0 0;}
 
 #projects section				{overflow: hidden; position: relative;}
 #projects section a.thumb		{float: left; height: 170px; width: 170px;}
@@ -39,7 +39,7 @@
 #projects section .summary h2 a:hover			{color: rgb(50,75,16);}
 
 #projects section .summary p					{padding-top: 10px;}
-#projects section .summary .read_more			{display: block; float: right; margin: 40px 10px 0 0;}
+#projects section .summary .read_more			{display: block; float: right; margin: 40px 0 0 0;}
 #projects section .summary .read_more a			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
 #projects section .summary .read_more a:hover	{background: rgb(50,74,16); color: rgb(241,242,242);}
 
@@ -88,19 +88,20 @@ article.project					{position: relative;}
 
 /* DATE ON POST */
 
-section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 45px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 38px;}
+section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 50px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 44px;}
 section .date span		{display: block; text-align: center;}
-section .date .day		{border-top: 1px dashed rgba(252,252,252,0.7); font-size: 1em; padding-top: 3px;}
-section .date .month	{font-size: 1.1em; text-transform: uppercase; padding: 2px 0;}
+section .date .day		{border-top: 1px solid rgba(252,252,252,1); font-size: 1em; padding-top: 3px;}
+section .date .month	{font-size: 1.1em; text-transform: uppercase; padding: 3px 0;}
 section .date .year		{font-size: 0.7em;}
 section .date .ribbon	{width: 0;height: 0;}
-section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(243,243,243) rgb(50,74,16); border-width: 0 19px 19px 19px;}
+section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(243,243,243) rgb(50,74,16); border-width: 0 22px 22px 22px;}
+#projects li:first-child section .date .ribbon{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16)}
 
 .project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
 
 /* SECTION HEADER */
 
-.section_heading				{background: rgb(153,190,105); color: rgb(50,75,16);	margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
+.section_heading				{background: rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
 
 /* WIDGETS */
 

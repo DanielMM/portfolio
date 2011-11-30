@@ -2,7 +2,7 @@
 		<div id="content_wrapp">
 			<div id="content">
 				<article id="projects">
-					<h1 class="section_header" >Category - <?php if(isset($title)){echo $title;}?></h1>
+					<h1 class="section_heading" >Category - <?php if(isset($title)){echo $title;}?></h1>
 					<ul>
 						<li class="first">
 							<section>
