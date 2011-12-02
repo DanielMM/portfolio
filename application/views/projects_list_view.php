@@ -4,19 +4,22 @@
 		<article id="projects">
 			<h1 class="section_heading"><?php echo $page_title; ?></h1>
 			<ul>
-				<?php foreach($item as $project): ?>
+				<?php foreach($projects as $project): ?>
 					<?php
-						$title = $project['title'];
-						$thumb = $project['thumb'];
-						$url_title = $project['url_title'];
-						$teaser = $project['teaser'];
+						$title = str_replace("_"," ",$project->post_title);
+						$date = explode("-",$project->post_date);
+						$months =array('01'=>'ian','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'iul','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
+						$thumb = $project->post_thumb;
+						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"170\" height=\"170\" alt=\"{$project->post_title}\" title=\"{$project->post_title}\" />";
+						$url_title = url_title($project->post_title,"underscore");
+						$teaser = $project->post_teaser;
 					?>
 					<li>
 						<section>
 							<div class="date">
-								<span class="day"><?php echo $project['date']['day']; ?></span>
-								<span class="month"><?php echo $project['date']['month']; ?></span>
-								<span class="year"><?php echo $project['date']['year']; ?></span>
+								<span class="day"><?php echo $date[2]; ?></span>
+								<span class="month"><?php echo $months[$date[1]]; ?></span>
+								<span class="year"><?php echo $date[0]; ?></span>
 								<span class="ribbon"></span>
 							</div>
 							<?php
@@ -28,10 +31,10 @@
 										echo anchor("project/".$url_title, $title, array('title' => $title));
 									?>
 								</h2>
-								<p>
 									<?php
 										echo $teaser;
 									?>
+								<p>
 									<span class="read_more">
 										<?php echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title)));?>
 									</span>
@@ -56,15 +59,7 @@
 			</div>
 		</article>
 		<aside class="sidebar">
-			<section id="categories" class="widget">
-			<h3 class="section_heading">Categories</h3>
-			<ul>
-				<li><?php echo anchor('project/category/cms','CMS<span class="count">3</span>','title="CMS category"'); ?></li>
-				<li><a href="#">Lorem ipsum dolor<span class="count">2</span></a></li>
-				<li><a href="#">Lorem ipsum dolor<span class="count">1</span></a></li>
-				<li><a href="#">Lorem ipsum dolor<span class="count">0</span></a></li>
-			</ul>
-			</section>
+			<?php $this->load->view('categories_widget_view'); ?>
 		</aside>
 	</div>
 </div>

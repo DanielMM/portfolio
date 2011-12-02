@@ -1,3 +1,4 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <section id="related" class="widget">
 	<h3 class="section_heading">Related projects</h3>
 	<ul>

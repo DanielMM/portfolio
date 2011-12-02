@@ -16,23 +16,26 @@
 				<section class="project_meta">
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>
-						<dt class="link">Link:</dt>
-							<dd><?php echo $project['meta']['link']; ?></dd>
+							<dt class="link">Link:</dt>
+								<dd><?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title)); ?>
+								</dd>
 						<?php endif; ?>
 						<?php if(isset($project['meta']['client'])): ?>
-						<dt class="client">Client:</dt>
-							<dd><?php echo $project['meta']['client']; ?></dd>
+							<dt class="client">Client:</dt>
+								<dd><?php echo $project['meta']['client']; ?></dd>
 						<?php endif; ?>
 						<?php if(isset($project['meta']['category'])): ?>
-						<dt class="category">Categorie:</dt>
-							<dd><?php echo $project['meta']['category']; ?></dd>
+							<dt class="category">Category:</dt>
+								<dd><?php echo $project['meta']['category']; ?></dd>
 						<?php endif; ?>
+						<?php if(isset($project['meta']['tags'])):?>
 						<dt class="tags">Tags:</dt>
 							<dd>
 								<?php foreach($project['meta']['tags'] as $tag): ?>
 									<span class="tag"><?php echo anchor('project/tags/'.$tag, $tag, array('title' => $tag)); ?></span>
 								<?php endforeach; ?>
 							</dd>
+						<?php endif; ?>
 					</dl>
 				</section>
 			</section>

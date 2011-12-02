@@ -1,9 +1,20 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <section id="categories" class="widget">
 	<h3 class="section_heading">Categories</h3>
 	<ul>
-		<li><?php echo anchor('project/category/cms','CMS<span class="count">3</span>','title="CMS category"'); ?></li>
-		<li><a href="#">Lorem ipsum dolor<span class="count">2</span></a></li>
-		<li><a href="#">Lorem ipsum dolor<span class="count">1</span></a></li>
-		<li><a href="#">Lorem ipsum dolor<span class="count">0</span></a></li>
+		<?php foreach($categories as $category): ?>
+			<?php
+				if(isset($project['meta']['category']) && $project['meta']['category'] == $category->cat_title)
+				{
+					$active = true;
+				}else
+				{
+					$active = false;
+				}
+			?>
+			<li<?php if(isset($active) && $active){ echo " class=active";} ?>>
+				<?php echo anchor('project/category/'.$category->cat_name, $category->cat_title.'<!--<span class="count">x</span>-->',array('title' => $category->cat_title)); ?>
+			</li>
+		<?php endforeach; ?>
 	</ul>
 </section>

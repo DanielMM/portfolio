@@ -39,7 +39,7 @@
 #projects section .summary h2 a:hover			{color: rgb(50,75,16);}
 
 #projects section .summary p					{padding-top: 10px;}
-#projects section .summary .read_more			{display: block; float: right; margin: 40px 0 0 0;}
+#projects section .summary .read_more			{display: block; float: right; margin: 20px 0 0 0;}
 #projects section .summary .read_more a			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
 #projects section .summary .read_more a:hover	{background: rgb(50,74,16); color: rgb(241,242,242);}
 
@@ -83,32 +83,34 @@ article.project					{position: relative;}
 .project .project_meta dd>span.tag a		{background: rgb(153,190,105);}
 .project .project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
 
-.project .project_body			{display: inline-block; margin-top: 20px;}
+.project .project_body			{display: inline-block; margin-top: 50px;}
 .project_body>p:last-child		{margin-bottom: 40px;}
 
 /* DATE ON POST */
 
-section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 50px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 44px;}
+section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 56px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 44px;}
 section .date span		{display: block; text-align: center;}
 section .date .day		{border-top: 1px solid rgba(252,252,252,1); font-size: 1em; padding-top: 3px;}
-section .date .month	{font-size: 1.1em; text-transform: uppercase; padding: 3px 0;}
-section .date .year		{font-size: 0.7em;}
+section .date .month	{font-size: 1.1em; text-transform: capitalize; padding: 3px 0 7px;}
+section .date .year		{font-size: 0.7em; padding:0 0 4px;}
 section .date .ribbon	{width: 0;height: 0;}
 section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(243,243,243) rgb(50,74,16); border-width: 0 22px 22px 22px;}
-#projects li:first-child section .date .ribbon{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16)}
+/*#projects li:first-child section .date .ribbon{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16)}
 
 .project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
-
+*/
 /* SECTION HEADER */
 
-.section_heading				{background: rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
+.section_heading				{background: rgb(153,190,105); color: rgb(50,75,16); font-size: 1.1em; margin-bottom: 10px; padding: 10px;	text-transform: uppercase;}
 
 /* WIDGETS */
 
 #categories.widget li			{background: rgb(153,190,105); margin: 6px 5px; overflow: hidden;}
-#categories.widget li:hover		{background: rgba(50,74,16,0.9); /* -moz-border-radius: 3px; border-radius: 3px; */}
+#categories.widget li.active	{background: rgb(50,74,16);}
+#categories.widget li:hover		{background: rgba(50,74,16,0.9);}
 #categories.widget li a			{color: rgb(50,75,16); height: 20px; padding: 8px 5px 8px 10px; float: left; width: 100%;}
-#categories.widget li a:hover	{color: rgb(252,252,252);}
+#categories.widget li a:hover,
+#categories.widget li.active a	{color: rgb(252,252,252);}
 
 #categories.widget li a span.count			{background: rgb(50,75,16); color: rgb(153,190,105); -moz-border-radius: 20px; border-radius: 20px; float: right; margin: 0 15px 0 0;	padding: 1px 2px 0;	text-align: center;	min-width: 26px;}
 #categories.widget li a:hover span.count	{background: rgb(153,190,105); color: rgb(252,252,252);}

@@ -21,7 +21,7 @@ article,
 
 #content_wrapp			{clear: both;}
 
-#content				{background: rgba(242,242,242,0.9); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; position: relative; z-index: 100;}
+#content				{background: rgba(242,242,242,1); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; position: relative; z-index: 100;}
 #content>article		{float: left; padding: 0 0 0 10px; width: 710px;}
 		article p		{margin-bottom: 20px; padding: 0 10px;}
 
