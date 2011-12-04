@@ -28,10 +28,10 @@
 						<header>
 							<div id="logo">
 								<h1>
-									<a href="<?php echo site_url(); ?>welcome">Daniel <span class="special">Mois</span></a>
+									<a href="<?php echo site_url(); ?>">Daniel <span class="special">Mois</span></a>
 								</h1>
 								<h2>
-									<a href="<?php echo site_url(); ?>welcome">Web Developer</a>
+									<a href="<?php echo site_url(); ?>">Web Developer</a>
 								</h2>
 							</div><!--logo-->
 						</header>

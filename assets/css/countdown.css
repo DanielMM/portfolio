@@ -15,7 +15,7 @@ footer,
 
 #coming_soon			{background: rgba(74,74,74,0.7); position: relative;}
 #coming_soon section:nth-child(2),
-#coming_soon section:nth-child(3)	{margin-top: 40px;}
+#coming_soon section:nth-child(3)	{margin-bottom: 20px;}
 #logo					{margin: 20px 0;}
 #logo h1,
 #logo h2,
@@ -26,13 +26,16 @@ footer,
 #logo h1>a .special,
 #logo h2>a				{color: rgba(254,254,254,1); font-weight: 700; text-decoration: none;}
 #logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
+#logo h1>a:hover,
+#logo h2>a:hover		{color: rgba(232,232,232,1);}
+#logo h1>a .special:hover{color: rgba(133,170,85,1);}
 
 h3.info,
 h4.info					{font-size: 2em;}
 
 #fancy-countdown 		{margin: 20px 108px; width: 744px;}
 
-#fancy-countdown>tbody>tr:nth-child(1)	{background: rgba(50,75,16,0.05);}
+#fancy-countdown>tbody>tr:nth-child(1)	{background: rgba(50,75,16,0.09);}
 #d1,#d2,#d3,
 #h1,#h2,#m1,#m2							{margin: 0 6px;}
 
@@ -43,12 +46,13 @@ h4.info					{font-size: 2em;}
 #social_media				{height: 60px; margin: 0 auto; width: 260px;}
 #social_media li			{display: inline-block; height: 52px; margin: 0 5px 0;}
 #social_media li>a			{display: inline-block; height: 52px; margin-top: 20px; width: 52px;}
-#social_media li>a:hover	{
-transform: rotate(30deg);
--ms-transform: rotate(30deg); /* IE 9 */
--webkit-transform: rotate(30deg); /* Safari and Chrome */
--o-transform: rotate(30deg); /* Opera */
--moz-transform: rotate(30deg); /* Firefox */
+#social_media li 			{-webkit-transition: -webkit-transform .4s;-moz-transition: -moz-transform .4s;-o-transition: -o-transform .4s;-ms-transition: -ms-transform .4s;transition: transform .4s;}
+#social_media li:hover	{
+		transform: scale(1.2) translate(0,-30px);
+		-ms-transform:  scale(1.2) translate(0,-30px); /* IE 9 */
+		-webkit-transform: scale(1.2) translate(0,-30px); /* Safari and Chrome */
+		-o-transform:  scale(1.2) translate(0,-30px); /* Opera */
+		-moz-transform: scale(1.2) translate(0,-30px); /* Firefox */
 }
 
 #copyleft					{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; margin-top: 1px; position: relative; text-align: center; z-index: 10;}
