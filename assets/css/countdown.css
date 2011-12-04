@@ -1,20 +1,57 @@
 ﻿/* 
 	COUNTDOWN PAGE
  */
+body,p, ol,ul,li,a, span,
+div, section, table, tr,
+th,td, form, fieldset,
+legend,label 			{font-size: 1em; font-weight: normal;}
 
-body,p, ol,ul,li,a, span, div, section, table, tr,th,td, form, fieldset,legend,label 	{font-size: 1em; font-weight: normal;}
-h1,h2,h3,h4,h5,h6			{font-weight: 700;}
-p	{line-height: 1.6em;}
-li	{list-style: none;}
+h1,h2,h3,h4,h5,h6		{color: rgb(254,254,254); font-family: 'Open Sans', sans-serif; font-weight: 700;}
 
+body					{background: url('../images/DotGrid2.png');}
 header,
 footer, 
 #content				{margin: 0 auto; overflow: hidden; width: 960px;}
 
-header,
-footer, 
-article,
-#conten_wrapp			{background: url('../images/html_grid.png') repeat; display: block;}
-#fancy-countdown 		{display: block; margin:100px 78px; width: 744px;}
-#d3,#h2,#m2				{margin-right: 30px;}
-#fancy-countdown tbody tr:nth-child(2) {text-align: center;}
+#coming_soon			{background: rgba(74,74,74,0.7); position: relative;}
+#coming_soon section:nth-child(2),
+#coming_soon section:nth-child(3)	{margin-top: 40px;}
+#logo					{margin: 20px 0;}
+#logo h1,
+#logo h2,
+.info					{text-align: center;}
+#logo h1>a				{font-size: 4.5em;}
+#logo h2>a				{font-size: 3.85em; padding: 0 2px;}
+#logo h1>a,
+#logo h1>a .special,
+#logo h2>a				{color: rgba(254,254,254,1); font-weight: 700; text-decoration: none;}
+#logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
+
+h3.info,
+h4.info					{font-size: 2em;}
+
+#fancy-countdown 		{margin: 20px 108px; width: 744px;}
+
+#fancy-countdown>tbody>tr:nth-child(1)	{background: rgba(50,75,16,0.05);}
+#d1,#d2,#d3,
+#h1,#h2,#m1,#m2							{margin: 0 6px;}
+
+#fancy-countdown tbody tr:nth-child(2) 	{text-align: center;}
+
+#fancy-countdown tbody tbody			{margin: 0 5px;}
+
+#social_media				{height: 60px; margin: 0 auto; width: 260px;}
+#social_media li			{display: inline-block; height: 52px; margin: 0 5px 0;}
+#social_media li>a			{display: inline-block; height: 52px; margin-top: 20px; width: 52px;}
+#social_media li>a:hover	{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg); /* IE 9 */
+-webkit-transform: rotate(30deg); /* Safari and Chrome */
+-o-transform: rotate(30deg); /* Opera */
+-moz-transform: rotate(30deg); /* Firefox */
+}
+
+#copyleft					{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; margin-top: 1px; position: relative; text-align: center; z-index: 10;}
+#copyleft a					{color: rgba(80,80,80,1); text-decoration: none;}
+#copyleft a:hover			{color: rgba(150,150,150,0.7); text-decoration: underline;}
+#copyleft span				{transform:rotate(180deg); -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg);-o-transform:rotate(180deg); filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}

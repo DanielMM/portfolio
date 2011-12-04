@@ -43,10 +43,10 @@
 		/********** Color Array **********/
 		color = {
 			'blank':'gray',		
-			'seconds':'green',
-			'minutes':'lightblue',
-			'hours':'red',
-			'days':'orange'
+			'seconds':'lightblue',
+			'minutes':'green',
+			'hours':'orange',
+			'days':'red'
 		},
 		
 		/********** Date objects creation and comparison between two dates **********/
