@@ -19,12 +19,12 @@
 		
 		/********** Default Settings **********/
 		settings = {
-			'year':2012, //Target year
+			'year':2011, //Target year
 			'month':12, //Target Month
-			'day':12, //Target Day
-			'hour':12, //Target Hour
-			'minute':12, //Target Minute
-			'second':12, //Target Second
+			'day':31, //Target Day
+			'hour':00, //Target Hour
+			'minute':00, //Target Minute
+			'second':00, //Target Second
 			'timeReachedMessage':'Hoorraay!!', //Message after the time has reached
 			'timeStamps':['Days', 'Hours', 'Minutes', 'Seconds'] //Timestamps in your own language
 		},

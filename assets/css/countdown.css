@@ -1,0 +1,20 @@
+﻿/* 
+	COUNTDOWN PAGE
+ */
+
+body,p, ol,ul,li,a, span, div, section, table, tr,th,td, form, fieldset,legend,label 	{font-size: 1em; font-weight: normal;}
+h1,h2,h3,h4,h5,h6			{font-weight: 700;}
+p	{line-height: 1.6em;}
+li	{list-style: none;}
+
+header,
+footer, 
+#content				{margin: 0 auto; overflow: hidden; width: 960px;}
+
+header,
+footer, 
+article,
+#conten_wrapp			{background: url('../images/html_grid.png') repeat; display: block;}
+#fancy-countdown 		{display: block; margin:100px 78px; width: 744px;}
+#d3,#h2,#m2				{margin-right: 30px;}
+#fancy-countdown tbody tr:nth-child(2) {text-align: center;}
