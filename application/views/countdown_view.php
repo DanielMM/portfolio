@@ -17,8 +17,6 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo asset_url('js');?>jquery-fancyCountdown-1.0.1.js"></script>
 	</head>
 	</body>
 		<div id="content_wrapp">
@@ -79,6 +77,8 @@
 				</article>
 			</div><!--content-->
 		</div><!--content_wrapp-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo asset_url('js');?>jquery-fancyCountdown-1.0.1.js"></script>
 		<script>
 			$(function() {
 				$("#countdown").fancyCountdown({
@@ -92,6 +92,18 @@
 					'timeStamps':['Days', 'Hours', 'Minutes', 'Seconds']
 				});
 			});
+		</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-4712500-3']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
 		</script>
 	</body>
 </html>

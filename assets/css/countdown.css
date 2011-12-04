@@ -12,6 +12,7 @@ body					{background: url('../images/DotGrid2.png');}
 header,
 footer, 
 #content				{margin: 0 auto; overflow: hidden; width: 960px;}
+#content				{margin: 2% auto;}
 
 #coming_soon			{background: rgba(74,74,74,0.7); position: relative;}
 #coming_soon section:nth-child(2),
@@ -43,7 +44,7 @@ h4.info					{font-size: 2em;}
 
 #fancy-countdown tbody tbody			{margin: 0 5px;}
 
-#social_media				{height: 60px; margin: 0 auto; width: 260px;}
+#social_media				{height: 40px; margin: 0 auto; width: 260px;}
 #social_media li			{display: inline-block; height: 52px; margin: 0 5px 0;}
 #social_media li>a			{display: inline-block; height: 52px; margin-top: 20px; width: 52px;}
 #social_media li 			{-webkit-transition: -webkit-transform .4s;-moz-transition: -moz-transform .4s;-o-transition: -o-transform .4s;-ms-transition: -ms-transform .4s;transition: transform .4s;}
