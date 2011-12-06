@@ -37,7 +37,21 @@
 					<section>
 						<h3 class="info">A new design is in the oven! It will be ready in:</h3>
 						<div id="countdown"></div>
-						<h4 class="info">Make sure you check it out on the 1st of January 2012</h4>
+						<h4 class="info">Leave your email address and you will be one of the first to see the new design!</h4>
+						<?php
+							echo form_open('subscribe',array('id'=>"subscribe_form"));
+							echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Email address"));
+							echo form_submit('submit', 'Subscribe');
+							echo form_close();
+						?>
+						<div id="feedback">
+							<?php
+								echo validation_errors('<span class="error">', '</span>');
+								if(isset($feedback)):
+							?>
+								<span class="success"><?php echo $feedback;?></span>
+							<?php endif; ?>
+						</div>
 					</section>
 					<section>
 						<ul id="social_media">

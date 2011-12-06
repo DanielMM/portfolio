@@ -12,9 +12,18 @@ body					{background: url('../images/DotGrid2.png');}
 header,
 footer, 
 #content				{margin: 0 auto; overflow: hidden; width: 960px;}
-#content				{margin: 2% auto;}
+#content				{border-radius: 10px;
+						-moz-border-radius: 10px;
+						-webkit-border-radius: 10px; 
+						border-radius: 10px; 
+						box-shadow: 0 0 50px 5px rgb(150,150,150);
+						-moz-box-shadow: 0 0 50px 5px rgb(150,150,150);
+						-webkit-box-shadow: 0 0 50px 5px rgb(150,150,150);
+						-o-box-shadow: 0 0 50px 5px rgb(150,150,150);
+						margin: 2% auto;
+}
 
-#coming_soon			{background: rgba(74,74,74,0.7); position: relative;}
+#coming_soon			{background: rgba(74,74,74,0.7); border-radius: 10px; position: relative;}
 #coming_soon section:nth-child(2),
 #coming_soon section:nth-child(3)	{margin-bottom: 20px;}
 #logo					{margin: 20px 0;}
@@ -27,18 +36,32 @@ footer,
 #logo h1>a .special,
 #logo h2>a				{color: rgba(254,254,254,1); font-weight: 700; text-decoration: none;}
 #logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
-#logo h1>a:hover,
-#logo h2>a:hover		{color: rgba(232,232,232,1);}
-#logo h1>a .special:hover{color: rgba(133,170,85,1);}
 
-h3.info,
-h4.info					{font-size: 2em;}
+h3.info 				{font-size: 2em;}
+h4.info 				{font-size: 1.5em;}
 
-#fancy-countdown 		{margin: 20px 108px; width: 744px;}
+#subscribe_form			{margin: 20px auto 0; width: 370px;}
+
+#subscribe_form input[type='text']		{margin: 0 16px 0 0 ; padding: 5px 2px; width: 250px;}
+#subscribe_form input[type='submit']	{margin: 0;padding:5px 10px; width: 90px;}
+
+#feedback				{background: rgba(252,252,252,0.5); border: 2px solid rgba(1,0,0,0.3);
+						 border-radius: 3px; 
+						 -moz-border-radius: 3px; 
+						 -webkit-border-radius: 3px;
+						 -o-border-radius: 3px; 
+						 font-size: 1em; font-style: italic; margin: 10px 0; text-align: center;}
+
+#feedback span						{display: block; height: 20px; padding:6px 0;}
+#feedback span.error				{color: rgba(252,10,10,0.8);}
+#feedback span.success				{color: rgba(10,152,10,0.8);}
+
+#fancy-countdown 						{margin: 20px 108px; width: 762px;}
 
 #fancy-countdown>tbody>tr:nth-child(1)	{background: rgba(50,75,16,0.09);}
 #d1,#d2,#d3,
-#h1,#h2,#m1,#m2							{margin: 0 6px;}
+#h1,#h2,#m1,#m2,
+#s1,#s2							{margin: 0 6px;}
 
 #fancy-countdown tbody tr:nth-child(2) 	{text-align: center;}
 
@@ -47,7 +70,11 @@ h4.info					{font-size: 2em;}
 #social_media				{height: 40px; margin: 0 auto; width: 260px;}
 #social_media li			{display: inline-block; height: 52px; margin: 0 5px 0;}
 #social_media li>a			{display: inline-block; height: 52px; margin-top: 20px; width: 52px;}
-#social_media li 			{-webkit-transition: -webkit-transform .4s;-moz-transition: -moz-transform .4s;-o-transition: -o-transform .4s;-ms-transition: -ms-transform .4s;transition: transform .4s;}
+#social_media li 			{-webkit-transition: -webkit-transform .4s;
+								-moz-transition: -moz-transform .4s;
+								-o-transition: -o-transform .4s;
+								-ms-transition: -ms-transform .4s;
+								transition: transform .4s;}
 #social_media li:hover	{
 		transform: scale(1.2) translate(0,-30px);
 		-ms-transform:  scale(1.2) translate(0,-30px); /* IE 9 */
@@ -56,7 +83,18 @@ h4.info					{font-size: 2em;}
 		-moz-transform: scale(1.2) translate(0,-30px); /* Firefox */
 }
 
-#copyleft					{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; margin-top: 1px; position: relative; text-align: center; z-index: 10;}
-#copyleft a					{color: rgba(80,80,80,1); text-decoration: none;}
-#copyleft a:hover			{color: rgba(150,150,150,0.7); text-decoration: underline;}
-#copyleft span				{transform:rotate(180deg); -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg);-o-transform:rotate(180deg); filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}
+#copyleft			{background: rgba(33,33,33,1); color: rgba(93,93,93,1); font-size: 0.7em; height: 15px; margin-top: 1px; padding: 5px; position: relative; text-align: center; z-index: 10;}
+
+#copyleft			{border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;
+					-moz-border-bottom-right-radius: 10px; -moz-border-bottom-left-radius: 10px;
+					-wemkit-border-bottom-right-radius: 10px; -webkit-border-bottom-left-radius: 10px;
+}
+
+#copyleft a			{color: rgba(80,80,80,1); text-decoration: none;}
+#copyleft a:hover	{color: rgba(150,150,150,0.7); text-decoration: underline;}
+#copyleft span		{transform:rotate(180deg);
+					 -webkit-transform:rotate(180deg); 
+					 -moz-transform:rotate(180deg);
+					 -o-transform:rotate(180deg); 
+					 filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
