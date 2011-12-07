@@ -4,7 +4,7 @@ class About extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] 	= "About myself";
+		$data['page_title'] 	= "About ";
 		$data['age'] 	= date('Y') - 1987;
 		
 		$this->load->view('header_view', $data);

@@ -5,38 +5,43 @@
 			<p>I am <?php echo $age; ?> and I love to design and develop. </p>
 			<p>
 				Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis. 
-				Commodo enim aliquam suspendisse tortor cum diam, commodo facilisis, rutrum et duis nisl porttitor, vel eleifend odio ultricies ut, orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero. Etiam vestibulum at lectus.					
-				Donec vivamus. Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec, tempor cursus vitae sit aliquet neque purus. Ultrices lacus proin conubia dictum tempus, tempor pede vitae faucibus, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat
-			</p>
-			<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis. Commodo enim aliquam suspendisse tortor cum diam, commodo facilisis, rutrum et duis nisl porttitor, vel eleifend odio ultricies ut, orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero. Etiam vestibulum at lectus.
-			
-			Donec vivamus. Vel donec et scelerisque vestibulum. Condimentum aliquam, mollit magna velit nec, tempor cursus vitae sit aliquet neque purus. Ultrices lacus proin conubia dictum tempus, tempor pede vitae faucibus, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio. Diam nibh diam, quam elit, libero nostra ut. Pellentesque vehicula. Eget sed, dapibus magna nulla nonummy commodo accumsan morbi, praesent volutpat vel id maecenas, morbi habitant sem in adipiscing mi erat, malesuada pretium tortor rutrum eu eros vel. Donec molestie, faucibus a amet commodo scelerisque libero massa. Sapien quam in eu vel nulla.
-			
-			Iaculis et dui ullamcorper, non egestas condimentum dui phasellus. Sit non mattis a, leo in imperdiet erat nec pulvinar. Ornare massa justo cursus, convallis mauris interdum felis. Felis posuere metus, ornare pede montes, morbi urna sed temporibus non, nibh inceptos enim turpis natoque ac praesent. Litora vivamus veritatis vel nonummy, ut qui est pellentesque at alias, sed condimentum dapibus.
-			
-			Rhoncus lacinia.</p>
+			</p>			
 		</article>
 		<aside class="sidebar">
 			<article id="personal_info" class="widget" >
 				<section>
-					<h4 class="section_heading">I know how to smile</h4>
+					<h4 class="section_heading">smiling always</h4>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="220" height="298" />
 				</section>
 				
-				<section>
+				<section class="cv">
 					<h4 class="section_heading">Download CV</h4>
-					<p><?php echo anchor("download/file/daniel_mois_cv.pdf","Download my CV in PDF format.",'title="Download cv"');?></p>
+					<p>Download my CV as<?php echo anchor("download/file/daniel_mois_cv.pdf","<span class=\"pdf_icon\"> PDF</span>",'title="Download daniel_mois_cv.pdf"');?></p>
 				</section>
-				<section>
-					<h4 class="section_heading">Download vCard</h4>
-					<p>Download my contact details as a vCard.</p>
-					<p>Find out more about vCard!</p>
+				<section class="hcard">
+					<h4 class="section_heading">Download <span class="lowcase">vCard</span></h4>
+					<div id="hcard-Daniel-Mois" class="vcard">
+						<?php echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
+						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>
+						<div class="adr">
+							<span class="locality">Aarhus</span>
+							<span class="postal-code">8260</span>,
+							<span class="country-name">Denmark</span>
+						</div>
+						<div class="tel">(+45) 60 61 79 57</div>
+						<div class="vcard_download"><p>Download my contact details</p>
+
+						<?php
+							$vcard = "<img src=".asset_url('img')."vcard_download.png"." width=\"48\" height=\"48\" alt=\"vCard icon\" title=\"Daniel Mois vCard\" />";
+							echo anchor("download/file/daniel_mois.vcf",$vcard,array('title'=>"Download my contact details as a vCard"));
+						?>
+						<?php 
+							echo anchor("download/file/daniel_mois.vcf","vCard",array('title'=>"Download my contact details as a vCard",'class'=>"download"));?>
+						<?php
+							echo anchor('http://www.wikipedia.org/wiki/VCard',"Find more about vCard !",array('class'=>"find_more"));
+						?>
+						</div>
+					</div>
 				</section>
 			</article>
 		</aside>
