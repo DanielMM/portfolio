@@ -37,7 +37,7 @@
 					<section>
 						<h3 class="info">A new design is in the oven! It will be ready in:</h3>
 						<div id="countdown"></div>
-						<h4 class="info">Leave your email address and you will be one of the first to see the new design!</h4>
+						<h4 class="info">Be one of the first to see the new design!</h4>
 						<?php
 							echo form_open('subscribe',array('id'=>"subscribe_form"));
 							echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Email address"));
@@ -91,20 +91,12 @@
 				</article>
 			</div><!--content-->
 		</div><!--content_wrapp-->
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo asset_url('js');?>jquery-fancyCountdown-1.0.1.js"></script>
 		<script>
 			$(function() {
-				$("#countdown").fancyCountdown({
-					'year':2011,
-					'month':12,
-					'day':31,
-					'hour':13,
-					'minute':00,
-					'second':00,
-					'timeReachedMessage':'Hoorraay!!',
-					'timeStamps':['Days', 'Hours', 'Minutes', 'Seconds']
-				});
+				$("#countdown").fancyCountdown();
 			});
 		</script>
 		<script type="text/javascript">
@@ -117,7 +109,6 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-
 		</script>
 	</body>
 </html>

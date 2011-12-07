@@ -19,9 +19,9 @@
 		
 		/********** Default Settings **********/
 		settings = {
-			'year':2011, //Target year
-			'month':12, //Target Month
-			'day':31, //Target Day
+			'year':2012, //Target year
+			'month':02, //Target Month
+			'day':21, //Target Day
 			'hour':00, //Target Hour
 			'minute':00, //Target Minute
 			'second':00, //Target Second
@@ -41,12 +41,19 @@
 		k,
 		
 		/********** Color Array **********/
-		color = {
+		/*color = {
 			'blank':'gray',		
 			'seconds':'lightblue',
 			'minutes':'green',
 			'hours':'orange',
 			'days':'red'
+		},*/
+		color = {
+			'blank':'micmic',		
+			'seconds':'mic',
+			'minutes':'mic2',
+			'hours':'mic3',
+			'days':'mic4'
 		},
 		
 		/********** Date objects creation and comparison between two dates **********/
@@ -85,7 +92,7 @@
 		if(custom) { $.extend(settings, custom); }
 		
 		/********** Create Tables **********/
-		tables += "<table id='fancy-countdown'><tr>";
+		tables += "<table id='fancy-countdown'><tr><td id='d-tx'>"+settings['timeStamps'][0]+"</td><td>"+settings['timeStamps'][1]+"</td><td>"+settings['timeStamps'][2]+"</td><td>"+settings['timeStamps'][3]+"</td></tr><tr>";
 		for(j = 0; j < tableIds.length; j++) {
 			tables += "<td>";
 			if(j == 0) {
@@ -111,7 +118,7 @@
 			}
 			tables += "</td>";
 		}
-		tables += "</td></tr><tr><td id='d-tx'>"+settings['timeStamps'][0]+"</td><td>"+settings['timeStamps'][1]+"</td><td>"+settings['timeStamps'][2]+"</td><td>"+settings['timeStamps'][3]+"</td></tr></table>";
+		tables += "</td></tr></table>";
 		
 		/********** Append tables to $(this) object **********/
 		$(this).append(tables);
