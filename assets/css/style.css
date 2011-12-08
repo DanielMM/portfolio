@@ -23,6 +23,15 @@
 |
 */
 
+/*@font-face web symbols*/
+@font-face
+			{
+			font-family: websymbols;
+			src: url('websymbols-regular-webfont.ttf'),
+			     url('websymbols-regular-webfont.svg'),
+			     url('websymbols-regular-webfont.woff')
+			}
+
 /* PROJECTS LIST */
 
 #projects h1					{margin-bottom: 20px;}
@@ -121,6 +130,21 @@ section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,7
 #related.widget li a		{color: rgb(50,75,16); display:block; height: 40px; padding: 10px 5px;}
 #related.widget li a:hover	{color: rgb(252,252,252);}
 #related.widget li:hover	{background: rgba(50,74,16,0.9);}
+
+
+/*CV*/
+
+.cv .download				{background: rgb(50,74,16); border: 1px solid rgb(153,190,105); border-radius: 25px; display: block; height: 42px; margin: 0 auto 10px; position: relative; width: 200px;}
+
+.cv .download:hover			{background: rgb(30,54,0); border: 1px solid rgb(42,42,42);}
+
+.cv .download img			{left: 10px ;position: absolute; top: 5px;}
+.cv .download .pdf_text		{color: rgb(252,252,252); font-size: 0.8em; padding:0 30px 0 50px; position: absolute; top: 4px; width: 120px; z-index: 10;}
+
+.cv .download .pdf_text:hover	{color: rgb(153,190,105);}
+
+.cv .download .arrow		{border-radius: 16px; color: rgb(153,190,105); display: inline-block;
+ font-family: 'websymbols'; font-size: 1.9em; height: 32px; position: absolute; right: 5px; top: 3px; width: 32px; z-index: 3;}
 
 /*hCard*/
 #hcard-Daniel-Mois			{padding: 0 10px;}

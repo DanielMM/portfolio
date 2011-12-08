@@ -16,7 +16,12 @@
 				
 				<section class="cv">
 					<h4 class="section_heading">Download CV</h4>
-					<p>Download my CV as<?php echo anchor("download/file/daniel_mois_cv.pdf","<span class=\"pdf_icon\"> PDF</span>",'title="Download daniel_mois_cv.pdf"');?></p>
+						<?php
+							$cv_pdf = "<img src=".asset_url('img')."pdf_file.png"." width=\"32\" height=\"32\" alt=\"PDF icon\" title=\"Daniel Mois CV\" />";
+							$cv_pdf .= "<span class=\"pdf_text\">Download CV as PDF</span>";
+							$cv_pdf .= "<span class=\"arrow\">;</span>";
+							echo anchor("download/file/daniel_mois_cv.pdf",$cv_pdf,array('title'=>"Download my cv as a PDF file",'class'=>"download"));
+						?>
 				</section>
 				<section class="hcard">
 					<h4 class="section_heading">Download <span class="lowcase">vCard</span></h4>
