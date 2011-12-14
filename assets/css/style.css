@@ -131,33 +131,39 @@ section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,7
 #related.widget li a:hover	{color: rgb(252,252,252);}
 #related.widget li:hover	{background: rgba(50,74,16,0.9);}
 
+/*PORTRAIT*/
+.personal_portrait img		{margin-top: -10px;}
 
 /*CV*/
 
-.cv .download				{background: rgb(50,74,16); border: 1px solid rgb(153,190,105); border-radius: 25px; display: block; height: 42px; margin: 0 auto 10px; position: relative; width: 200px;}
+ .download				{background: rgb(50,74,16); border: 1px solid rgb(153,190,105); border-radius: 10px; display: block; height: 42px; margin: 0 auto 10px; position: relative; width: 200px;}
 
-.cv .download:hover			{background: rgb(30,54,0); border: 1px solid rgb(42,42,42);}
+ .download:hover			{background: rgb(30,54,0); border: 1px solid rgb(42,42,42); text-decoration: none;}
 
-.cv .download img			{left: 10px ;position: absolute; top: 5px;}
-.cv .download .pdf_text		{color: rgb(252,252,252); font-size: 0.8em; padding:0 30px 0 50px; position: absolute; top: 4px; width: 120px; z-index: 10;}
+ .download img			{left: 10px ;position: absolute; top: 5px;}
+ .download .bt_text		{color: rgb(252,252,252); font-size: 0.9em; padding: 9px 10px 0 60px; position: absolute; top: 4px; width: 120px; z-index: 10;}
 
-.cv .download .pdf_text:hover	{color: rgb(153,190,105);}
+ .download .bt_text:hover	{color: rgb(153,190,105);}
 
-.cv .download .arrow		{border-radius: 16px; color: rgb(153,190,105); display: inline-block;
+ .download .arrow		{border-radius: 16px; color: rgb(153,190,105); display: inline-block;
  font-family: 'websymbols'; font-size: 1.9em; height: 32px; position: absolute; right: 5px; top: 3px; width: 32px; z-index: 3;}
 
 /*hCard*/
 #hcard-Daniel-Mois			{padding: 0 10px;}
-.hcard a 					{color: rgb(1,1,1); display:inline-block; margin: 0 0 5px; text-decoration: none;}
+.hcard a 					{color: rgb(50,50,50); text-decoration: none;}
 #hcard-Daniel-Mois a:hover	{color: rgb(90,90,90); text-decoration: underline;}
 
 .fn, .email, .tel, .adr,
 .vcard						{font-size: 0.9em; margin: 0 0 5px;}
 
 .fn, .email					{font-size: 1em;}
-.vcard_download				{height: 65px; margin: 25px 0 0; overflow: hidden; position: relative;}
-.vcard_download	p 			{margin: 0; padding: 0;}
-.vcard_download a>img 		{position: absolute; top: 13px; left: 5px;}
-.vcard_download .download 			{left: 60px; position:absolute; top: 30px;}
-.vcard_download .find_more			{color: rgb(1,1,1); font-size: 0.7em; left: 60px; position: absolute; top: 48px;}
-.vcard_download .find_more:hover	{color: rgb(90,90,90);}
+.vcard_download				{height: 50px; margin: 5px 0 0; overflow: hidden; position: relative;}
+
+.vcard_download .download>img		{position:absolute; top: -9px; left: 5px;}
+.vcard_download .download .bt_text	{padding: 9px 26px 0 54px;}
+
+.vcard .find_more				{color: rgb(50,50,50); font-size: 0.7em;}
+.vcard .find_more:hover			{color: rgb(90,90,90);}
+
+.stefan ul li		{color: rgb(252,252,252);background: rgb(65,65,65); margin: 0 0 5px; padding: 5px;}
+.stefan ul li:hover	{background: rgb(105,105,105);}

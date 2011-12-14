@@ -9,7 +9,7 @@
 		</article>
 		<aside class="sidebar">
 			<article id="personal_info" class="widget" >
-				<section>
+				<section class="personal_portrait">
 					<h4 class="section_heading">smiling always</h4>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="220" height="298" />
 				</section>
@@ -18,7 +18,7 @@
 					<h4 class="section_heading">Download CV</h4>
 						<?php
 							$cv_pdf = "<img src=".asset_url('img')."pdf_file.png"." width=\"32\" height=\"32\" alt=\"PDF icon\" title=\"Daniel Mois CV\" />";
-							$cv_pdf .= "<span class=\"pdf_text\">Download CV as PDF</span>";
+							$cv_pdf .= "<span class=\"bt_text\">Download CV</span>";
 							$cv_pdf .= "<span class=\"arrow\">;</span>";
 							echo anchor("download/file/daniel_mois_cv.pdf",$cv_pdf,array('title'=>"Download my cv as a PDF file",'class'=>"download"));
 						?>
@@ -34,18 +34,17 @@
 							<span class="country-name">Denmark</span>
 						</div>
 						<div class="tel">(+45) 60 61 79 57</div>
-						<div class="vcard_download"><p>Download my contact details</p>
-
-						<?php
-							$vcard = "<img src=".asset_url('img')."vcard_download.png"." width=\"48\" height=\"48\" alt=\"vCard icon\" title=\"Daniel Mois vCard\" />";
-							echo anchor("download/file/daniel_mois.vcf",$vcard,array('title'=>"Download my contact details as a vCard"));
-						?>
-						<?php 
-							echo anchor("download/file/daniel_mois.vcf","vCard",array('title'=>"Download my contact details as a vCard",'class'=>"download"));?>
 						<?php
 							echo anchor('http://www.wikipedia.org/wiki/VCard',"Find more about vCard !",array('class'=>"find_more"));
 						?>
-						</div>
+					</div>
+					<div class="vcard_download">
+						<?php
+							$vcard = "<img src=".asset_url('img')."vcard_download.png"." width=\"48\" height=\"48\" alt=\"vCard icon\" title=\"Daniel Mois vCard\" />";
+							$vcard .= "<span class=\"bt_text\">Download vCard</span>";
+							$vcard .= "<span class=\"arrow\">;</span>";
+							echo anchor("download/file/daniel_mois.vcf",$vcard,array('title'=>"Download my vCard as a VCF file",'class'=>"download"));
+						?>
 					</div>
 				</section>
 			</article>
