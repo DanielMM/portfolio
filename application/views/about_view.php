@@ -1,16 +1,35 @@
 <div id="content_wrapp">
 	<div id="content">
-		<article id="personal_info">
-			<h1 class="section_heading">A few words about the person behind these words!</h1>
-			<p>I am <?php echo $age; ?> and I love to design and develop. </p>
-			<p>
-				Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.
-			</p>			
+		<article>
+			<section id="personal_info">
+				<h1 class="section_heading">Daniel - about myself and my past</h1>
+				<p>I am <?php echo $age; ?> and I love to design and develop. </p>
+				<p>Websites have been in the focus of my profession for more than 7 years now and in the past 3, I have been concentrating on developing web applications. Started with front end and static web pages, but quickly found a pleasure in developing the dynamic back end of more complex projects
+	using PHP and MySQL. Complexity ranging from basic blogging systems to custom CMS platforms designed and built from the ground up.
+				</p>
+			</section>
+			<section id="keypoints">
+				<h2>Keypoints about the my work experience</h2>
+				<ul>
+					<li>Looking for more complex and challenging projects to put in practice the gained experience</li>
+					<li>Focused on details and continuous improvements of user experience</li>
+					<li>Avid feedback provider and team member with a passion for discussion and debates</li>
+					<li>A deep understanding of the gap between the developers, management and stakeholders</li>
+					<li>Learn how to deal with scaling up</li>
+					<li>Big fan on agile development</li>
+				</ul>
+			</section>
+			<section>
+				<h3>When away from the keyboard</h3>
+				<p>Web development is what I love to do, but when I need to take a break from it, I like to do others things like photography, reading, DIY projects or hiking in the forest, just to name a few. On the opposite side of my love for technology, lays the love for cooking, which can only be explained by my wish to always create new things.
+				
+				</p>
+			</section>
 		</article>
 		<aside class="sidebar">
 			<article id="personal_info" class="widget" >
 				<section class="personal_portrait">
-					<h4 class="section_heading">smiling always</h4>
+					<h4 class="section_heading">always smiling</h4>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="220" height="298" />
 				</section>
 				
@@ -23,29 +42,8 @@
 							echo anchor("download/file/daniel_mois_cv.pdf",$cv_pdf,array('title'=>"Download my cv as a PDF file",'class'=>"download"));
 						?>
 				</section>
-				<section class="hcard">
-					<h4 class="section_heading">Download <span class="lowcase">vCard</span></h4>
-					<div id="hcard-Daniel-Mois" class="vcard">
-						<?php echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
-						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>
-						<div class="adr">
-							<span class="locality">Aarhus</span>
-							<span class="postal-code">8260</span>,
-							<span class="country-name">Denmark</span>
-						</div>
-						<div class="tel">(+45) 60 61 79 57</div>
-						<?php
-							echo anchor('http://www.wikipedia.org/wiki/VCard',"Find more about vCard !",array('class'=>"find_more"));
-						?>
-					</div>
-					<div class="vcard_download">
-						<?php
-							$vcard = "<img src=".asset_url('img')."vcard_download.png"." width=\"48\" height=\"48\" alt=\"vCard icon\" title=\"Daniel Mois vCard\" />";
-							$vcard .= "<span class=\"bt_text\">Download vCard</span>";
-							$vcard .= "<span class=\"arrow\">;</span>";
-							echo anchor("download/file/daniel_mois.vcf",$vcard,array('title'=>"Download my vCard as a VCF file",'class'=>"download"));
-						?>
-					</div>
+				<section id="skills">
+					
 				</section>
 			</article>
 		</aside>

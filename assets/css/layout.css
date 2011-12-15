@@ -5,7 +5,7 @@
 
 body,p, ol,ul,li,a, span, div, section, table, tr,th,td, form, fieldset,legend,label 	{font-size: 1em; font-weight: normal;}
 h1,h2,h3,h4,h5,h6			{font-weight: 700;}
-p	{line-height: 1.6em;}
+p	{line-height: 1.8em;}
 li	{list-style: none;}
 
 header,
@@ -23,7 +23,15 @@ article,
 
 #content				{background: rgba(242,242,242,1); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; position: relative; z-index: 100;}
 #content>article		{float: left; padding: 0 0 0 10px; width: 710px;}
-		article p		{margin-bottom: 20px; padding: 0 10px;}
+		article p		{margin-bottom: 10px; padding: 0 10px;}
+article>section			{margin-bottom: 20px;}
+article section>h2,
+article section>h3,
+article section>h4		{margin-left: 10px;}
+
+section>h2+p,
+section>h3+p,
+section>h4+p 			{margin-top: 15px;}
 
 #content>aside.sidebar	{float: right; margin-right: 10px; padding: 0 0 20px 0; width: 220px;}
 
