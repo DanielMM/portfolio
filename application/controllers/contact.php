@@ -23,7 +23,7 @@ class Contact extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['page_title'] 	= "Contact ";
-			
+
 			$this->load->view('header_view', $data);
 			$this->load->view('contact_view', $data);
 			$this->load->view('footer_view');
@@ -39,13 +39,13 @@ class Contact extends CI_Controller {
 			$this->email->from($email, $name);
 			$this->email->to('daniel@danielmois.com');  
 
-			$this->email->subject('Email Test');
+			$this->email->subject($name);
 			$this->email->message($message);	
 
 			$delivered = $this->email->send();
 
 			if($delivered){
-				$data['success']		= "Thank you for your message!";
+				$data['success']		= "Message sent successfuly!";
 				$data['feedback']		= true;
 				$data['page_title'] 	= "Message sent successfuly - Contact ";	
 			}else{

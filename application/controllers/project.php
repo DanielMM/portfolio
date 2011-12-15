@@ -33,12 +33,12 @@ class Project extends CI_Controller {
 		$data['project']['date']['year'] = $date[0];
 
 		$data['project']['meta']['id'] = 3;
-		$data['project']['meta']['link'] = "http://www.example.com";
+		$data['project']['meta']['link'] = "http://www.danielmois.com";
 
 		//get the category title from the categories table not the name of the category
 		
 		$data['project']['meta']['category'] = $project->cat_title;
-		$data['project']['meta']['client'] = "Example Ltd. Co";
+		$data['project']['meta']['client'] = "Myself";
 		$data['project']['meta']['tags'] = json_decode($project->post_terms);
 
 		$data['project']['data']['teaser'] = $project->post_teaser;
@@ -56,6 +56,8 @@ class Project extends CI_Controller {
 	{
 		//Select all projects beloging to one category
 		$data['page_title'] = $category;
+		$data['categories'] = $this->_getCategories();
+
 		$this->load->view('header_view', $data);
 		$this->load->view('projects_list_view', $data);
 		$this->load->view('footer_view');
@@ -64,9 +66,11 @@ class Project extends CI_Controller {
 	public function tag($tag)
 	{
 		//Select all projects beloging to one category
-		$data['title'] = $tag;
+		$data['page_title'] = $tag;
 		$this->load->view('header_view', $data);
-		$this->load->view('tag_view', $data);
+		$data['categories'] = $this->_getCategories();
+
+		$this->load->view('projects_list_view', $data);
 		$this->load->view('footer_view');
 	}
 

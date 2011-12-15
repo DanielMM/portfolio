@@ -4,7 +4,10 @@
 		<article id="projects">
 			<h1 class="section_heading"><?php echo $page_title; ?></h1>
 			<ul>
-				<?php foreach($projects as $project): ?>
+				<?php 
+					if(isset($projects)):
+					foreach($projects as $project): 
+				?>
 					<?php
 						$title = str_replace("_"," ",$project->post_title);
 						$date = explode("-",$project->post_date);
@@ -42,8 +45,12 @@
 							</div>
 						</section>
 					</li>
-				<?php endforeach; ?>
+				<?php endforeach; 
+					else:
+				?>
 			</ul>
+			<div>No data.</div>
+			<?php endif;?>
 			<div class="pagination">
 				<ul>
 					<li class="prev" ><a href="">&laquo;</a></li>

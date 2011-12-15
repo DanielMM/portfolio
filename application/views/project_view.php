@@ -17,7 +17,7 @@
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>
 							<dt class="link">Link:</dt>
-								<dd><?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title)); ?>
+								<dd><?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blanck")); ?>
 								</dd>
 						<?php endif; ?>
 						<?php if(isset($project['meta']['client'])): ?>
