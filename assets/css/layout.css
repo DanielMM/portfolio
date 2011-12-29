@@ -15,13 +15,13 @@ footer,
 header,
 footer, 
 article,
-#content				{/* background: url('../images/html_gri.png') repeat; */ display: block;}
+#content				{}
 
-#header_wrapp			{background: url('../images/header_bg9.png') repeat-x; overflow: hidden;}
+#header_wrapp			{background: url('../images/header_bg.png') repeat-x; overflow: hidden;}
 
 #content_wrapp			{clear: both;}
 
-#content				{background: rgba(242,242,242,1); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); margin-top: -196px; padding-top: 10px; position: relative; z-index: 100;}
+#content				{background: rgba(242,242,242,1); border: 1px solid rgba(25,25,25,0.2);border-bottom: 0px solid rgba(25,25,25,0.2); padding-top: 10px; position: relative; z-index: 100;}
 #content>article		{float: left; padding: 0 0 0 10px; width: 710px;}
 		article p		{margin-bottom: 10px; padding: 0 10px;}
 article>section			{margin-bottom: 20px;}
@@ -33,9 +33,11 @@ section>h2+p,
 section>h3+p,
 section>h4+p 			{margin-top: 15px;}
 
+article section blockquote 		{background: rgb(252,252,252); color: rgb(90,90,90); font-style: italic; line-height: 1.6em; outline: 1px solid rgb(142,142,142); margin: 20px 10px 20px 55px; padding: 10px;}
+
 #content>aside.sidebar	{float: right; margin-right: 10px; padding: 0 0 20px 0; width: 220px;}
 
-header					{height: 300px; position: relative;}
+header					{height: 100px; position: relative;}
 
 #logo					{float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
 #logo h1>a				{font-size: 2.5em;}
@@ -45,29 +47,30 @@ header					{height: 300px; position: relative;}
 #logo h2>a				{color: rgba(254,254,254,1); font-family: 'Open Sans', sans-serif; font-weight: 700; text-decoration: none;}
 #logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
 
-nav						{float: right; margin: 0 10px 0 0; position: relative; z-index: 110;}
+nav						{float: right; position: relative; z-index: 110;}
 nav>ul					{overflow: hidden;}
 nav>ul>li				{float: left;}
 nav>ul>li>h3			{text-align: center; text-transform: uppercase;}
-nav>ul>li>h3>a			{color: rgba(250,250,250,1); border-left: 1px solid rgba(25,25,25,1); display: inline-block; font-size: 1.4em; font-family: 'Open Sans', sans-serif; font-weight: 700; padding: 35px 22px 35px 19px; text-decoration: none; width: 90px;}
+nav>ul>li>h3>a			{color: rgba(250,250,250,1); border-left: 1px solid rgba(25,25,25,1); display: inline-block; font-size: 1.4em; font-family: 'Open Sans', sans-serif; font-weight: 700; padding: 30px 22px 40px 19px; text-decoration: none; width: 90px;}
 nav>ul>li>h3>a.last		{border-right: 1px solid rgba(25,25,25,1);}
-nav>ul>li>h3>a:hover	{background: rgba(3,3,3,1); border-top: 5px solid rgba(153,190,105,1); color: rgba(153,190,105,1); padding-top: 40px;}
+nav>ul>li>h3>a:hover	{background: rgb(3,3,3); border-top: 5px solid rgba(153,190,105,1); border-bottom: 5px solid rgba(153,190,105,1); color: rgb(153,190,105); padding: 25px 22px 35px 19px;}
 
-#bg						{background: rgba(10,10,10,0.9); height: 100px; position: absolute; top: 2px; width: 100%; z-index: 1;}
 
-#footer_wrapp			{background: url('../images/header_bg8.png') repeat-x; }
-footer					{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); color: rgba(252,252,252,1);  height: 290px; padding-top: 0px; position: relative;}
+#footer_wrapp			{background: url('../images/footer_bg.png') repeat-x; }
+footer					{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); color: rgba(252,252,252,1);  height: 299px; padding-top: 0px; position: relative;}
 
-footer>article			{float: left; outline: 0px dotted blue; margin-left: 60px; width: 240px;}
-footer>article>h4		{font-size: 1.2em; margin: 5px 0;}
+footer article section	{float: left; outline: 0px dotted blue; margin-left: 30px;}
+footer section h4		{border-bottom: 2px solid rgb(153,190,105); font-size: 1.2em; margin: 15px 0 15px; padding-bottom: 3px;}
 
-#tweets					{ display: block; height: 250px; width: 240px;}
-#tweets>li				{background: rgba(30,30,30,0.8); margin-bottom: 5px; outline: 1px solid rgba(100,100,100,0.2); padding: 2px;}
-/* #tweets>li:hover		{outline: 2px solid rgba(140,39,220,0.25);} */
+#tweets					{display: block; height: 250px; width: 450px;}
+#tweets>li				{background: rgba(30,30,30,0.8); margin-bottom: 9px; outline: 1px solid rgba(100,100,100,0.2); padding: 2px;}
 #tweets>li>h6			{font-size: 0.8em; margin: 2px 0; position: relative;}
 #tweets>li>p			{font-size: 0.8em; line-height: 1em; margin: 3px 0;}
 #tweets>li>h6>span		{font-size: 0.9em; font-weight: normal; position:absolute; right: 1px; text-align: right; top: 2px;}
-
+#favorites				{height: 250px; width: 370px;}
+#favorites li			{float: left; margin: 0 5px 15px 5px; width: 165px;}
+#favorites li a			{color: rgb(90,90,90);}
+#favorites li a:hover	{color: rgb(114,114,114);}
 #social_media			{position: absolute; top: 20px; right: 0; width: 36px;}
 #social_media li		{float: right; height: 52px; margin: 0 0 15px 2px; width: 32px;}
 #social_media li>a		{height: 52px; width: 52px;}
@@ -77,10 +80,6 @@ footer>article>h4		{font-size: 1.2em; margin: 5px 0;}
 #copyleft a				{color: rgba(80,80,80,1); text-decoration: none;}
 #copyleft a:hover		{color: rgba(150,150,150,0.7); text-decoration: underline;}
 #copyleft span			{transform:rotate(180deg); -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg);-o-transform:rotate(180deg); filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}
-
-
-/* SPACER / DEVIDER */
-.spacer					{background: rgba(230,230,230,1); clear: both; display: block; height: 6px; width: 100%; background: url('../images/spacer.png') repeat-x;}
 
 /* WIDGET */
 

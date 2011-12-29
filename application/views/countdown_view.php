@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php if(isset($page_title)){echo $page_title;}else{echo "Portfolio";}?> - Daniel Mois - Web Developer and Designer</title>
+		<title><?php if(isset($page_title)){echo $page_title;}else{echo "Portfolio";}?> - Daniel Mois - Web Developer</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-		<meta name="description" content="Portfolio of Daniel Mois, web developer located in Aarhus, Denmark. Daniel is specialized in semntic markup with HTML5,CSS3, SEO oriented, backend development with PHP and frontend integration with HTML5, CSS3, JavaScript, jQuery." />
+		<meta name="description" content="Portfolio of Daniel Mois, a web developer from Aarhus, specialized in semntic markup with HTML5,CSS3, JavaScript / jQuery and focused on SEO." />
 		<meta name="keywords" content="web, web development, design, web design, web application, web integration, SEO,portfolio,HTML,5HTML,CSS,JavaScript,jQuery,PHP,MySQL" />
 		<meta name="author" content="Daniel Mois" />
-
+		<meta name="language" content="english"> 
 		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>reset.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>countdown.css" media="screen" />
@@ -23,7 +23,7 @@
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
 	</head>
 	</body>
-		<div id="content_wrapp">
+		<div id="content_wrap">
 			<div id="content">
 				<article id="coming_soon">
 					<section>

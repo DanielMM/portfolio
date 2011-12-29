@@ -2,17 +2,20 @@
 <div id="content_wrapp">
 	<div id="content">
 		<article class="project">
-			<img class="thumb" src="<?php echo asset_url('img'); ?>img.png" alt="<?php if(isset($title)){echo $title;}?>" title="<?php if(isset($title)){echo $title;}?>" height="170" width="170" />
-			<section class="project_header">
+			<!-- <h1 class="section_heading"><?php echo $project['meta']['category'].">".$page_title; ?></h1> -->
+			<header class="project_header">
+				<?php
+					$thumb = $project['thumb'];
+					$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"170\" height=\"170\" alt=\"{$page_title}\" title=\"{$page_title}\" />";
+					echo $thumb;
+				?>
 				<div class="date">
 					<span class="day"><?php echo $project['date']['day']; ?></span>
 					<span class="month"><?php echo $project['date']['month']; ?></span>
 					<span class="year"><?php echo $project['date']['year']; ?></span>
-					<span class="ribbon"></span>
 				</div>
-				<section class="project_title">
-					<h1 title="<?php if(isset($page_title)){echo $page_title;}else{echo " ";}?>"><?php if(isset($page_title)){echo $page_title;}else{echo " ";}?></h1>
-				</section>
+				<h3 class="category"><?php echo $project['meta']['category']; ?></h3>
+				<h1 class="project_title" title="<?php if(isset($page_title)){echo $page_title;}else{echo " ";}?>"><?php if(isset($page_title)){echo $page_title;}else{echo " ";}?></h1>
 				<section class="project_meta">
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>
@@ -38,7 +41,7 @@
 						<?php endif; ?>
 					</dl>
 				</section>
-			</section>
+			</header>
 			<section class="project_body">
 				<?php
 					echo $project['data']['teaser'];
@@ -46,6 +49,9 @@
 				<?php
 					echo $project['data']['body'];
 				?>
+			</section>
+			<section class="project_footer">
+				<!--Add author bio for google author SEO -->
 			</section>
 		</article>
 		<aside class="sidebar">

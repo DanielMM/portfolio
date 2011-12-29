@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div id="content_wrapp">
 	<div id="content">
-		<article id="projects">
+		<article id="list">
 			<h1 class="section_heading"><?php echo $page_title; ?></h1>
 			<ul>
 				<?php 

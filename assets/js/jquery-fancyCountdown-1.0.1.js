@@ -127,7 +127,7 @@
 		$(this).find("table").css({"display":"inline-table"}).attr({"cellspacing":"3px"});
 		
 		/********** Add gray balls to each cell **********/
-		$("#d1 td,#d2 td,#d3 td,#h1 td,#h2 td,#m1 td,#m2 td,#s1 td,#s2 td").append("<img src='images/gray-ball.png' />");
+		$("#d1 td,#d2 td,#d3 td,#h1 td,#h2 td,#m1 td,#m2 td,#s1 td,#s2 td").append("<img src='images/micmic-ball.png' />");
 		
 		/********** Check if target date has passed or not **********/
 		if(differenceMiliseconds < 0) {				

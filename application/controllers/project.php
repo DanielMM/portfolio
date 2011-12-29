@@ -9,9 +9,9 @@ class Project extends CI_Controller {
 		$data['projects'] = $this->_getProjects();
 		
 		$data['categories'] = $this->_getCategories();
-
+		$data['months'] =array('01'=>'ian','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'iul','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
 		$this->load->view('header_view', $data);
-		$this->load->view('projects_list_view', $data);
+		$this->load->view('list_view', $data);
 		$this->load->view('footer_view');
 	}
 	
@@ -28,6 +28,7 @@ class Project extends CI_Controller {
 		$date = explode("-",$project->post_date);
 		$months =array('01'=>'ian','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'iul','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
 		
+		$data['project']['thumb'] = $project->post_thumb;
 		$data['project']['date']['day'] = $date[2];
 		$data['project']['date']['month'] = $months[$date[1]];
 		$data['project']['date']['year'] = $date[0];
@@ -84,7 +85,7 @@ class Project extends CI_Controller {
 			
 			$projects[] = $project_item;
 		}
-		//var_dump($projects);
+		//var_dump($results->result());
 		return $projects;
 
 	}

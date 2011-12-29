@@ -1,4 +1,4 @@
-/*
+/**
 |--------------------------------------------------------------------------
 | CSS 2.0/3.0
 |--------------------------------------------------------------------------
@@ -34,23 +34,25 @@
 
 /* PROJECTS LIST */
 
-#projects h1					{margin-bottom: 20px;}
-#projects a 					{text-decoration: none;}
-#projects>ul>li					{margin: 0 0 40px; overflow: hidden; padding: 10px 0 0;}
+#list h1					{margin-bottom: 20px;}
+#list a 					{text-decoration: none;}
+#list>ul>li					{background: rgb(240,240,240); border: 1px solid rgb(238,238,238);margin: 0 0 30px; overflow: hidden; padding: 10px;}
 
-#projects section				{overflow: hidden; position: relative;}
-#projects section a.thumb		{float: left; height: 170px; width: 170px;}
+#list section				{overflow: hidden; position: relative;}
+#list section a.thumb		{float: left; height: 170px; width: 170px;}
 
-#projects section .summary		{float: left; min-height: 170px; position: relative; width: 540px;}
-#projects section .summary h2	{font-size: 1.9em; margin: -6px 10px 20px 10px; width: 475px;}
-#projects section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; font-family: 'Open Sans', sans-serif; padding: 0;}
+#list section .summary		{float: left; min-height: 170px; position: relative; width: 518px;}
+#list section .summary h2	{font-size: 1.9em; margin: -6px 10px 10px 10px; width: 420px;}
+#list section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; font-family: 'Open Sans', sans-serif; padding: 0;}
 
-#projects section .summary h2 a:hover			{color: rgb(50,75,16);}
+#list section .summary h2 a:hover			{color: rgb(50,75,16);}
 
-#projects section .summary p					{padding-top: 10px;}
-#projects section .summary .read_more			{display: block; float: right; margin: 20px 0 0 0;}
-#projects section .summary .read_more a			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
-#projects section .summary .read_more a:hover	{background: rgb(50,74,16); color: rgb(241,242,242);}
+#list section .summary .category			{color: rgb(153,190,105); display: block; font-weight: normal; margin: 0 0 10px 10px; padding: 2px 5px;}
+#list section .summary .date 				{color: rgb(153,190,105); display: inline-block; float: right; padding: 2px 5px;}
+#list section .summary p					{padding-top: 10px;}
+#list section .summary .read_more			{display: block; float: right; margin: 20px 0 0 0;}
+#list section .summary .read_more			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
+#list section .summary .read_more:hover		{background: rgb(50,74,16); color: rgb(241,242,242);}
 
 /* PAGINATION */
 
@@ -80,34 +82,45 @@
 /* PROJECT */
 
 article.project					{position: relative;}
-.project .project_header		{height: 170px; left: 200px; position: absolute; top: -2px;}
-.project .project_title			{display: block;  margin:  0 10px 10px 0; width: 465px;}
-.project .project_title h1		{color: rgba(50,75,16, 0.7); font-family: 'Open Sans', sans-serif; font-size: 2em;}
-.project .project_meta dt,
-.project .project_meta dd		{display: inline-block; margin: 5px 0;}
-.project .project_meta dt		{width: 80px;}
-.project .project_meta dd		{width: 400px;}
+.project .project_header		{border-bottom: 1px solid rgb(232,232,232); height: auto; padding-bottom: 20px; width: 710px;}
+.project_header img.thumb				{float: left;}
+.project_header h3.category				{color: rgb(153,190,105); font-weight: normal; margin: 0 0 10px 180px; padding: 2px 5px;}
+.project_header .project_title			{margin-left: 180px;}
+.project_header .project_title			{color: rgba(50,75,16, 0.7); font-family: 'Open Sans', sans-serif; font-size: 2em;}
+.project_header .project_meta			{display: inline-block; margin-left: 10px; width: 530px;}
+.project_header .project_meta dt,
+.project_header .project_meta dd		{display: inline-block; margin: 5px 0;}
+.project_header .project_meta dt		{width: 80px;}
+.project_header .project_meta dd		{margin-left: 15px; width: 400px;}
 
-.project .project_meta dd>span.tag a		{color: rgb(222,222,222); display: inline-block; margin: 0 2px; padding: 3px 5px;}
-.project .project_meta dd>span.tag a		{background: rgb(153,190,105);}
-.project .project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
+.project_header .project_meta dd>span.tag a		{color: rgb(222,222,222); display: inline-block; margin: 0 2px; padding: 3px 5px;}
+.project_header .project_meta dd>span.tag a		{background: rgb(153,190,105);}
+.project_header .project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
 
-.project .project_body			{display: inline-block; margin-top: 50px;}
+.project .project_body			{display: inline-block; padding: 20px 0;}
 .project_body>p:last-child		{margin-bottom: 40px;}
 
 /* DATE ON POST */
 
-section .date			{background: rgb(50,74,16); color: rgb(252,252,252) ; height: 56px; line-height: 0.8em; padding-top: 4px; position: absolute; right: 10px; width: 44px;}
-section .date span		{display: block; text-align: center;}
-section .date .day		{border-top: 1px solid rgba(252,252,252,1); font-size: 1em; padding-top: 3px;}
-section .date .month	{font-size: 1.1em; text-transform: capitalize; padding: 3px 0 7px;}
-section .date .year		{font-size: 0.7em; padding:0 0 4px;}
-section .date .ribbon	{width: 0;height: 0;}
-section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(243,243,243) rgb(50,74,16); border-width: 0 22px 22px 22px;}
+section .date,
+.project_header .date	{color: rgb(153,190,105); display: inline-block; float: right; padding: 2px 5px;}
+.date span		{display: inline-block;}
+.date .day		{font-size: 1em; }
+.date .month,
+.date .month	{text-transform: capitalize;}
+
+
 /*#projects li:first-child section .date .ribbon{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16)}
 
 .project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
 */
+
+/*INLINE IMAGE PLACEHOLDER*/
+
+.img_placeholder		{background: rgb(252,252,252); outline: 1px solid rgb(142,142,142); margin: 20px auto; padding: 35px 0 10px 0; width: 690px;}
+.img_placeholder img 	{display: block; margin: 0 auto;}
+.img_placeholder figcaption 	{background: rgb(242,242,242); color: rgb(90,90,90); font-style: italic; line-height: 1.6em; margin: 10px 25px 0; outline: 1px solid rgb(142,142,142); padding: 7px 100px; text-align: center;}
+
 /* SECTION HEADER */
 
 .section_heading				{background: rgb(153,190,105); color: rgb(50,75,16); font-size: 1.1em; margin:0 0 10px 0; padding: 10px;	text-transform: uppercase;}
@@ -116,7 +129,7 @@ section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,7
 
 /* WIDGETS */
 
-#categories.widget li			{background: rgb(153,190,105); margin: 6px 5px; overflow: hidden;}
+#categories.widget li			{/*background: rgb(153,190,105);*/ margin: 6px 5px; overflow: hidden;}
 #categories.widget li.active	{background: rgb(50,74,16);}
 #categories.widget li:hover		{background: rgba(50,74,16,0.9);}
 #categories.widget li a			{color: rgb(50,75,16); height: 20px; padding: 8px 5px 8px 10px; float: left; width: 100%;}
@@ -136,7 +149,26 @@ section .date .ribbon	{border-style: solid; border-color: rgb(50,74,16) rgb(50,7
 
 
 /*ABOUT*/
+#skills						{float: left;}
+#skills dl 					{background: rgb(232,232,232); border: 1px solid rgb(222,222,222); margin: 10px 0 0 20px; overflow: hidden; width: 350px;}
+#skills dt, #skills dd		{display: inline; float: left; padding: 10px 0;}
+#skills dt 					{padding-left: 10px;}
+#skills dt:nth-child(1),
+#skills dd:nth-child(2),
+#skills dt:nth-child(5),
+#skills dd:nth-child(6),
+#skills dt:nth-child(9),
+#skills dd:nth-child(10)	{background: rgb(252,252,252);}
+dt,dd .score				{display: inline-block; font-size: 1.2em; line-height: 1.6em; width: 80px;}
+dd .score					{text-align: center;}
+dd .rating 					{display: inline-block; height: 18px; width: 180px;}
+dd .rating li 				{border: 1px solid rgb(114,114,114); display:inline-block; height: 20px; margin: 0 3px; width: 9px;}
+dd .rating li.fill			{background: rgb(153,190,105);}
+/*dd .rating li:not(.fill)	{background: rgb(142,142,142);}*/
 
+#toolkit					{float: left; height: 200px; margin: 30px 0 0 20px; width: 300px;}
+
+#keypoints					{clear: both;}
 #keypoints ul 	 			{margin: 0 0 5px 25px;padding: 4px 0;}
 #keypoints ul li 			{list-style: inherit; list-style-type: circle; margin: 0 0 0 20px; padding: 10px 0;}
 

@@ -1,6 +1,6 @@
 <div id="content_wrapp">
 	<div id="content">
-		<article id="personal_info">
+		<article>
 			<h1 class="section_heading">Send me a message</h1>
 			<p>Feel free to contact me if you think I could add value to your future project or maybe you want to get feedback on your latest work or even if you just want to say hello! </p>
 			<section id="contact_form">
@@ -14,7 +14,7 @@
 					echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Your email address"));
 					echo form_label('What do you want to tell me', 'message'); 
 					echo form_error('message');
-					echo form_textarea(array('name'=>"message",'value'=>set_value('message'), 'placeholder'=>"Your message to me",'rows'=>"15",'cols'=>"52"));
+					echo form_textarea(array('name'=>"message",'value'=>set_value('message'), 'placeholder'=>"Your message to me",'rows'=>"12",'cols'=>"52"));
 					echo form_submit('submit', 'Send');
 					echo form_close();
 				?>

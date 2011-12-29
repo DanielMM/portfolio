@@ -8,7 +8,7 @@ class Blog extends CI_Controller {
 
 
 		$this->load->view('header_view', $data);
-		//$this->load->view('blog_view', $data);
+		$this->load->view('list_view', $data);
 		$this->load->view('footer_view');
 	}
 }

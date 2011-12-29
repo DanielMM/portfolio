@@ -10,7 +10,11 @@ class Project_model extends CI_Model {
 
     public function getProjects(){
     	
-    	$results = $this->db->get('projects');
+    	//$results = $this->db->get('projects');
+        $this->db->select('*','categories.cat_title');
+        $this->db->from('projects');
+        $this->db->join('categories', 'projects.post_category = categories.cat_name');
+        $results = $this->db->get();
 		return $results;    	
     }
 

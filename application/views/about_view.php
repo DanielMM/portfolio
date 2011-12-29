@@ -2,11 +2,35 @@
 	<div id="content">
 		<article>
 			<section id="personal_info">
-				<h1 class="section_heading">Daniel - about myself and my past</h1>
+				<h1 class="section_heading">Daniel - about myself and the way I work</h1>
 				<p>I am <?php echo $age; ?> and I love to design and develop. </p>
 				<p>Websites have been in the focus of my profession for more than 7 years now and in the past 3, I have been concentrating on developing web applications. Started with front end and static web pages, but quickly found a pleasure in developing the dynamic back end of more complex projects
 	using PHP and MySQL. Complexity ranging from basic blogging systems to custom CMS platforms designed and built from the ground up.
 				</p>
+			</section>
+			<section id="skills">
+				<h2>Web development skills</h2>
+				<dl>
+					<dt>HTML5</dt>
+					<dd><span class="score">9/10</span><ul class="rating"><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li></li></ul></dd>
+					<dt>CSS</dt>
+					<dd><span class="score">9/10</span><ul class="rating"><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li></li></ul></dd>
+					<dt>jQuery</dt>
+					<dd><span class="score">7/10</span><ul class="rating"><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li></li><li></li><li></li></ul></dd>
+					<dt>PHP</dt>
+					<dd><span class="score">9/10</span><ul class="rating"><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li></li></ul></dd>
+					<dt>SQL</dt>
+					<dd><span class="score">7/10</span><ul class="rating"><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li class="fill"></li><li></li><li></li><li></li></ul></dd>
+				</dl>
+			</section>
+			<section id="toolkit">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
 			</section>
 			<section id="keypoints">
 				<h2>Keypoints about the my work experience</h2>
@@ -15,7 +39,6 @@
 					<li>Focused on details and continuous improvements of user experience</li>
 					<li>Avid feedback provider and team member with a passion for discussion and debates</li>
 					<li>A deep understanding of the gap between the developers, management and stakeholders</li>
-					<li>Learn how to deal with scaling up</li>
 					<li>Big fan on agile development</li>
 				</ul>
 			</section>
@@ -41,9 +64,6 @@
 							$cv_pdf .= "<span class=\"arrow\">;</span>";
 							echo anchor("download/file/daniel_mois_cv.pdf",$cv_pdf,array('title'=>"Download my cv as a PDF file",'class'=>"download"));
 						?>
-				</section>
-				<section id="skills">
-					
 				</section>
 			</article>
 		</aside>
