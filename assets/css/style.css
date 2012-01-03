@@ -47,7 +47,7 @@
 
 #list section .summary h2 a:hover			{color: rgb(50,75,16);}
 
-#list section .summary .category			{color: rgb(153,190,105); display: block; font-weight: normal; margin: 0 0 10px 10px; padding: 2px 5px;}
+#list section .summary .category			{color: rgb(153,190,105); display: block; font-weight: normal; margin: 0 0 10px 10px; padding: 2px 5px; text-transform: capitalize;}
 #list section .summary .date 				{color: rgb(153,190,105); display: inline-block; float: right; padding: 2px 5px;}
 #list section .summary p					{padding-top: 10px;}
 #list section .summary .read_more			{display: block; float: right; margin: 20px 0 0 0;}
@@ -84,7 +84,7 @@
 article.project					{position: relative;}
 .project .project_header		{border-bottom: 1px solid rgb(232,232,232); height: auto; padding-bottom: 20px; width: 710px;}
 .project_header img.thumb				{float: left;}
-.project_header h3.category				{color: rgb(153,190,105); font-weight: normal; margin: 0 0 10px 180px; padding: 2px 5px;}
+.project_header h3.category				{color: rgb(153,190,105); font-weight: normal; margin: 0 0 10px 180px; padding: 2px 5px; text-transform: capitalize;}
 .project_header .project_title			{margin-left: 180px;}
 .project_header .project_title			{color: rgba(50,75,16, 0.7); font-family: 'Open Sans', sans-serif; font-size: 2em;}
 .project_header .project_meta			{display: inline-block; margin-left: 10px; width: 530px;}
@@ -102,15 +102,10 @@ article.project					{position: relative;}
 
 /* DATE ON POST */
 
-section .date,
 .project_header .date	{color: rgb(153,190,105); display: inline-block; float: right; padding: 2px 5px;}
-.date span		{display: inline-block;}
-.date .day		{font-size: 1em; }
-.date .month,
-.date .month	{text-transform: capitalize;}
-
-
-/*#projects li:first-child section .date .ribbon{border-style: solid; border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16)}
+.date span				{display: inline-block; font-size: 0.8em;}
+.date .month			{text-transform: capitalize;}
+.date .year 			{display: block; font-size: 1.1em; text-align: center;}
 
 .project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
 */
@@ -150,8 +145,9 @@ section .date,
 
 /*ABOUT*/
 #skills						{float: left;}
-#skills dl 					{background: rgb(232,232,232); border: 1px solid rgb(222,222,222); margin: 10px 0 0 20px; overflow: hidden; width: 350px;}
-#skills dt, #skills dd		{display: inline; float: left; padding: 10px 0;}
+#skills dl,
+#toolkit dl					{background: rgb(232,232,232); border: 1px solid rgb(222,222,222); margin: 10px 0 0 20px; overflow: hidden; width: 350px;}
+#skills dt, #skills dd 		{display: inline; float: left; padding: 10px 0;}
 #skills dt 					{padding-left: 10px;}
 #skills dt:nth-child(1),
 #skills dd:nth-child(2),
@@ -159,14 +155,27 @@ section .date,
 #skills dd:nth-child(6),
 #skills dt:nth-child(9),
 #skills dd:nth-child(10)	{background: rgb(252,252,252);}
-dt,dd .score				{display: inline-block; font-size: 1.2em; line-height: 1.6em; width: 80px;}
-dd .score					{text-align: center;}
-dd .rating 					{display: inline-block; height: 18px; width: 180px;}
-dd .rating li 				{border: 1px solid rgb(114,114,114); display:inline-block; height: 20px; margin: 0 3px; width: 9px;}
-dd .rating li.fill			{background: rgb(153,190,105);}
+#skills dt,
+#skills dd .score,
+#toolkit dd					{display: inline-block; font-size: 1.2em; line-height: 1.6em; width: 80px;}
+#skills dd .score			{text-align: center;}
+#skills dd .rating 			{display: inline-block; height: 18px; width: 180px;}
+#skills dd .rating li 		{border: 1px solid rgb(114,114,114); display:inline-block; height: 20px; margin: 0 3px; width: 9px;}
+#skills dd .rating li.fill	{background: rgb(153,190,105);}
 /*dd .rating li:not(.fill)	{background: rgb(142,142,142);}*/
 
-#toolkit					{float: left; height: 200px; margin: 30px 0 0 20px; width: 300px;}
+#toolkit					{float: left; margin: 0 0 0 20px; width: 300px;}
+#toolkit dl 				{width: 280px;}
+#toolkit dt, #toolkit dd 	{display: inline-block; float: left;}
+#toolkit dt 				{height: 48px; padding: 1px 0 1px 10px; width: 48px;}
+#toolkit dd 				{height: 30px; padding: 10px 0 10px 10px; width: 212px;}
+
+#toolkit dt:nth-child(1),
+#toolkit dd:nth-child(2),
+#toolkit dt:nth-child(5),
+#toolkit dd:nth-child(6),
+#toolkit dt:nth-child(9),
+#toolkit dd:nth-child(10)	{background: rgb(252,252,252);}
 
 #keypoints					{clear: both;}
 #keypoints ul 	 			{margin: 0 0 5px 25px;padding: 4px 0;}

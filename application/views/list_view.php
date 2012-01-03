@@ -11,6 +11,9 @@
 					<?php
 						$title = str_replace("_"," ",$project->post_title);
 						$date = explode("-",$project->post_date);
+						$year = $date[0];
+						$month = $date[1];
+						$day =	substr($date[2],0,2);
 						$url_title = url_title($project->post_title,"underscore");
 						
 						$thumb = $project->post_thumb;
@@ -24,11 +27,11 @@
 							?>
 							<div class="summary">
 								<div class="date">
-									<span class="day"><?php echo $date[2]; ?></span>
-									<span class="month"><?php echo $months[$date[1]]; ?></span>
-									<span class="year"><?php echo $date[0]; ?></span>
+									<span class="day"><?php echo $day; ?></span>
+									<span class="month"><?php echo $months[$month]; ?></span>
+									<span class="year"><?php echo $year; ?></span>
 								</div>
-								<h3 class="category"><?php echo $project->cat_title; ?></h3>
+								<h3 class="category"><?php echo $project->post_category; ?></h3>
 								<h2>
 									<?php
 										echo anchor("project/".$url_title, $title, array('title' => $title));

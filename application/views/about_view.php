@@ -24,13 +24,14 @@
 				</dl>
 			</section>
 			<section id="toolkit">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+				<h2>Web development tools</h2>
+				<dl>
+					<dt><img src="<?php echo asset_url('img');  ?>ubuntu.png" title="Ubuntu" alt="Ubuntu" width="48" height="48" /></dt><dd>Ubuntu</dd>
+					<dt><img src="<?php echo asset_url('img');  ?>sublimetext2.png" title="Sublime Text 2" alt="Sublime Text 2" width="48" height="48" /></dt><dd>Sublime Text 2</dd>
+					<dt><img src="<?php echo asset_url('img');  ?>git.png" title="GIT" alt="GIT" width="48" height="48" /></dt><dd>Git</dd>
+					<dt><img src="<?php echo asset_url('img');  ?>chromium.png" title="Chromium" alt="Chromium" width="48" height="48" /></dt><dd>Chromium</dd>
+					<dt><img src="<?php echo asset_url('img');  ?>pma.png" title="phpMyAdmin" alt="phpMyAdmin" width="48" height="48" /></dt><dd>phpMyAdmin</dd>
+				</dl>
 			</section>
 			<section id="keypoints">
 				<h2>Keypoints about the my work experience</h2>
