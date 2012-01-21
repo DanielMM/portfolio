@@ -2,22 +2,98 @@
 	LANDING PAGE STYLES
  */
 
-#content>article		{margin: 0 0 0 10px; float: left; width: 340px;}
-#content>article>p		{font-size: 1.6em; margin: 10px 0;}
+/*@font-face web symbols*/
+@font-face
+			{
+			font-family: websymbols;
+			src: url('websymbols-regular-webfont.ttf'),
+			     url('websymbols-regular-webfont.svg'),
+			     url('websymbols-regular-webfont.woff')
+			}
 
-#content #slider		{float: right; margin: 0 10px 0 0; position: relative; width: 580px;}
+ /*LAYOUT*/
 
-#content aside					{clear:both; width: 100%;}
-#content aside>ul				{margin: 30px 60px 60px; overflow: hidden;}
-#content aside>ul>li			{float: left;  width: 240px;}
-#content aside>ul>li>h4			{font-size: 1.2em;padding: 5px 0; text-transform: uppercase;}
-#content aside>ul>li>a			{display: inline-block; height: 100px; margin: 5px 0; outline: 0px dotted green; width: 240px;}
-#content aside>ul>li>h6			{font-weight: normal;}
-#content aside>ul>li.space		{margin-left: 60px;}
+#content			{padding-top: 30px;}
+#content>article	{padding: 0;}
+#featured			{width: 960px;}
+article.col			{float: left; margin: 0 10px 30px 10px; width: 300px;}
 
-/* Slider */
-.slides_container 				{display:none; position:relative; overflow:hidden; width:580px;}
-.slides_container div.slide 	{display:block; height:275px; width:580px;}
-.caption 						{background:#000; background:rgba(0,0,0,.5); border-top:1px solid #000; bottom:-35px; color:#fff; font-size:1.3em; height:30px; left:0; line-height:1.33; padding:5px 10px 0 20px; position:absolute; text-shadow:none; width:550px; z-index:500;}
-.caption p span					{display: inline-block; float: right; font-size: 0.66em; height: 27px; text-transform: capitalize; margin-bottom: 3px;}
-.caption p span:hover			{background: rgba(153,190,105,1);}
+.col .col_title		{background: rgb(255,255,255); border-bottom: 2px solid rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 20px; padding: 5px; text-transform: uppercase;}
+.col section 		{background: rgb(255,255,255); margin-bottom: 20px; padding: 10px;}
+
+.list section .summary	{margin-top: 15px; padding: 0 4px;}
+
+/*SLIDER*/
+
+.slider 			{height: 380px; margin: 0 10px; position: relative; width: 940px;}
+.frame 				{height: 341px; left: -48px; position: absolute; top: -3px; width: 739px; z-index: 0;}
+.slides 			{left: 25px; position: absolute; top: 15px; z-index: 100;}
+.slides_container 	{display: none; height: 305px; overflow: hidden; position: relative; width: 890px;}
+.slides_container section {background: rgb(255,255,255); border-radius: 2px; display: block; height: 281px; padding: 10px; /*border-top: 1px solid rgb(215,215,215); border-bottom: 1px solid rgb(215,215,215);*/ width: 868px;}
+
+.slides_container img {display:block; float: right;}
+
+.slides_container .caption		{background: rgb(153, 190, 105); float: left; height: 260px; margin: 0 10px 0 0; padding: 10px; position: relative; width: 288px;}
+
+.slides_container .caption h1 a 		{color: rgb(50,75,16); font-size: 1.3em; font-weight: 700; text-decoration: none;}
+.slides_container .caption h1 a:hover 	{color: rgb(255,255,255);}
+.slides_container .caption h2 			{color: rgb(255,255,255); font-size: 1.3em; line-height: 1.5em; margin: 15px 0 0;}
+
+.caption .download		{background: rgb(50,74,16); border: 2px solid rgb(153,190,105); border-radius: 10px;}
+.caption .download		{bottom: 10px; height: 42px; left: 96px; position: absolute; text-decoration: none; width: 200px;}
+
+.caption .download:hover		{background: rgb(30,54,0); border: 2px solid rgb(242,242,242); text-decoration: none;}
+
+.caption .download .bt_text		{color: rgb(153,190,105); font-size: 1.3em; padding: 10px 25px; position: absolute; width: 150px; z-index: 10;}
+
+.caption .download .bt_text:hover	{color: rgb(255,255,255);}
+
+.caption .download .arrow			{border-radius: 16px; color: rgb(153,190,105); display: inline-block; font-family: 'websymbols'; font-size: 1.9em; height: 32px; position: absolute; right: 5px; top: 3px; width: 32px; z-index: 3;}
+
+.slides .next,
+.slides .prev 			{color: rgb(55,55,55); font-family: 'websymbols'; font-size: 2.4em; left: -31px; position: absolute; text-decoration: none; top: 132px; z-index: 101;}
+
+.slides .next 				{left: 881px;}
+
+.slides .next:hover,
+.slides .prev:hover			{color: rgb(155,155,155);}
+.slides>.pagination 		{margin: 15px auto 0; overflow: hidden; width: 100px;}
+
+.slides>.pagination li 		{float: left; list-style: none; margin: 0 2px;}
+
+.slides>.pagination li a 	{background: rgb(55,55,55); border: 2px solid rgb(255,255,255); border-radius: 8px; display: block; float: left; height: 0; overflow: hidden; padding-top: 12px; width: 12px;}
+
+.slides>.pagination li.current a,
+.slides>.pagination li a:hover {background: rgb(153,190,105);}
+
+/*PUNCHLINE*/
+.punchline 			{margin-bottom: 30px;}
+.punchline hgroup	{background: rgb(255,255,255); border-bottom: 1px solid rgb(225,225,225); border-top: 1px solid rgb(225,225,225); color: rgb(50,74,16); font-size: 1.6em;}
+.punchline hgroup h1,
+.punchline hgroup h2	{padding: 16px 0;}
+.punchline hgroup h1	{border-bottom: 2px solid rgb(153,190,105); padding-left: 110px;}
+.punchline hgroup h2 	{margin-left: 280px;}
+
+/*---------*/
+
+/*COL LISTS*/
+
+.list section		{border: 1px solid rgb(245,245,245); border-radius: 2px;}
+.list h2			{font-size: 1.3em;}
+.list h2>a			{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; padding: 4px; text-decoration: none;}
+.list h2>a:hover	{background: rgb(153,190,105); color: rgb(255,255,255);}
+
+.list .meta				{border-bottom: 1px solid rgb(242,242,242); border-top: 1px solid rgb(242,242,242); color: rgb(175,175,175); font-size: 0.8em; margin-top: 5px; overflow: hidden; padding: 0 4px;}
+.list .thumb			{display: inline-block; height: 170px; margin-top: 15px; padding: 0 4px;}
+.list .category			{display: block; float: left;}
+.list .category			{font-weight: normal; text-transform: capitalize;}
+.list .date 			{display: inline-block; float: right;}
+.list .date .month		{text-transform: capitalize;}
+
+.list footer			{overflow: hidden; margin-top: 20px; padding: 0 4px;}
+.list footer a 			{font-size: 0.8em;}
+.list footer .author		{color: rgb(153,190,105); float: left; margin-top: 13px; text-decoration: none;}
+.list footer .author:hover	{color: rgb(175,175,175);}
+
+.list footer .read_more	{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); float: right; font-weight: bold; padding: 5px; text-decoration: none;}
+.list .read_more:hover	{background: rgb(105,105,105); color: rgb(255,255,255	);}

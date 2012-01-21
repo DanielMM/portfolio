@@ -1,9 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div id="content_wrapp">
 	<div id="content">
-		<article id="projects">
-			<h1 class="section_heading"><?php echo $page_title; ?></h1>
-			<ul>
+		<section class="main list">
+			<h1 class="col_title">Projects</h1>
 				<?php 
 					if(isset($projects)):
 					foreach($projects as $project): 
@@ -14,37 +13,40 @@
 						$url_title = url_title($project->post_title,"underscore");
 						
 						$thumb = $project->post_thumb;
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"170\" height=\"170\" alt=\"{$title}\" title=\"{$title}\" />";
+						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"710\" height=\"280\" alt=\"{$title}\" title=\"{$title}\" />";
 						$teaser = $project->post_teaser;
 					?>
-					<li>
-						<section>
-							<?php
-								echo anchor("project/".$url_title, $thumb, array('title' => $title,'class'=>"thumb"));
-							?>
-							<div class="summary">
-								<div class="date">
-									<span class="day"><?php echo $date[2]; ?></span>
+						<article class="<?php echo $project->post_category; ?>">
+							<h1>
+								<?php
+									echo anchor("project/".$url_title, $title, array('title' => $title,'class'=>"thumb"));
+								?>
+							</h1>
+							<p class="post_info">
+								<span class="category"><?php echo $project->cat_name; ?></span>
+								<span class="date nobrd">
 									<span class="month"><?php echo $months[$date[1]]; ?></span>
+									<span class="day"><?php echo substr($date[2], 0,2); ?></span>
 									<span class="year"><?php echo $date[0]; ?></span>
-								</div>
-								<h3 class="category"><?php echo $project->cat_title; ?></h3>
-								<h2>
-									<?php
-										echo anchor("project/".$url_title, $title, array('title' => $title));
-									?>
-								</h2>
-									<?php
-										echo $teaser;
-									?>
-								<?php echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+								</span>
+							</p>
+							<h2>
+								<?php
+									echo anchor("project/".$url_title, $thumb, array('title' => $title));
+								?>
+							</h2>
+							<div class="summary">
+								<?php
+									echo $teaser;
+								?>
 							</div>
-						</section>
-					</li>
+							<footer>
+								<?php echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+							</footer>
+						</article>
 				<?php endforeach; 
 					else:
 				?>
-			</ul>
 			<div>No data.</div>
 			<?php endif;?>
 			<div class="pagination">
@@ -59,14 +61,14 @@
 					<li><a href="">7</a></li>
 					<li class="next" ><a href="">&raquo;</a></li>
 				</ul>
-			</div>
-		</article>
+			</div><!--pagination-->
+		</section><!--main-->
 		<aside class="sidebar">
 			<?php 
 				if(isset($categories)){
 					$this->load->view('categories_widget_view'); 
 				}
 			?>
-		</aside>
-	</div>
-</div>
+		</aside><!--sidebar-->
+	</div><!--content-->
+</div><!--content_wrapp-->

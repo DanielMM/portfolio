@@ -6,7 +6,8 @@ class About extends CI_Controller {
 	{
 		$data['page_title'] 	= "About ";
 		$data['age'] 	= date('Y') - 1987;
-		
+		$data['nav_item'] = "about";
+
 		$this->load->view('header_view', $data);
 		$this->load->view('about_view', $data);
 		$this->load->view('footer_view');

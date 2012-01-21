@@ -4,10 +4,10 @@
 	<head>
 		<title><?php if(isset($title)){echo $title;}?> - Daniel Mois - Web Developer</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>reset.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>layout.css" media="screen" />
-		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>style.css" media="screen" />
+		<!--<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>style.css" media="screen" />-->
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>landing.css" media="screen" />
 		<!--[if IE 8]>
 			<link href="<?php echo asset_url('css'); ?>ie7.css" type="text/css" rel="stylesheet" media="screen">
@@ -20,45 +20,12 @@
 		<![endif]-->
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script src="<?php echo asset_url('js'); ?>slides.min.jquery.js"/></script>
-		<script>
-			$(function(){
-				$('#slides').slides({
-					preload: true,
-					preloadImage: '<?php echo asset_url('img');?>loading.gif',
-					play: 5000,
-					effect: 'fade',
-					generatePagination: false,
-					fadeSpeed: 800,
-					crossfade: true,
-					hoverPause: false,
-					animationStart: function(current){
-						$('.caption').animate({
-							bottom:-35
-						},100);
-						if (window.console && console.log) {
-							// example return of current slide number
-							console.log('animationStart on slide: ', current);
-						};
-					},
-					animationComplete: function(current){
-						$('.caption').animate({
-							bottom:0
-						},200);
-						if (window.console && console.log) {
-							// example return of current slide number
-							console.log('animationComplete on slide: ', current);
-						};
-					},
-					slidesLoaded: function() {
-						$('.caption').animate({
-							bottom:0
-						},200);
-					}
-				});
-			});
-		</script>
-	</head>
+		<?php
+			if(isset($headers)){
+				echo $headers;
+			}
+		?>
+		</head>
 	<body>
 		<div id="header_wrapp">
 			<header>

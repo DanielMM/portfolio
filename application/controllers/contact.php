@@ -4,7 +4,8 @@ class Contact extends CI_Controller {
 
 	public function index()
 	{
-		$data['page_title'] 	= "Contact ";
+		$data['page_title'] = "Contact ";
+		$data['nav_item'] = "contact";
 		
 		$this->load->view('header_view', $data);
 		$this->load->view('contact_view', $data);
@@ -23,7 +24,7 @@ class Contact extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['page_title'] 	= "Contact ";
-
+			$data['nav_item'] = "contact";
 			$this->load->view('header_view', $data);
 			$this->load->view('contact_view', $data);
 			$this->load->view('footer_view');
@@ -47,11 +48,13 @@ class Contact extends CI_Controller {
 			if($delivered){
 				$data['success']		= "Message sent successfuly!";
 				$data['feedback']		= true;
-				$data['page_title'] 	= "Message sent successfuly - Contact ";	
+				$data['page_title'] 	= "Message sent successfuly - Contact ";
+				$data['nav_item'] = "contact";
 			}else{
 				$data['error']			= "Error sending message, please try again!";
 				$data['feedback']		= false;
-				$data['page_title'] 	= "Error sending message - Contact ";	
+				$data['page_title'] 	= "Error sending message - Contact ";
+				$data['nav_item'] = "contact";
 			}
 		
 			$this->load->view('header_view', $data);

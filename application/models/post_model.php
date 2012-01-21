@@ -1,33 +1,32 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Project_model extends CI_Model {
-
-    function __construct()
+class Post_model extends CI_Model {
+	
+	function __construct()
     {
-        // Call the Model constructor
         parent::__construct();
     }
 
-    public function getProjects(){
-    	
-        $this->db->select('*','categories.cat_title','categories.cat_name');
+	public function getPostsByTag($tag)
+	{
+		$this->db->select('*','categories.cat_title','categories.cat_name');
         $this->db->from('posts');
         $this->db->join('categories', 'posts.post_category = categories.cat_name');
-        $this->db->where(array('post_type'=>'project'));
+        $this->db->like(array('post_status'=>'published','post_terms'=>$tag));
         $this->db->order_by('post_date', 'desc');
         $results = $this->db->get();
-		return $results;    	
-    }
+		return $results;
+	}
 
-    public function getProject($post_title)
-    {	
-        //SELECT * , ct.cat_title FROM projects AS pr JOIN categories AS ct ON pr.post_category = ct.cat_name
-
+	public function getPostsByCategory($category){
         $this->db->select('*','categories.cat_title','categories.cat_name');
         $this->db->from('posts');
         $this->db->join('categories', 'posts.post_category = categories.cat_name');
-    	$this->db->where(array('post_title'=>$post_title));
+        $this->db->where(array('post_status'=>'published','post_category'=>$category));
+        $this->db->order_by('posts.post_date', 'desc');
+
         $results = $this->db->get();
 		return $results;    	
     }
+
 }

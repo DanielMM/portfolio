@@ -1,7 +1,7 @@
 <div id="content_wrapp">
 	<div id="content">
-		<article>
-			<h1 class="section_heading">Send me a message</h1>
+		<section class="main">
+			<h1 class="col_title">Contact - Send me a message</h1>
 			<p>Feel free to contact me if you think I could add value to your future project or maybe you want to get feedback on your latest work or even if you just want to say hello! </p>
 			<section id="contact_form">
 				<?php
@@ -31,15 +31,15 @@
 					</div>
 					<?php endif; ?>
 			</section>
-		</article>
+		</section><!--main-->
 		<aside class="sidebar">
 			<article id="personal_info" class="widget" >
 				<section class="personal_portrait">
-					<h4 class="section_heading">always smiling</h4>
+					<h3 class="col_title">always smiling</h4>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="220" height="298" />
 				</section>
 				<section class="hcard">
-					<h4 class="section_heading">Download <span class="lowcase">vCard</span></h4>
+					<h3 class="col_title">Download <span class="lowcase">vCard</span></h4>
 					<div id="hcard-Daniel-Mois" class="vcard">
 						<?php echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
 						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>
@@ -63,6 +63,6 @@
 					</div>
 				</section>
 			</article>
-		</aside>
-	</div>
-</div>
+		</aside><!--sidebar-->
+	</div><!--content-->
+</div><!--content_wrapp-->
