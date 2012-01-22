@@ -20,11 +20,12 @@ class Blog_model extends CI_Model {
     }
     
         
-    public function getArticles(){
+    public function getArticles($limit, $offset = 0){
 
         $this->db->select('*');
         $this->db->from('posts');
         $this->db->where(array('post_type'=>'article', 'post_status'=>'published'));
+        $this->db->limit($limit, $offset);
         $this->db->order_by('post_date', 'desc');
 
         $results = $this->db->get();

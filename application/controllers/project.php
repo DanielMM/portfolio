@@ -18,9 +18,9 @@ class Project extends CI_Controller {
 		$config['full_tag_open'] = '<ul>';
 		$config['full_tag_close'] = '</ul>';
 
-		$config['next_link'] = '&raquo;';
-		$config['next_tag_open'] = '<li class="prev">';
-		$config['next_tag_close'] = '</li>';
+		$config['prev_link'] = '&laquo;';
+		$config['prev_tag_open'] = '<li class="next" title="Previous">';
+		$config['prev_tag_close'] = '</li>';
 
 		$config['num_tag_open'] = '<li>';
 		$config['num_tag_close'] = '</li>';
@@ -28,9 +28,9 @@ class Project extends CI_Controller {
 		$config['cur_tag_open'] = '<li class="active"><a href="">';
 		$config['cur_tag_close'] = '</a></li>';
 
-		$config['prev_link'] = '&laquo;';
-		$config['prev_tag_open'] = '<li class="next">';
-		$config['prev_tag_close'] = '</li>';
+		$config['next_link'] = '&raquo;';
+		$config['next_tag_open'] = '<li class="prev" title="Next">';
+		$config['next_tag_close'] = '</li>';
 
 		$this->pagination->initialize($config);
 
@@ -113,7 +113,7 @@ class Project extends CI_Controller {
 		}
 	}
 
-	/*private function _getProject($title)
+	private function _getProject($title)
 	{	
 		//check if there is an item with that title in the first place
 		$this->load->model('Project_model');
@@ -128,7 +128,7 @@ class Project extends CI_Controller {
 			return false;
 		}
 
-	}*/
+	}
 	
 	private function _getCategories()
 	{

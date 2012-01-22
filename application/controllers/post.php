@@ -34,7 +34,7 @@ class Post extends CI_Controller {
 		$this->load->view('footer_view');
 	}
 
-	public function tag($tag){
+	public function tag($tag, $offset = 0){
 		$data['page_title'] 	= "Tag: ".$tag;
 
 		//Select all posts that have the tag
@@ -43,7 +43,48 @@ class Post extends CI_Controller {
 			$data['categories'] = $this->_getCategories();
 		}
 
-		$posts = $this->_getPostsByTag($tag);
+		//Load pagination library
+		$this->load->library('pagination');
+		
+		//Set config settings for pagination
+		$config['base_url'] = "http://portfolio/tag/".$tag."/page";
+		$config['total_rows'] = 10;
+		$config['per_page'] = 2;
+		$config['num_links'] = 2;
+		$config['uri_segment'] = 4;
+
+
+		$config['full_tag_open'] = '<ul>';
+		$config['full_tag_close'] = '</ul>';
+
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+
+		$config['prev_link'] = '&laquo;';
+		$config['prev_tag_open'] = '<li class="next" title="Previous">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['next_link'] = '&raquo;';
+		$config['next_tag_open'] = '<li class="prev" title="Next">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+
+
+		$this->pagination->initialize($config);
+
+		$data['pagination'] = $this->pagination->create_links();
+
+		$posts = $this->_getPostsByTag($tag, $config['per_page'], $offset);
 		//var_dump($posts);
 
 		if($posts){
@@ -58,12 +99,12 @@ class Post extends CI_Controller {
 		$this->load->view('footer_view');
 	}
 
-	private function _getPostsByTag($tag)
+	private function _getPostsByTag($tag, $limit, $offset)
 	{
 		
 		$this->load->model('Post_model');
 		
-		$results = $this->Post_model->getPostsByTag($tag);
+		$results = $this->Post_model->getPostsByTag($tag, $limit, $offset);
 		foreach($results->result() as $post){
 			
 			$posts[] = $post;

@@ -38,7 +38,7 @@
 			}
 		?>
 	</head>
-	<body onload="prettyPrint()">
+	<body>
 		<div id="header_wrapp">
 			<header>
 				<div id="logo">

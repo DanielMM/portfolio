@@ -54,7 +54,7 @@
 			<article id="personal_info" class="widget" >
 				<section class="personal_portrait">
 					<h3 class="col_title">always smiling</h3>
-					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="220" height="298" />
+					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="230" height="312" />
 				</section>
 				
 				<section class="cv">

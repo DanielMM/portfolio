@@ -8,7 +8,8 @@ class Project_model extends CI_Model {
         parent::__construct();
     }
 
-    public function getProjects($limit, $offset){
+    public function getProjects($limit, $offset)
+    {
     	
         $this->db->select('*','categories.cat_title','categories.cat_name');
         $this->db->from('posts');
@@ -22,8 +23,7 @@ class Project_model extends CI_Model {
 
     public function getProject($post_title)
     {	
-        //SELECT * , ct.cat_title FROM projects AS pr JOIN categories AS ct ON pr.post_category = ct.cat_name
-
+      
         $this->db->select('*','categories.cat_title','categories.cat_name');
         $this->db->from('posts');
         $this->db->join('categories', 'posts.post_category = categories.cat_name');

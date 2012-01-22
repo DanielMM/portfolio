@@ -311,12 +311,15 @@ article.project			{position: relative;}
 /*---------------*/
 
 /*PORTRAIT*/
-.personal_portrait img		{margin-top: -10px;}
+.personal_portrait .col_title		{margin: 0 0 15px;}
 
 /*--------*/
 /*ABOUT*/
 
-#skills, #toolkit, #keypoints	{margin-top: 20px;}
+#skills, 
+#toolkit, 
+#keypoints					{margin-top: 20px;}
+
 #skills						{float: left;}
 #skills, #toolkit			{padding: 10px 0 0 20px;}
 #skills dl,
@@ -355,7 +358,7 @@ article.project			{position: relative;}
 #keypoints ul 	 			{margin: 0 0 5px 25px;padding: 4px 0;}
 #keypoints ul li 			{list-style: inherit; list-style-type: circle; margin: 0 0 0 20px; padding: 10px 0;}
 
-.cv .col_title		{text-transform: none;}
+.cv .col_title				{text-transform: none;}
 
 /*-----------*/
 
@@ -416,7 +419,7 @@ span.lowcase			{text-transform: none;}
 /*hCard*/
 #hcard-Daniel-Mois			{padding: 0 10px;}
 .hcard a 					{color: rgb(50,50,50); text-decoration: none;}
-#hcard-Daniel-Mois a:hover	{color: rgb(90,90,90); text-decoration: underline;}
+#hcard-Daniel-Mois a:hover	{color: rgb(153,190,105); text-decoration: underline;}
 
 .fn, .email, .tel, .adr,
 .vcard						{font-size: 0.9em; margin: 0 0 5px;}
