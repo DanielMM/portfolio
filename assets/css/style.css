@@ -227,7 +227,7 @@ ARTICLE PAGE
 
 /* PAGINATION */
 
-.pagination>ul			{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
+.pagination 			{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
 
 .pagination>ul>li		{background: rgb(175,175,175); border-radius: 2px; display: inline; margin-right: 10px; padding: 5px 0;}
 

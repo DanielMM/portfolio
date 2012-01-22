@@ -2,12 +2,45 @@
 
 class Project extends CI_Controller {
 
-	public function index()
+	public function page($offset = 0)
 	{	//Select all projects
+
+
+		//Load pagination library
+		$this->load->library('pagination');
+		
+		//Set config settings for pagination
+		$config['base_url'] = "http://portfolio/projects/page";
+		$config['total_rows'] = 5;
+		$config['per_page'] = 2;
+
+
+		$config['full_tag_open'] = '<ul>';
+		$config['full_tag_close'] = '</ul>';
+
+		$config['next_link'] = '&raquo;';
+		$config['next_tag_open'] = '<li class="prev">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['prev_link'] = '&laquo;';
+		$config['prev_tag_open'] = '<li class="next">';
+		$config['prev_tag_close'] = '</li>';
+
+		$this->pagination->initialize($config);
+
+		$data['pagination'] = $this->pagination->create_links();
+	
 		$data['page_title'] = "Projects";
 
-		if($this->_getProjects()){
-			$data['posts'] = $this->_getProjects();
+		$posts = $this->_getProjects($config['per_page'], $offset);
+		if($posts){
+			$data['posts'] = $posts;
 		}else{
 			$this->load->view('error_404_view');
 		}
@@ -63,12 +96,11 @@ class Project extends CI_Controller {
 		
 	}
 
-	private function _getProjects()
+	private function _getProjects($limit, $offset)
 	{
-		
 		$this->load->model('Project_model');
 		
-		$results = $this->Project_model->getProjects();
+		$results = $this->Project_model->getProjects($limit, $offset);
 		foreach($results->result() as $project_item){
 			
 			$projects[] = $project_item;
@@ -81,7 +113,7 @@ class Project extends CI_Controller {
 		}
 	}
 
-	private function _getProject($title)
+	/*private function _getProject($title)
 	{	
 		//check if there is an item with that title in the first place
 		$this->load->model('Project_model');
@@ -96,7 +128,7 @@ class Project extends CI_Controller {
 			return false;
 		}
 
-	}
+	}*/
 	
 	private function _getCategories()
 	{

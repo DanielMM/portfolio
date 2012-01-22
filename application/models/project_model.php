@@ -8,13 +8,14 @@ class Project_model extends CI_Model {
         parent::__construct();
     }
 
-    public function getProjects(){
+    public function getProjects($limit, $offset){
     	
         $this->db->select('*','categories.cat_title','categories.cat_name');
         $this->db->from('posts');
         $this->db->join('categories', 'posts.post_category = categories.cat_name');
         $this->db->where(array('post_type'=>'project'));
         $this->db->order_by('post_date', 'desc');
+        $this->db->limit($limit, $offset);
         $results = $this->db->get();
 		return $results;    	
     }

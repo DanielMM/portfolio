@@ -41,7 +41,7 @@
 					<ul>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>project">Work</a>
+								<a href="<?php echo site_url(); ?>projects">Work</a>
 							</h3>
 						</li>
 						<li>

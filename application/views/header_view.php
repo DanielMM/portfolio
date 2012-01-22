@@ -53,7 +53,7 @@
 					<ul>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>project" <?php if(isset($nav_item) && $nav_item=="work"){echo "class=\"selected\" ";}?>>Work</a>
+								<a href="<?php echo site_url(); ?>projects" <?php if(isset($nav_item) && $nav_item=="work"){echo "class=\"selected\" ";}?>>Work</a>
 							</h3>
 						</li>
 						<li>
