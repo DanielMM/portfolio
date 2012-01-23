@@ -10,12 +10,14 @@
 				?>
 				<p class="post_info">
 					<span class="category"><?php echo $article['post_category']; ?></span>
-					<span class="date">
+					<span class="date <?php if($article['post_category'] == "project"){echo "nobrd";} ?>">
 						<span class="month"><?php echo $article['date']['month']; ?></span>
 						<span class="day"><?php echo $article['date']['day']; ?></span>
 						<span class="year"><?php echo $article['date']['year']; ?></span>
 					</span>
+				<?php if($article['post_category'] != "project"): ?>
 					<span class="comm_count">3<?php //echo $comm_count; ?> comments</span>
+				<?php endif; ?>
 				</p>
 				<?php echo $thumb; ?>
 				<div class="summary">
@@ -77,12 +79,94 @@
 			</section><!--post_footer-->
 			<?php if($article['post_settings']['comments']): ?>
 			<section class="comm_wrapp">
-				<h2 class="col_title"><?php echo "5"; ?> Comments <!--<span class="add_comm_toggle">Add Comment<span>{</span></span>--></h2>
-				<article class="comm_form">
-					<h3>Join the disscusion and add your own comments!</h3>
+				<h2 class="col_title"><?php echo "5"; ?> Comments <a class="add_comm_toggle" href="#addComment">Add Comment<span>{</span></a></h2>
+				<section class="comments">
+					<article class="comment">
+						<p class="comm_meta">
+							<span class="comm_thumb">
+								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
+							</span>
+							<a href="" class="comm_author">miguelsancez@webtres.es</a>
+							<span class="comm_date">december 12 2012</span>
+						</p>
+						
+						<section class="comm_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat.
+						</section>
+						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+					</article>
+					<article class="comment reply author">
+						<p class="comm_meta">
+							<span class="comm_thumb">
+								<img src="<?php echo asset_url('img');?>daniel_mois_author.jpg" height="32" widht="32" />
+							</span>
+							<a href="" class="comm_author">author</a>
+							<span class="comm_date">june 30 2012</span>
+						</p>
+						<section class="comm_body">Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</section>
+						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+					</article>
+					<article class="comment">
+						<p class="comm_meta">
+							<span class="comm_thumb">
+								<img src="<?php echo asset_url('img');?>user2.jpg" height="32" widht="32" />
+							</span>
+							<a href="" class="comm_author">estravaganza@gmail.com</a>
+							<span class="comm_date">june 30 2012</span>
+						</p>
+						<section class="comm_body"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla <a href="">pariatur</a>. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</section>
+						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+					</article>
+					<article class="comment reply author">
+						<p class="comm_meta">
+							<span class="comm_thumb">
+								<img src="<?php echo asset_url('img');?>daniel_mois_author.jpg" height="32" widht="32" />
+							</span>
+							<a href="<?php echo site_url();?>" class="comm_author">author</a>
+							<span class="comm_date">june 30 2012</span>
+						</p>
+						<section class="comm_body"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<blockquote>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat <a href="">cupidatat</a> non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</section>
+						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+					</article>
+					<article class="comment reply2">
+						<p class="comm_meta">
+							<span class="comm_thumb">
+								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
+							</span>
+							<a href="<?php echo site_url();?>" class="comm_author">estravaganza@gmail.com</a>
+							<span class="comm_date">june 30 2012</span>
+						</p>
+						<section class="comm_body">Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</section>
+						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+					</article>
+				</section>
+				<article class="comm_form" id="addComment">
+					<h3>Add your own comments!</h3>
 					<?php
 					
-						echo form_open($article['post_type'].'/'.$article['link']);
+						echo form_open($article['post_type'].'/'.$article['link'].'#addComment');
 						
 						echo form_label('Name*', 'name');
 						echo form_label('Email*', 'email'); 
@@ -118,89 +202,6 @@
 					</div>
 					<?php endif; ?>
 				</article>
-				<section class="comments">
-					<article class="comment">
-						<p class="comm_meta">
-							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
-							</span>
-							<a href="" class="comm_author">miguelsancez@webtres.es</a>
-							<span class="comm_date">december 12 2012</span>
-						</p>
-						
-						<section class="comm_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat.
-						</section>
-						<section>
-							<footer><span>h</span>Respond</footer>
-						</section>
-					</article>
-					<article class="comment reply author">
-						<p class="comm_meta">
-							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>daniel_mois_author.jpg" height="32" widht="32" />
-							</span>
-							<a href="" class="comm_author">author</a>
-							<span class="comm_date">june 30 2012</span>
-						</p>
-						<section class="comm_body">Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</section>
-					</article>
-					<article class="comment">
-						<p class="comm_meta">
-							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>user2.jpg" height="32" widht="32" />
-							</span>
-							<a href="" class="comm_author">estravaganza@gmail.com</a>
-							<span class="comm_date">june 30 2012</span>
-						</p>
-						<section class="comm_body"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla <a href="">pariatur</a>. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</section>
-					</article>
-					<article class="comment reply author">
-						<p class="comm_meta">
-							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>daniel_mois_author.jpg" height="32" widht="32" />
-							</span>
-							<a href="<?php echo site_url();?>" class="comm_author">author</a>
-							<span class="comm_date">june 30 2012</span>
-						</p>
-						<section class="comm_body"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<blockquote>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat <a href="">cupidatat</a> non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						</section>
-						<section>
-							<footer><span>h</span>Respond</footer>
-						</section>
-					</article>
-					<article class="comment reply2">
-						<p class="comm_meta">
-							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
-							</span>
-							<a href="<?php echo site_url();?>" class="comm_author">estravaganza@gmail.com</a>
-							<span class="comm_date">june 30 2012</span>
-						</p>
-						<section class="comm_body">Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</section>
-					</article>
-				</section>
 			</section>
 			<?php endif; ?>
 		</article>

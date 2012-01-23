@@ -169,7 +169,7 @@ ARTICLE PAGE
 .article_page .summary			{float: left; margin-left: 10px; min-height: 170px; width: 530px;}
 
 /*COMMENT FORM*/
-.add_comm_toggle			{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-weight: bold; margin-top: -4px; padding: 3px 9px; text-transform: none;}
+.add_comm_toggle			{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-weight: bold; margin-top: -4px; padding: 3px 9px; text-transform: none; text-decoration: none;}
 .add_comm_toggle:hover		{background: rgb(205,205,205); color: rgb(105,105,105); cursor: pointer;}
 .add_comm_toggle:active		{color: rgb(255,255,255);}
 
@@ -189,7 +189,7 @@ ARTICLE PAGE
 .comm_form input,
 .comm_form textarea,
 .comm_form input[type=submit],
-.comm_form span.error			{border-color: transparent; border-radius: 5px;font-family: arial, sans-serif; font-size: 1em;}
+.comm_form span.error			{border-color: transparent; border-radius: 3px;font-family: arial, sans-serif; font-size: 1em;}
 
 .comm_form input[type='text'],
 .comm_form textarea,
@@ -211,9 +211,9 @@ ARTICLE PAGE
 .comm_form textarea:focus		{box-shadow: 0 0 5px 1px rgb(142,142,142);}
 
 
-.comm_form input[type=submit]	{float: right; font-size: 0.9em; font-weight: bold; margin: 20px 0; padding: 10px 20px; text-transform: uppercase; width: auto;}
-.comm_form input[type=submit]:hover		{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142);}
-.comm_form input[type=submit]:active	{background: rgb(153,190,105); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(255,255,255);}
+.comm_form input[type=submit]	{float: right; font-size: 0.9em; font-weight: bold; margin: 20px 0; padding: 10px 20px; text-transform: uppercase;}
+.comm_form input[type=submit]:hover		{background: rgb(153,190,105); color: rgb(255,255,255);}
+.comm_form input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(0,0,0);}
 
 /*------------*/
 
@@ -243,6 +243,13 @@ ARTICLE PAGE
 .comments .comm_body		{padding: 10px 0;}
 
 .comments footer>span		{height: 20px; font-family: "websymbols"; font-size: 1em; width: 20px;}
+
+.comment .comm_footer		{}
+
+.comment .reply_btn			{background: rgb(205,205,205); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-size: 0.8em; font-weight: bold; padding: 4px 6px; text-decoration: none;}
+.comment .reply_btn:hover{background: rgb(153,190,105);  color: rgb(255,255,255);}
+
+.comment .reply_btn span	{font-family: 'websymbols'; margin-right: 6px;}
 
 .comment.reply				{}
 /*.comment.reply>span			{color: rgb(205,205,205); display: inline-block; float: left; font-family: 'websymbols'; font-size: 2em; padding-top: 1em; width: 40px;}*/
@@ -321,7 +328,7 @@ article.project			{position: relative;}
 #keypoints					{margin-top: 20px;}
 
 #skills						{float: left;}
-#skills, #toolkit			{padding: 10px 0 0 20px;}
+#skills, #toolkit			{padding: 10px 0 30px 20px;}
 #skills dl,
 #toolkit dl					{background: rgb(232,232,232); border: 1px solid rgb(222,222,222); margin-top: 10px; overflow: hidden; width: 350px;}
 #skills dt, #skills dd 		{display: inline; float: left; padding: 10px 0;}
@@ -371,7 +378,7 @@ span.lowcase			{text-transform: none;}
 #contact_form label,
 #contact_form input,
 #contact_form textarea,
-#contact_form input[type=submit]	{border-width: 0; border-color: transparent;  border-radius: 5px; display: block; font-family: arial, sans-serif; font-size: 1em; margin: 0; padding: 0;}
+#contact_form input[type=submit]	{border-width: 0; border-color: transparent;  border-radius: 3px; display: block; font-family: arial, sans-serif; font-size: 1em; margin: 0; padding: 0;}
 
 #contact_form input,
 #contact_form textarea,
@@ -385,9 +392,12 @@ span.lowcase			{text-transform: none;}
 
 #contact_form textarea				{padding: 5px; width: 680px;}
 
-#contact_form input[type=submit]	{float: right; font-size: 0.9em; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
-#contact_form input[type=submit]:hover	{background: rgb(153,190,105); box-shadow: 0 0 5px 1px rgb(142,142,142);}
-#contact_form input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142);}
+#contact_form input[type=submit]	{float: right; font-size: 0.9em; font-weight: bold; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
+
+#contact_form input[type=submit]:hover	{background: rgb(153,190,105); color: rgb(255,255,255); font-weight: bold;}
+
+#contact_form input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(0,0,0);}
+
 #contact_form span.error				{color: rgb(240,128,128); font-size: 0.8em; margin-left: 15px;}
 #feedback				{border: 1px solid rgb(142,142,142);
 						 border-radius: 5px; 
