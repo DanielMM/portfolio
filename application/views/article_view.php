@@ -44,7 +44,7 @@
 				<?php
 					echo $article['post_content'];
 				?>
-				<pre class="prettyprint linenums:2">
+				<pre class="prettyprint linenums:2" onclick="prettyPrint()">
 					<span class="nocode">This is code to be formated.</span>
 					//testing prettyprint on js code
 					$data['article']['date']['day'] = substr($date[2], 0,2);
@@ -75,12 +75,48 @@
 					</section>
 				</footer>
 			</section><!--post_footer-->
-
+			<?php if($article['post_settings']['comments']): ?>
 			<section class="comm_wrapp">
-				<h2 class="col_title">Comments</h2>
-				<article>
-					<h3>Add new comment</h3>
-					<p>here comes the form.</p>
+				<h2 class="col_title"><?php echo "5"; ?> Comments <!--<span class="add_comm_toggle">Add Comment<span>{</span></span>--></h2>
+				<article class="comm_form">
+					<h3>Join the disscusion and add your own comments!</h3>
+					<?php
+					
+						echo form_open($article['post_type'].'/'.$article['link']);
+						
+						echo form_label('Name*', 'name');
+						echo form_label('Email*', 'email'); 
+						echo form_label('URL', 'url'); 
+						echo form_input(array('name'=>"name",'value'=>set_value('name'), 'placeholder'=>"Name"));
+						
+						echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Email address"));
+						
+						echo form_input(array('name'=>"url",'value'=>set_value('url'), 'placeholder'=>"URL"));
+						
+						echo form_error('name'); 
+						echo form_error('email');
+						echo form_error('url');
+						
+						echo form_label('Your comments', 'comment'); 
+						echo form_error('comment');
+						echo form_textarea(array('name'=>"comment",'value'=>set_value('comment'), 'placeholder'=>"Your comments",'rows'=>"12",'cols'=>"52"));
+						
+						echo form_submit('submit', 'Add comment');
+						
+						echo form_close();
+					?>
+					
+					<?php
+						if(isset($feedback) && $feedback):
+					?>
+					<div id="feedback" class="success">
+						<span class="success"><?php echo $success;?></span>
+					</div>
+					<?php elseif(isset($feedback) && !$feedback): ?>
+					<div id="feedback" class="error">
+						<span class="error"><?php echo $error;?></span>
+					</div>
+					<?php endif; ?>
 				</article>
 				<section class="comments">
 					<article class="comment">
@@ -166,6 +202,7 @@
 					</article>
 				</section>
 			</section>
+			<?php endif; ?>
 		</article>
 		<aside class="sidebar">
 			<?php //$this->load->view('related_content_widget_view'); ?>

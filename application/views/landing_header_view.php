@@ -46,7 +46,7 @@
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>blog">Blog</a>
+								<a href="<?php echo site_url(); ?>articles">Blog</a>
 							</h3>
 						</li>
 						<li>

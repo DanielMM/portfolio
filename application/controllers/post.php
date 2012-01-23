@@ -48,9 +48,9 @@ class Post extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/tag/".$tag."/page";
-		$config['total_rows'] = 10;
-		$config['per_page'] = 2;
-		$config['num_links'] = 2;
+		$config['total_rows'] = 5;
+		$config['per_page'] = 3;
+		$config['num_links'] = 4;
 		$config['uri_segment'] = 4;
 
 
@@ -97,6 +97,23 @@ class Post extends CI_Controller {
 		$this->load->view('header_view', $data);
 		$this->load->view('list_view', $data);
 		$this->load->view('footer_view');
+	}
+
+	public function addComment($post_link){
+		var_dump($post_link);
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_error_delimiters('<span class="error">', '</span>');
+		$this->form_validation->set_rules('name', 'name', 'trim|required');
+		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
+		$this->form_validation->set_rules('url', 'url', 'trim');
+		$this->form_validation->set_rules('message', 'message', 'trim|required');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			
+			//redirect('/article/'.$post_link, 'refresh');
+		}
 	}
 
 	private function _getPostsByTag($tag, $limit, $offset)

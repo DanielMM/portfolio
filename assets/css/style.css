@@ -115,12 +115,12 @@ POST PAGE
 
 .post_meta .tags+dd>a.tag:hover		{background: rgb(153,190,105); color: rgb(252,252,252);}
 
-.post_meta .tags,
+/*.post_meta .tags,
 .post_meta .tags+dd 	{float: right;}
 
 .post_meta .tags		{position: absolute; right: 160px; top: 10px;}
 .post_meta .tags+dd 	{max-width: 190px; min-width: 120px; position: absolute; right: 0; top: 10px;}
-
+*/
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
 
 .share					{float: left; height: 100px; width: 400px;}
@@ -155,20 +155,72 @@ POST PAGE
 .post_footer .author_info img		{position: absolute; right: 10px; top: 33px;}
 .post_footer .author_info a 		{color: rgb(175,175,175); display: inline-block; margin-top: 5px; text-decoration: none;}
 .post_footer .author_info a:hover 	{color: rgb(153,190,105);}
+
 /*-----------------------
 ARTICLE PAGE
 ------------------------*/
+
 .article_page header>h1		{color: rgb(50,75,16); font-weight: 700; font-size: 2em;}
 .article 				{position: relative;}
 
-.article_page .post_meta dl 	{min-height: inherit;}
+/*.article_page .post_meta dl 	{min-height: inherit;}*/
 .article_page .post_info+img	{float: left; height: 170px; width: 170px;}
 
 .article_page .summary			{float: left; margin-left: 10px; min-height: 170px; width: 530px;}
 
+/*COMMENT FORM*/
+.add_comm_toggle			{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-weight: bold; margin-top: -4px; padding: 3px 9px; text-transform: none;}
+.add_comm_toggle:hover		{background: rgb(205,205,205); color: rgb(105,105,105); cursor: pointer;}
+.add_comm_toggle:active		{color: rgb(255,255,255);}
+
+.add_comm_toggle span		{font-family: 'websymbols'; margin-left: 9px;}
+
+.comm_form						{border-bottom: 1px solid rgb(215,215,215); margin-bottom: 20px; padding-left: 5px; overflow: hidden;}
+.comm_form span.error			{color: rgb(240,128,128); font-size: 0.9em;}
+
+.comm_form label, 
+.comm_form input[type='text'],
+.comm_form span.error			{border-width: 0; display: inline-block; padding: 0; width: 212px;}
+
+.comm_form label[for='comment']	{display: inline-block;}
+.comm_form label[for='comment']+span.error	{display: inline-block; margin-left: -115px; width: 250px;}
+
+.comm_form label,
+.comm_form input,
+.comm_form textarea,
+.comm_form input[type=submit],
+.comm_form span.error			{border-color: transparent; border-radius: 5px;font-family: arial, sans-serif; font-size: 1em;}
+
+.comm_form input[type='text'],
+.comm_form textarea,
+.comm_form input[type=submit]	{border: 1px solid rgb(142,142,142);}
+
+.comm_form input[type='text'],
+.comm_form label,
+.comm_form span.error				{margin: 0 15px 5px 0; padding: 5px;}
+
+.comm_form input[name='url'],
+.comm_form label[for="url"]		{margin-right: 0;}
+
+
+.comm_form label				{color: rgb(114,114,114);font-size: 0.9em; margin-top: 10px; width: 212px;}
+
+.comm_form textarea				{padding: 5px; width: 690px;}
+
+.comm_form input:focus,
+.comm_form textarea:focus		{box-shadow: 0 0 5px 1px rgb(142,142,142);}
+
+
+.comm_form input[type=submit]	{float: right; font-size: 0.9em; font-weight: bold; margin: 20px 0; padding: 10px 20px; text-transform: uppercase; width: auto;}
+.comm_form input[type=submit]:hover		{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142);}
+.comm_form input[type=submit]:active	{background: rgb(153,190,105); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(255,255,255);}
+
+/*------------*/
+
+
 /*COMMENTS*/
 
-.comm_wrapp>.col_title		{background: rgb(255,255,255); border-bottom: 2px solid rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 10px; padding: 5px; text-transform: uppercase;}
+.comm_wrapp>.col_title		{background: rgb(255,255,255); border-bottom: 2px solid rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 10px; padding: 5px 0 5px 5px; text-transform: uppercase;}
 
 .comments>.comment 			{border-bottom: 1px solid rgb(245,245,245); margin-bottom: 15px; overflow: hidden; padding-bottom: 15px;}
 .comments .comm_meta		{color: rgb(175,175,175); margin: 0; overflow: hidden; padding: 4px 0;}
@@ -184,7 +236,7 @@ ARTICLE PAGE
 .comments .comm_body p a		{color: rgb(153,190,105); text-decoration: none;}
 
 
-.comments .comm_thumb		{height: 32px; margin: 0 4px;}
+.comments .comm_thumb		{height: 32px; margin: 0 4px 0 0;}
 .comments .comm_author		{color: rgb(175,175,175); font-size: 0.9em; text-decoration: none;}
 .comments .comm_author:hover{color: rgb(153,190,105);}
 .comments .comm_date		{font-size: 0.7em; padding: 9px 4px 0 0; text-transform: uppercase;}
@@ -203,31 +255,11 @@ ARTICLE PAGE
 .comment.author .comm_author	{color: rgb(105,105,105); font-size: 0.8em; font-weight: bold; text-transform: capitalize;}
 
 /*--------*/
-/* Article LIST */
 
-/*#list h1					{margin-bottom: 20px;}
-#list a 					{text-decoration: none;}
-#list>ul>li					{background: rgb(240,240,240); border: 1px solid rgb(238,238,238);margin: 0 0 30px; overflow: hidden; padding: 10px;}
-
-#list section				{overflow: hidden; position: relative;}
-#list section a.thumb		{float: left; height: 170px; width: 170px;}
-
-#list section .summary		{float: left; min-height: 170px; position: relative; width: 518px;}
-#list section .summary h2	{font-size: 1.9em; margin: -6px 10px 10px 10px; width: 420px;}
-#list section .summary h2 a	{color: rgba(50,75,16, 0.7); font-weight: 700; font-family: 'Open Sans', sans-serif; padding: 0;}
-
-#list section .summary h2 a:hover			{color: rgb(50,75,16);}
-
-#list section .summary .category			{color: rgb(153,190,105); display: block; font-weight: normal; margin: 0 0 10px 10px; padding: 2px 5px; text-transform: capitalize;}
-#list section .summary .date 				{color: rgb(153,190,105); display: inline-block; float: right; padding: 2px 5px;}
-#list section .summary p					{padding-top: 10px;}
-#list section .summary .read_more			{display: block; float: right; margin: 20px 0 0 0;}
-#list section .summary .read_more			{background: rgb(153,190,105); color: rgb(50,75,16); padding: 5px;}
-#list section .summary .read_more:hover		{background: rgb(50,74,16); color: rgb(241,242,242);}*/
 
 /* PAGINATION */
 
-.pagination 			{height: 32px; margin: 10px auto; padding-top: 13px; width: 410px;}
+.pagination 			{height: 32px; margin: 10px auto; padding-top: 13px; width: 300px;}
 
 .pagination>ul>li		{background: rgb(175,175,175); border-radius: 2px; display: inline; margin-right: 10px; padding: 5px 0;}
 
@@ -245,38 +277,6 @@ ARTICLE PAGE
 /* PROJECT PAGE*/
 
 article.project			{position: relative;}
-/*
-.project p				{color: rgb(153,190,105); overflow: hidden;}
-.project .category,
-.project .date 			{display: inline-block; padding: 2px 5px;}
-.project .category		{font-weight: normal; text-transform: capitalize;}
-
-.project .project_header		{border-bottom: 1px solid rgb(232,232,232); height: auto; padding-bottom: 20px; width: 710px;}
-.project_header img.thumb				{float: left;}
-.project_header h3.category				{color: rgb(153,190,105); font-weight: normal; margin: 0 0 10px 180px; padding: 2px 5px; text-transform: capitalize;}
-.project_header .project_title			{margin-left: 180px;}
-.project_header .project_title			{color: rgba(50,75,16, 0.7); font-family: 'Open Sans', sans-serif; font-size: 2em;}
-.project_meta			{display: inline-block; margin-left: 10px; width: 530px;}
-.project_meta dt,
-.project_meta dd		{display: inline-block; margin: 5px 0;}
-.project_meta dt		{width: 80px;}
-.project_meta dd		{margin-left: 15px; width: 400px;}
-
-.project_meta dd>span.tag a			{color: rgb(252,252,252); display: inline-block; margin: 0 2px; padding: 3px 5px;}
-.project_meta dd>span.tag a			{background: rgb(153,190,105);}
-.project_meta dd>span.tag a:hover	{background: rgb(50,74,16); cursor: pointer;}
-
-.project .project_body			{display: inline-block; padding: 20px 0;}
-.project_body>p:last-child		{margin-bottom: 40px;}
-*/
-/* DATE ON POST */
-/*
-.date span				{display: inline-block; font-size: 0.8em;}
-.date .month			{text-transform: capitalize;}
-.date .year 			{}
-
-.project section .date .ribbon {border-color: rgb(50,74,16) rgb(50,74,16) rgb(220,220,220) rgb(50,74,16);}
-*/
 
 /*INLINE IMAGE PLACEHOLDER*/
 
@@ -371,24 +371,24 @@ span.lowcase			{text-transform: none;}
 #contact_form label,
 #contact_form input,
 #contact_form textarea,
-#contact_form input[type=submit]	{border-size: 0; border-color: transparent;  border-radius: 5px; display: block; font-family: arial, sans-serif; font-size: 1em; margin: 0; padding: 0;}
+#contact_form input[type=submit]	{border-width: 0; border-color: transparent;  border-radius: 5px; display: block; font-family: arial, sans-serif; font-size: 1em; margin: 0; padding: 0;}
 
 #contact_form input,
 #contact_form textarea,
 #contact_form input[type=submit]	{border: 1px solid rgb(142,142,142);}
 
-#contact_form label					{color: rgb(114,114,114); font-size: 0.9em; margin: 0 0 5px 0;}
+#contact_form label					{color: rgb(114,114,114); display: inline-block; font-size: 0.9em; margin: 0 0 5px 0;}
 #contact_form input					{margin: 0 0 20px 0; padding: 5px; width: 350px;}
 
 #contact_form input:focus,
-#contact_form textarea:focus		{box-shadow: 0 0 15px 1px rgb(142,142,142);}
+#contact_form textarea:focus		{box-shadow: 0 0 5px 1px rgb(142,142,142);}
 
 #contact_form textarea				{padding: 5px; width: 680px;}
 
 #contact_form input[type=submit]	{float: right; font-size: 0.9em; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
-#contact_form input[type=submit]:hover	{background: rgb(242,242,242); box-shadow: 0 0 10px 1px rgb(142,142,142);}
-#contact_form input[type=submit]:active	{background: rgb(153,190,105); box-shadow: 0 0 15px 1px rgb(142,142,142);}
-#contact_form span.error				{color: rgba(252,10,10,0.8); font-size: 0.8em; margin-left: 15px;}
+#contact_form input[type=submit]:hover	{background: rgb(153,190,105); box-shadow: 0 0 5px 1px rgb(142,142,142);}
+#contact_form input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142);}
+#contact_form span.error				{color: rgb(240,128,128); font-size: 0.8em; margin-left: 15px;}
 #feedback				{border: 1px solid rgb(142,142,142);
 						 border-radius: 5px; 
 						 -moz-border-radius: 5px; 

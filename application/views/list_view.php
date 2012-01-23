@@ -31,30 +31,49 @@
 						<article class="<?php echo $post->post_category; ?>">
 							<h1>
 								<?php
-									echo anchor("blog/".$url_title, $title, array('title' => $title));
+									if($post->post_category == 'project'){
+										echo anchor("project/".$url_title, $title, array('title' => $title));
+									}else{
+										echo anchor("article/".$url_title, $title, array('title' => $title));
+									}
 								?>
 							</h1>
 							<p class="post_info">
 								<span class="category"><?php echo $post->post_category; ?></span>
-								<span class="date">
+								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
 									<span class="month"><?php echo $months[$month]; ?></span>
 									<span class="day"><?php echo $day; ?></span>
 									<span class="year"><?php echo $year; ?></span>
 								</span>
-								<span class="comm_count">3<?php //echo $comm_count; ?> comments</span>
+								<?php if($post->post_category != 'project'): ?>
+									<span class="comm_count">3<?php //echo $comm_count; ?> comments</span>
+								<?php endif; ?>
 							</p>
 							<h2>
 								<?php
-									echo anchor("blog/".$url_title, $thumb, array('title' => $title,'class'=>"thumb"));
+									if($post->post_category == 'project'){
+										echo anchor("project/".$url_title, $thumb, array('title' => $title));
+									}else{
+										echo anchor("article/".$url_title, $thumb, array('title' => $title,'class'=>"thumb"));
+									}
 								?>
-							<h2>
-							<div class="summary">
-								<?php
-									echo $teaser;
-								?>
-							</div>
+							</h2>
+							<?php
+								if($post->post_category != 'project'):
+							?>
+								<div class="summary">
+										<?php echo $teaser; ?>
+								</div>
+								
+							<?php endif; ?>
 							<footer>
-								<?php echo anchor("blog/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+								<?php
+									if($post->post_category == 'project'){
+										echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
+									}else{
+										echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
+									}
+									?>
 							</footer>
 						</article>
 			<?php

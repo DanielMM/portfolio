@@ -49,12 +49,12 @@ class Contact extends CI_Controller {
 				$data['success']		= "Message sent successfuly!";
 				$data['feedback']		= true;
 				$data['page_title'] 	= "Message sent successfuly - Contact ";
-				$data['nav_item'] = "contact";
+				$data['nav_item'] 		= "contact";
 			}else{
 				$data['error']			= "Error sending message, please try again!";
 				$data['feedback']		= false;
 				$data['page_title'] 	= "Error sending message - Contact ";
-				$data['nav_item'] = "contact";
+				$data['nav_item'] 		= "contact";
 			}
 		
 			$this->load->view('header_view', $data);
