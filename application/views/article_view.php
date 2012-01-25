@@ -162,10 +162,13 @@
 						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
 					</article>
 				</section>
+			</section>
+			<?php endif; ?>
+			<?php if($article['post_settings']['add_comments']): ?>
 				<article class="comm_form" id="addComment">
 					<h3>Add your own comments!</h3>
 					<?php
-					
+						
 						echo form_open($article['post_type'].'/'.$article['link'].'#addComment');
 						
 						echo form_label('Name*', 'name');
@@ -184,7 +187,9 @@
 						echo form_label('Your comments', 'comment'); 
 						echo form_error('comment');
 						echo form_textarea(array('name'=>"comment",'value'=>set_value('comment'), 'placeholder'=>"Your comments",'rows'=>"12",'cols'=>"52"));
-						
+
+						echo form_hidden(array('article_id'=>$article['post_id']));
+
 						echo form_submit('submit', 'Add comment');
 						
 						echo form_close();
@@ -202,7 +207,6 @@
 					</div>
 					<?php endif; ?>
 				</article>
-			</section>
 			<?php endif; ?>
 		</article>
 		<aside class="sidebar">

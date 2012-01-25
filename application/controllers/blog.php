@@ -94,6 +94,7 @@ class Blog extends CI_Controller {
 				
 				$data['article']['link'] = $article->post_title;
 				$data['article']['post_type'] = $article->post_type;
+				$data['article']['post_id'] = $article->post_id;
 
 				$data['article']['date']['day'] = substr($date[2], 0,2);
 				$data['article']['date']['month'] = $months[$date[1]];
@@ -126,11 +127,10 @@ class Blog extends CI_Controller {
 		
 
 		}else{
-			var_dump($this->input->post());
-
-			$this->load->view('header_view', $data);
-			$this->load->view('article_view', $data);
-			$this->load->view('footer_view');
+			//var_dump($this->input->post());
+			$this->load->library('comments');
+			$this->comments->addComment($this->input->post());
+			
 		}
 	}
 
