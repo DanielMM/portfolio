@@ -81,20 +81,29 @@
 			<section class="comm_wrapp">
 				<h2 class="col_title"><?php echo "5"; ?> Comments <a class="add_comm_toggle" href="#addComment">Add Comment<span>{</span></a></h2>
 				<section class="comments">
+					<?php
+						//var_dump($article['post_comments']);
+						if($article['post_comments']):
+						foreach ($article['post_comments'] as $comment):
+					?>
 					<article class="comment">
 						<p class="comm_meta">
 							<span class="comm_thumb">
 								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
 							</span>
 							<a href="" class="comm_author">miguelsancez@webtres.es</a>
-							<span class="comm_date">december 12 2012</span>
+							<span class="comm_date"><?php echo $comment->comm_date; ?></span>
 						</p>
-						
-						<section class="comm_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat.
+						<section class="comm_body">
+							<?php echo $comment->comm_content; ?>
 						</section>
 						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
 					</article>
+					<?php 
+						endforeach;
+						endif;
+					?>
+					<!--
 					<article class="comment reply author">
 						<p class="comm_meta">
 							<span class="comm_thumb">
@@ -160,7 +169,7 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</section>
 						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
-					</article>
+					</article>-->
 				</section>
 			</section>
 			<?php endif; ?>

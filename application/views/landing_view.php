@@ -78,7 +78,7 @@
 				<section class=<?php echo $tutorial->post_category; ?>>
 					<h2>
 						<?php
-							echo anchor("blog/".$url_title, $title, array('title' => $title));
+							echo anchor("article/".$url_title, $title, array('title' => $title));
 						?>
 					</h2>
 					<p class="meta">
@@ -90,7 +90,7 @@
 						</span>
 					</p>
 					<?php
-						echo anchor("blog/".$url_title, $thumb, array('title' => $title));
+						echo anchor("article/".$url_title, $thumb, array('title' => $title));
 					?>
 					<div class="summary">
 						<?php
@@ -99,7 +99,7 @@
 					</div>
 					<footer>
 						<a href="#" class="author">by Daniel Mois</a>
-						<?php echo anchor("blog/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+						<?php echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
 					</footer>
 				</section>
 			<?php
@@ -129,7 +129,7 @@
 				<section class=<?php echo $quicktip->post_category; ?>>
 					<h2>
 						<?php
-							echo anchor("blog/".$url_title, $title, array('title' => $title));
+							echo anchor("article/".$url_title, $title, array('title' => $title));
 						?>
 					</h2>
 					<p class="meta">
@@ -141,7 +141,7 @@
 						</span>
 					</p>
 					<?php
-						echo anchor("blog/".$url_title, $thumb, array('title' => $title));
+						echo anchor("article".$url_title, $thumb, array('title' => $title));
 					?>
 					<div class="summary">
 						<?php
@@ -150,7 +150,7 @@
 					</div>
 					<footer>
 						<a href="#" class="author">by Daniel Mois</a>
-						<?php echo anchor("blog/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+						<?php echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
 					</footer>
 				</section>
 			<?php
@@ -180,7 +180,7 @@
 					<section class=<?php echo $question->post_category; ?>>
 						<h2>
 							<?php
-								echo anchor("blog/".$url_title, $title, array('title' => $title));
+								echo anchor("article/".$url_title, $title, array('title' => $title));
 							?>
 						</h2>
 						<p class="meta">
@@ -192,7 +192,7 @@
 							</span>
 						</p>
 						<?php
-							echo anchor("blog/".$url_title, $thumb, array('title' => $title));
+							echo anchor("article/".$url_title, $thumb, array('title' => $title));
 						?>
 						<div class="summary">
 							<?php
@@ -201,7 +201,7 @@
 						</div>
 						<footer>
 							<a href="#" class="author">by Daniel Mois</a>
-							<?php echo anchor("blog/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
+							<?php echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));?>
 						</footer>
 					</section>
 				<?php

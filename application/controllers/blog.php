@@ -114,7 +114,9 @@ class Blog extends CI_Controller {
 						$data['article']['post_settings'][$key]  = $value;
 					}
 				}
-
+				$this->load->library('comments');
+				$data['article']['post_comments'] = $this->comments->getComments($article->post_id);
+				
 				$this->load->view('header_view', $data);
 				$this->load->view('article_view', $data);
 				$this->load->view('footer_view');
@@ -128,7 +130,7 @@ class Blog extends CI_Controller {
 
 		}else{
 			//var_dump($this->input->post());
-			$this->load->library('comments');
+			//$this->load->library('comments');
 			$this->comments->addComment($this->input->post());
 			
 		}
