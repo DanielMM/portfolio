@@ -7,7 +7,7 @@ class Post_model extends CI_Model {
                parent::__construct();
         }
 
-	public function getPostsByTag($tag, $limit, $offset)
+	public function getPostsByTag($tag, $limit, $offset = 0)
 	{
                 $this->db->select('*, COUNT(parent_id) as comm_count');
                 $this->db->from('posts');

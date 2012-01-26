@@ -36,7 +36,7 @@ article section			{overflow: hidden;}
 
 /*HEADER LOGO*/
 
-#logo					{float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
+#logo					{background: url('../images/beta.png') no-repeat 21px 22px;float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
 #logo h1>a				{font-size: 2.5em;}
 #logo h2>a				{font-size: 1.85em; padding: 0 2px;}
 #logo h1>a,
