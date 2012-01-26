@@ -48,7 +48,7 @@ class Post extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/tag/".$tag."/page";
-		$config['total_rows'] = 5;
+		$config['total_rows'] = 9;
 		$config['per_page'] = 3;
 		$config['num_links'] = 4;
 		$config['uri_segment'] = 4;

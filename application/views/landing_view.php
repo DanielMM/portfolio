@@ -5,7 +5,7 @@
 				<!-- <img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon"> -->
 				<div class="slides">
 					<div class="slides_container">
-						<?php 
+						<?php
 							if(isset($projects)):
 								foreach($projects as $project):
 									$title = str_replace("_"," ",$project->post_title);

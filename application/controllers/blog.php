@@ -15,7 +15,7 @@ class Blog extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/articles/page";
-		$config['total_rows'] = 5;
+		$config['total_rows'] = 4;
 		$config['per_page'] = 2;
 		
 		$config['full_tag_open'] = '<ul>';
@@ -41,6 +41,7 @@ class Blog extends CI_Controller {
 
 		$posts = $this->_getArticles($config['per_page'], $offset);
 		if($posts){
+			//var_dump($posts);
 			$data['posts'] = $posts;
 
 			$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
@@ -115,8 +116,19 @@ class Blog extends CI_Controller {
 					}
 				}
 				$this->load->library('comments');
-				$data['article']['post_comments'] = $this->comments->getComments($article->post_id);
+				$comments = $this->comments->getComments($article->post_id);
 				
+				$data['article']['comm_count'] = $this->comments->getCommentsCount($article->post_id);
+				
+
+				if($comments){
+					foreach ($comments as $key => $value) {
+						$data['article']['post_comments'][$key] = $value;
+					}
+				}else{
+					$data['article']['post_comments'] = false;
+				}
+
 				$this->load->view('header_view', $data);
 				$this->load->view('article_view', $data);
 				$this->load->view('footer_view');
@@ -130,7 +142,7 @@ class Blog extends CI_Controller {
 
 		}else{
 			//var_dump($this->input->post());
-			//$this->load->library('comments');
+			$this->load->library('comments');
 			$this->comments->addComment($this->input->post());
 			
 		}

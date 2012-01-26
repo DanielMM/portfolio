@@ -10,7 +10,9 @@
 				if(isset($posts)):
 					
 					foreach($posts as $post): 
+					
 					//var_dump($post);
+
 					$title = str_replace("_"," ",$post->post_title);
 					$date = explode("-",$post->post_date);
 					$year = $date[0];
@@ -27,6 +29,17 @@
 					}
 					
 					$teaser = $post->post_teaser;
+					if(isset($post->comm_count)){
+						if($post->comm_count > 0){
+							if($post->comm_count == 1){
+								$comm_count = $post->comm_count." comment";
+							}else{
+								$comm_count = $post->comm_count." comments";
+							}
+						}else{
+							$comm_count ="no comments";
+						}
+					}
 			?>
 						<article class="<?php echo $post->post_category; ?>">
 							<h1>
@@ -46,7 +59,7 @@
 									<span class="year"><?php echo $year; ?></span>
 								</span>
 								<?php if($post->post_category != 'project'): ?>
-									<span class="comm_count">3<?php //echo $comm_count; ?> comments</span>
+									<span class="comm_count"><?php echo $comm_count; ?></span>
 								<?php endif; ?>
 							</p>
 							<h2>

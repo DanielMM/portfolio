@@ -8,7 +8,7 @@ class Project_model extends CI_Model {
         parent::__construct();
     }
 
-    public function getProjects($limit, $offset)
+    public function getProjects($limit = 100, $offset = 0)
     {
     	
         $this->db->select('*','categories.cat_title','categories.cat_name');

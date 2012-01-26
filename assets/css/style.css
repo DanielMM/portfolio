@@ -230,6 +230,7 @@ ARTICLE PAGE
 
 .comments .comm_date,
 .comments .comm_body		{color: rgb(105,105,105); float: right; line-height: 1.4em;}
+.comments .comm_body		{float: left;}
 .comments .comm_body p		{line-height: 1.4em;}
 
 .comments .comm_body p a:hover	{color: rgb(175,175,175);}
@@ -244,7 +245,7 @@ ARTICLE PAGE
 
 .comments footer>span		{height: 20px; font-family: "websymbols"; font-size: 1em; width: 20px;}
 
-.comment .comm_footer		{}
+.comment .comm_footer		{clear: both;}
 
 .comment .reply_btn			{background: rgb(205,205,205); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-size: 0.8em; font-weight: bold; padding: 4px 6px; text-decoration: none;}
 .comment .reply_btn:hover{background: rgb(153,190,105);  color: rgb(255,255,255);}

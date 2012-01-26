@@ -22,16 +22,21 @@ class Comments_model extends CI_Model {
 		return $results;
 	}
 
-        /*public function getPostsByCategory($category)
+        public function getCommentsCount($article_id)
         {
-                $this->db->select('*','categories.cat_title','categories.cat_name');
+                /*$this->db->select('*',);
                 $this->db->from('posts');
                 $this->db->join('categories', 'posts.post_category = categories.cat_name');
                 $this->db->where(array('post_status'=>'published','post_category'=>$category));
                 $this->db->order_by('posts.post_date', 'desc');
 
-                $results = $this->db->get();
+                $results = $this->db->get();*/
+
+                $this->db->where('parent_id',$article_id);
+                $this->db->from('comments');
+                $results = $this->db->count_all_results();
+                
                 return $results;
-        }*/
+        }
 
 }

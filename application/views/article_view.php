@@ -16,7 +16,7 @@
 						<span class="year"><?php echo $article['date']['year']; ?></span>
 					</span>
 				<?php if($article['post_category'] != "project"): ?>
-					<span class="comm_count">3<?php //echo $comm_count; ?> comments</span>
+					<span class="comm_count"><?php echo $article['comm_count']; ?></span>
 				<?php endif; ?>
 				</p>
 				<?php echo $thumb; ?>
@@ -77,12 +77,20 @@
 					</section>
 				</footer>
 			</section><!--post_footer-->
+
 			<?php if($article['post_settings']['comments']): ?>
 			<section class="comm_wrapp">
-				<h2 class="col_title"><?php echo "5"; ?> Comments <a class="add_comm_toggle" href="#addComment">Add Comment<span>{</span></a></h2>
+				<h2 class="col_title">
+					<?php echo $article['comm_count']; ?>
+					<?php
+						if($article['post_settings']['add_comments']):?>
+							<a class="add_comm_toggle" href="#addComment">Add Comment<span>{</span></a>
+						<?php endif; ?>
+				</h2>
 				<section class="comments">
 					<?php
 						//var_dump($article['post_comments']);
+
 						if($article['post_comments']):
 						foreach ($article['post_comments'] as $comment):
 					?>
@@ -91,18 +99,30 @@
 							<span class="comm_thumb">
 								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
 							</span>
-							<a href="" class="comm_author">miguelsancez@webtres.es</a>
-							<span class="comm_date"><?php echo $comment->comm_date; ?></span>
+							<?php
+								echo anchor($comment['comm_author_url'],$comment['comm_author_name'],array("class"=>"comm_author","target"=>"_blank"))
+							?>
+							<span class="comm_date"><?php echo $comment['comm_date']; ?></span>
 						</p>
 						<section class="comm_body">
-							<?php echo $comment->comm_content; ?>
+							<?php echo $comment['comm_content']; ?>
 						</section>
-						<footer class="comm_footer"><a href="" class="reply_btn"><span>h</span>Respond</a></footer>
+						<footer class="comm_footer">
+							<?php
+								
+								$reply_to = site_url().$article['link'].'/addComment/'.$comment['comm_id'];
+								
+								/*Threaded comments not implemented yet, wait for it*/
+								//echo anchor($reply_to,"<span>h</span>Respond",array("class"=>"reply_btn"));
+							?>
+						</footer>
 					</article>
 					<?php 
 						endforeach;
-						endif;
+						elseif($article['post_settings']['add_comments']):
 					?>
+						<p>Be the first to add a comment to this article.</p>
+					<?php endif;?>
 					<!--
 					<article class="comment reply author">
 						<p class="comm_meta">

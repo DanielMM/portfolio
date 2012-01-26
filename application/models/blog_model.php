@@ -20,15 +20,25 @@ class Blog_model extends CI_Model {
     }
     
         
-    public function getArticles($limit, $offset = 0){
+    public function getArticles($limit, $offset = 0)
+    {
+        $this->db->select('*, COUNT(parent_id) as comm_count');
+        $this->db->from('posts');
+        $this->db->join('comments', 'post_id = comments.parent_id', 'left');
+        $this->db->where(array('post_type'=>'article', 'post_status'=>'published'));
+        $this->db->limit($limit, $offset);
+        $this->db->group_by('posts.post_id');
+        $this->db->order_by('post_date', 'desc');
+        $results = $this->db->get();
 
-        $this->db->select('*');
+
+       /* $this->db->select('*');
         $this->db->from('posts');
         $this->db->where(array('post_type'=>'article', 'post_status'=>'published'));
         $this->db->limit($limit, $offset);
-        $this->db->order_by('post_date', 'desc');
+        $this->db->order_by('post_date', 'desc');*/
 
-        $results = $this->db->get();
+        //$results = $this->db->get();
 
         return $results;        
     }

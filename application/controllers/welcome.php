@@ -10,7 +10,8 @@ class Welcome extends CI_Controller {
 		$data['categories'] = $this->_getCategories();
 
 
-		$projects = $this->_getPostsByCategory('project',3);;
+		$projects = $this->_getPostsByType('project',4);
+
 		if($projects){
 			$data['projects'] = $projects;
 		}else{
@@ -70,14 +71,31 @@ class Welcome extends CI_Controller {
 		
 		$this->load->model('Post_model');
 		
-		$results = $this->Post_model->getPostsByCategory($category);
+		$results = $this->Post_model->getPostsByCategory($category, $limit);
+		foreach($results->result() as $post){
+			
+			$posts[] = $post;
+		}
+		
+		if(isset($posts)){
+			return $posts;
+		}else{
+			return false;
+		}
+	}
+
+	private function _getPostsByType($type, $limit)
+	{
+		$this->load->model('Post_model');
+		
+		$results = $this->Post_model->getPostsByType($type, $limit);
 		foreach($results->result() as $post){
 			
 			$posts[] = $post;
 		}
 		if(isset($posts)){
 			return $posts;
-		}else{
+		}else {
 			return false;
 		}
 	}
@@ -91,6 +109,7 @@ class Welcome extends CI_Controller {
 			
 			$categories[] = $cat_item;
 		}
+
 		if(isset($categories)){
 			return $categories;
 		}else{
