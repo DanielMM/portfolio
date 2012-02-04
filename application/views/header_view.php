@@ -58,7 +58,7 @@
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>articles" <?php if(isset($nav_item) && $nav_item=="blog"){echo "class=\"selected\" ";}?>>Blog</a>
+								<a href="<?php echo site_url(); ?>articles" <?php if(isset($nav_item) && $nav_item=="blog"){echo "class=\"selected\" ";}?>>Articles</a>
 							</h3>
 						</li>
 						<li>
