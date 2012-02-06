@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{	
 		//$data['headers'] = "<script src=". asset_url('js')."slides.min.jquery.js></script>";
-		$data['title'] = "Portfolio";
+		$data['title'] = "Welcome";
 
 		$data['categories'] = $this->_getCategories();
 

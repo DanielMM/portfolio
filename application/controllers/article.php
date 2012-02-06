@@ -1,10 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Blog extends CI_Controller {
+class Article extends CI_Controller {
 
 	public function page($offset = 0)
 	{	//Select all articles
-		$data['page_title'] = "Blog";
+		$data['page_title'] = "Articles";
 		
 		if($this->_getCategories()){
 			$data['categories'] = $this->_getCategories();
@@ -151,9 +151,9 @@ class Blog extends CI_Controller {
 	private function _getArticle($title)
 	{	
 		//check if there is an item with that title in the first place
-		$this->load->model('Blog_model');
+		$this->load->model('Post_model');
 		
-		$results = $this->Blog_model->getArticle($title);
+		$results = $this->Post_model->getPostByTitle($title);
 
 		$article = $results->result();
 
@@ -168,9 +168,9 @@ class Blog extends CI_Controller {
 	private function _getArticles($limit, $offset)
 	{
 		
-		$this->load->model('Blog_model');
+		$this->load->model('Post_model');
 		
-		$results = $this->Blog_model->getArticles($limit, $offset);
+		$results = $this->Post_model->getPosts($limit, $offset);
 		foreach($results->result() as $article_item){
 			
 			$articles[] = $article_item;
@@ -200,4 +200,4 @@ class Blog extends CI_Controller {
 }
 
 /* End of file blog.php */
-/* Location: ./application/controllers/blog.php */
+/* Location: ./application/controllers/article.php */

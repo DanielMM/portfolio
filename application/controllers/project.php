@@ -98,9 +98,10 @@ class Project extends CI_Controller {
 
 	private function _getProjects($limit, $offset)
 	{
-		$this->load->model('Project_model');
+		$this->load->model('Post_model');
 		
-		$results = $this->Project_model->getProjects($limit, $offset);
+		$results = $this->Post_model->getPostsByType('project',$limit, $offset);
+
 		foreach($results->result() as $project_item){
 			
 			$projects[] = $project_item;
@@ -116,9 +117,9 @@ class Project extends CI_Controller {
 	private function _getProject($title)
 	{	
 		//check if there is an item with that title in the first place
-		$this->load->model('Project_model');
+		$this->load->model('Post_model');
 		
-		$results = $this->Project_model->getProject($title);
+		$results = $this->Post_model->getPostByTitle($title);
 
 		$project = $results->result();
 
