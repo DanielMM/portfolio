@@ -13,87 +13,29 @@
 
  /*LAYOUT*/
 
-#content			{padding-top: 30px;}
-#content>article	{padding: 0;}
-#featured			{width: 960px;}
-article.col			{float: left; margin: 0 10px 30px 10px; width: 300px;}
+#content			{padding-top: 40px;}
+.list 				{margin-bottom: 30px; overflow: hidden;}
+.page_title			{border-bottom: 1px solid rgb(215,215,215); color: rgb(175,175,175); font-size: 0.9em; padding: 0 0 5px; text-transform: uppercase;}
 
-.col .col_title		{background: rgb(255,255,255); border-bottom: 2px solid rgb(153,190,105); color: rgb(50,75,16); font-size: 1.2em; margin-bottom: 20px; padding: 5px; text-transform: uppercase;}
-.col section 		{background: rgb(255,255,255); margin-bottom: 20px; padding: 10px;}
+.post 				{border-bottom: 1px solid rgb(205,205,205); overflow: hidden; padding: 40px 0; position: relative;}
 
-.list section .summary	{margin-top: 15px; padding: 0 4px;}
+.post .summary		{float: left; margin: 15px 0 0 15px; min-height: 150px; width: 430px;}
 
-/*SLIDER*/
 
-.slider 			{height: 380px; margin: 0 10px; position: relative; width: 940px;}
-.frame 				{height: 341px; left: -48px; position: absolute; top: -3px; width: 739px; z-index: 0;}
-.slides 			{left: 25px; position: absolute; top: 15px; z-index: 100;}
-.slides_container 	{display: none; height: 305px; overflow: hidden; position: relative; width: 890px;}
-.slides_container section {background: rgb(255,255,255); border-radius: 2px; display: block; height: 281px; padding: 10px; /*border-top: 1px solid rgb(215,215,215); border-bottom: 1px solid rgb(215,215,215);*/ width: 868px;}
+/*LIST*/
 
-.slides_container img {display:block; float: right;}
+.list h2				{font-size: 1.3em; margin-left: 39px; width: 430px;}
+.list h2>a				{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; text-decoration: none; width: 430px;}
 
-.slides_container .caption		{background: rgb(153, 190, 105); float: left; height: 260px; margin: 0 10px 0 0; padding: 10px; position: relative; width: 288px;}
+.list h2>a:hover		{color: rgb(153,190,105);/* color: rgb(255,255,255); text-decoration: underline;*/}
+.list .summary+a 		{position: absolute; right: 0; top: 40px;}
+.list .thumb			{}
 
-.slides_container .caption h1 a 		{color: rgb(50,75,16); font-size: 1.3em; font-weight: 700; text-decoration: none;}
-.slides_container .caption h1 a:hover 	{color: rgb(255,255,255);}
-.slides_container .caption h2 			{color: rgb(255,255,255); font-size: 1.3em; line-height: 1.5em; margin: 15px 0 0;}
-
-.caption .download		{background: rgb(50,74,16); border: 2px solid rgb(153,190,105); border-radius: 10px;}
-.caption .download		{bottom: 10px; height: 42px; left: 96px; position: absolute; text-decoration: none; width: 200px;}
-
-.caption .download:hover		{background: rgb(30,54,0); border: 2px solid rgb(242,242,242); text-decoration: none;}
-
-.caption .download .bt_text		{color: rgb(153,190,105); font-size: 1.3em; padding: 10px 25px; position: absolute; width: 150px; z-index: 10;}
-
-.caption .download .bt_text:hover	{color: rgb(255,255,255);}
-
-.caption .download .arrow			{border-radius: 16px; color: rgb(153,190,105); display: inline-block; font-family: 'websymbols'; font-size: 1.9em; height: 32px; position: absolute; right: 5px; top: 3px; width: 32px; z-index: 3;}
-
-.slides .next,
-.slides .prev 			{color: rgb(55,55,55); font-family: 'websymbols'; font-size: 2.4em; left: -31px; position: absolute; text-decoration: none; top: 132px; z-index: 101;}
-
-.slides .next 				{left: 881px;}
-
-.slides .next:hover,
-.slides .prev:hover			{color: rgb(155,155,155);}
-.slides>.pagination 		{margin: 15px auto 0; overflow: hidden; width: 100px;}
-
-.slides>.pagination li 		{float: left; list-style: none; margin: 0 2px;}
-
-.slides>.pagination li a 	{background: rgb(55,55,55); border: 2px solid rgb(255,255,255); border-radius: 8px; display: block; float: left; height: 0; overflow: hidden; padding-top: 12px; width: 12px;}
-
-.slides>.pagination li.current a,
-.slides>.pagination li a:hover {background: rgb(153,190,105);}
-
-/*PUNCHLINE*/
-.punchline 			{margin-bottom: 30px;}
-.punchline hgroup	{background: rgb(255,255,255); border-bottom: 1px solid rgb(225,225,225); border-top: 1px solid rgb(225,225,225); color: rgb(50,74,16); font-size: 1.6em;}
-.punchline hgroup h1,
-.punchline hgroup h2	{padding: 16px 0;}
-.punchline hgroup h1	{border-bottom: 2px solid rgb(153,190,105); padding-left: 110px;}
-.punchline hgroup h2 	{margin-left: 280px;}
-
-/*---------*/
-
-/*COL LISTS*/
-
-.list section		{border: 1px solid rgb(245,245,245); border-radius: 2px;}
-.list h2			{font-size: 1.3em;}
-.list h2>a			{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; padding: 4px; text-decoration: none;}
-.list h2>a:hover	{background: rgb(153,190,105); color: rgb(255,255,255);}
-
-.list .meta				{border-bottom: 1px solid rgb(242,242,242); border-top: 1px solid rgb(242,242,242); color: rgb(175,175,175); font-size: 0.8em; margin-top: 5px; overflow: hidden; padding: 0 4px;}
-.list .thumb			{display: inline-block; height: 170px; margin-top: 15px; padding: 0 4px;}
-.list .category			{display: block; float: left;}
+.list .meta				{color: rgb(205,205,205); display: block; float: left; height: 140px; position: relative; width: 24px;}
+.list .category			{display: block;}
 .list .category			{font-weight: normal; text-transform: capitalize;}
-.list .date 			{display: inline-block; float: right;}
-.list .date .month		{text-transform: capitalize;}
+.list .date .day 		{font-size: 1.1em; left: 2px; position: absolute; top: 0;}
+.list .date .month		{display: block; font-size: 0.7em; height: 20px; text-transform: uppercase; position: absolute; top: 14px;}
+/*----*/
 
-.list footer			{overflow: hidden; margin-top: 20px; padding: 0 4px;}
-.list footer a 			{font-size: 0.8em;}
-.list footer .author		{color: rgb(153,190,105); float: left; margin-top: 13px; text-decoration: none;}
-.list footer .author:hover	{color: rgb(175,175,175);}
-
-.list footer .read_more	{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); float: right; font-weight: bold; padding: 5px; text-decoration: none;}
-.list .read_more:hover	{background: rgb(105,105,105); color: rgb(255,255,255	);}
+.all_articles			{float: right; margin-top: 20px; padding: 3px 6px;}

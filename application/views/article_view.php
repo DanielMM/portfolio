@@ -58,9 +58,9 @@
 				<!--Add author bio for google author SEO -->
 				<footer>
 					<section class="share">
-						<a href="" class="appreciate"><span>O</span>Appreciate</a>
+						<a href="" class="btn"><span>O</span>Appreciate</a>
 						<div class="sharing">
-							<a href="" class="sharing_btn">Share<span>></span></a>
+							<a href="" class="btn">Share<span>></span></a>
 							<ul class="social">
 								<li><a href="" class="s_icon">g</a></li>
 								<li><a href="" class="s_icon">t</a></li>

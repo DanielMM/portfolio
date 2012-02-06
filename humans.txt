@@ -1,0 +1,27 @@
+﻿/* TEAM */
+	Everything: Daniel Mois
+	Contact: daniel [at] danielmois.com
+	Twitter: @danmois
+	From:Aarhus, Denmark
+
+/* THANKS */
+
+	Feedback: Adrian Mois
+	Twitter: @adrian_mois
+	From: Aarhus, Denmark
+
+	Feedback: Paul Cojan
+	Twitter: @paulici12
+	From: Aarhus, Denmark
+
+	Feedback: Detaljerytterne
+	Twitter: @Detaljerytterne
+	From: Aarhus, Denmark
+		
+
+/* SITE */
+	Last update:2012/02/06
+	Language:English
+	Doctype:HTML5
+	Framework: Codeigniter 2.0
+	IDE: Sublime Text 2

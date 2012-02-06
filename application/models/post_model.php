@@ -21,7 +21,7 @@ class Post_model extends CI_Model {
 		return $results;
 	}
 
-	public function getPostsByCategory($category, $limit, $offset = 0)
+	public function getPostsByCategory($category, $limit = 10, $offset = 0)
         {
                 $this->db->select('*, COUNT(parent_id) as comm_count');
                 $this->db->from('posts');

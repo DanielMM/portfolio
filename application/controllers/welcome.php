@@ -4,7 +4,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{	
-		$data['headers'] = "<script src=". asset_url('js')."slides.min.jquery.js></script>";
+		//$data['headers'] = "<script src=". asset_url('js')."slides.min.jquery.js></script>";
 		$data['title'] = "Portfolio";
 
 		$data['categories'] = $this->_getCategories();
@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 			//$this->load->view('error_404_view');
 		}
 
-		$tutorials = $this->_getPostsByCategory('tutorial',3);
+		$tutorials = $this->_getPostsByCategory('tutorial',6);
 		if($tutorials){
 			$data['tutorials'] = $tutorials;
 		}else{
@@ -40,7 +40,8 @@ class Welcome extends CI_Controller {
 		}
 
 
-		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
+		$data['months'] =array('01'=>'jan','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'july
+		','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
 
 		$this->load->view('landing_header_view', $data);
 		$this->load->view('landing_view', $data);

@@ -17,9 +17,7 @@
 			?>
 			<li<?php if(isset($active) && $active){ echo " class=active";} ?>>
 				<?php 
-					if($category->cat_name == 'project'){
-						echo anchor('projects/', $category->cat_title, array('title' => $category->cat_title));
-					}else{
+					if($category->cat_name != 'project'){
 						echo anchor('category/'.$category->cat_name, $category->cat_title,array('title' => $category->cat_title));
 					}?>
 			</li>

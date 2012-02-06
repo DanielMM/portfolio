@@ -52,7 +52,9 @@
 								?>
 							</h1>
 							<p class="post_info">
+								<?php if($post->post_category != 'project'): ?>
 								<span class="category"><?php echo $post->post_category; ?></span>
+								<?php endif; ?>
 								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
 									<span class="month"><?php echo $months[$month]; ?></span>
 									<span class="day"><?php echo $day; ?></span>
@@ -99,17 +101,6 @@
 						echo $pagination;
 					}
 				?>
-				<!-- <ul>
-					<li class="prev" ><a href="">&laquo;</a></li>
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li class="active"><a href="">4</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">6</a></li>
-					<li><a href="">7</a></li>
-					<li class="next" ><a href="">&raquo;</a></li>
-				</ul> -->
 			</div><!--pagination-->
 		</section><!--main-->
 		<aside class="sidebar">

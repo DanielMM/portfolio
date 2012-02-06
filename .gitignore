@@ -11,4 +11,3 @@ assets/download
 .htaccess
 *.sublime-project
 *.sublime-workspace
-db_structure.txt

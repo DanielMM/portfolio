@@ -10,8 +10,10 @@ table, tr,th,td, form,
 fieldset,legend,label 		{font-size: 1em; font-weight: normal;}
 
 h1,h2,h3,h4,h5,h6			{font-weight: 700;}
-p							{line-height: 1.8em;}
+p							{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; line-height: 1.5em;}
 li							{list-style: none;}
+
+pre							{margin: 20px 0; padding: 10px 0;}
 
 #header_wrapp header,
 #footer_wrapp footer, 
@@ -29,7 +31,7 @@ li							{list-style: none;}
 .main 					{float: left; width: 710px;}
 .sidebar 				{float: right; width: 250px;}
 
-article p 				{margin-bottom: 10px;}
+article p+p				{margin-top: 20px;}
 article section			{overflow: hidden;}
 
 /*----------*/
@@ -37,6 +39,7 @@ article section			{overflow: hidden;}
 /*HEADER LOGO*/
 
 #logo					{background: url('../images/beta.png') no-repeat 21px 22px;float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
+#logo h2 				{line-height: 2.5em;}
 #logo h1>a				{font-size: 2.5em;}
 #logo h2>a				{font-size: 1.85em; padding: 0 2px;}
 #logo h1>a,
@@ -113,6 +116,12 @@ footer section h4		{border-bottom: 2px solid rgb(153,190,105); font-size: 1.2em;
 .widget a 				{color: rgb(0,0,0); display: inline-block; text-decoration: none;}
 
 /*--------*/
+
+/*BTN*/
+.btn 		{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
+.btn:hover	{background: rgb(205,205,205); color: rgb(105,105,105);}
+/*---*/
+
 
 /*BLOCKQUOTE*/
 

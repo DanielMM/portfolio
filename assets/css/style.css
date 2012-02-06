@@ -59,9 +59,9 @@
 
 .list article h1	{overflow: hidden;}
 .list article h1>a	{color: rgb(50,75,16); display: inline-block; font-weight: 700; font-size: 2em; padding: 2px 4px; text-decoration: none;}
-.list article h1>a:hover	{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255);}
+.list article h1>a:hover	{color: rgb(153,190,105); /*border-radius: 2px; color: rgb(255,255,255);*/}
 
-h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; padding: 0 4px; text-transform: uppercase;}
+h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; margin-top: 10px; padding: 0 4px; text-transform: uppercase;}
 
 h1+.post_info .category,
 h1+.post_info .comm_count 	{border-right: 1px solid rgb(215,215,215); color: rgb(175,175,175);}
@@ -73,21 +73,21 @@ h1+.post_info .date 		{padding-right: 3px;}
 h1+.post_info .date.nobrd	{border: 0 solid transparent;}
 h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
-.list article h2				{margin-top: 15px;}
+.list article h2				{display: inline-block; float: left; margin-top: 15px; width: 170px;}
 .list article h2 a				{display: inline-block;}
 .list article a>img 			{outline: 1px solid rgb(175,175,175);}
 
 .list .project .summary			{margin-left: 0; min-height: 100px;}
 /*FOR BLOG*/
 
-.list article .thumb			{float: left;}
-.list article .summary			{margin-left: 180px; min-height: 150px;}
+.list article .thumb			{}
+.list article .summary			{margin: 10px 0 0 185px; min-height: 170px;}
 
 /*--------*/
 
-.list footer		{border-bottom: 1px solid rgb(245,245,245); margin-top: 20px; overflow: hidden; padding-bottom: 20px;}
+.list footer		{border-bottom: 1px solid rgb(245,245,245); margin-top: 15px; overflow: hidden; padding-bottom: 15px;}
 
-.list .read_more	{background: rgb(153,190,105); color: rgb(255,255,255); display: block; float: right; font-size: 0.8em; font-weight: bold; padding: 5px; text-decoration: none;}
+.list .read_more	{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: block; float: right; font-size: 0.8em; font-weight: bold; padding: 5px; text-decoration: none;}
 .list .read_more:hover	{background: rgb(175,175,175); color: rgb(255,255,255);}
 
 /*-----------*/
@@ -151,7 +151,7 @@ POST PAGE
 .post_footer .author_info			{float: right; margin-right: 5px; padding: 10px; position: relative; width: 200px;}
 .post_footer .author_info h5		{border-bottom: 2px solid rgb(153,190,105);}
 .post_footer .author_info h5+a		{color: rgb(105,105,105);}
-.post_footer .author_info p			{margin: 0;}
+.post_footer .author_info p			{font-family: "helvetica"; margin: 0;}
 .post_footer .author_info img		{position: absolute; right: 10px; top: 33px;}
 .post_footer .author_info a 		{color: rgb(175,175,175); display: inline-block; margin-top: 5px; text-decoration: none;}
 .post_footer .author_info a:hover 	{color: rgb(153,190,105);}
@@ -164,9 +164,9 @@ ARTICLE PAGE
 .article 				{position: relative;}
 
 /*.article_page .post_meta dl 	{min-height: inherit;}*/
-.article_page .post_info+img	{float: left; height: 170px; width: 170px;}
+.article_page .post_info+img	{float: left; height: 170px; margin-top: 20px; width: 170px;}
 
-.article_page .summary			{float: left; margin-left: 10px; min-height: 170px; width: 530px;}
+.article_page .summary			{float: left; margin-left: 10px; margin-top: 20px; min-height: 170px; width: 530px;}
 
 /*COMMENT FORM*/
 .add_comm_toggle			{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-weight: bold; margin-top: -4px; padding: 3px 9px; text-transform: none; text-decoration: none;}
@@ -284,7 +284,7 @@ ARTICLE PAGE
 
 /* PROJECT PAGE*/
 
-article.project			{position: relative;}
+article.project			{overflow: hidden; position: relative;}
 
 /*INLINE IMAGE PLACEHOLDER*/
 
@@ -301,7 +301,7 @@ article.project			{position: relative;}
 /* CATEGORY WIDGET */
 
 #categories.widget li			{overflow: hidden;}
-#categories.widget li:hover		{outline: 1px solid rgb(245,245,245); border-radius: 2px;}
+#categories.widget li:hover		{}
 
 #categories.widget li a			{color: rgb(175,175,175); font-weight: bold; height: 20px; padding: 5px 10px;}
 #categories.widget li a:hover,
