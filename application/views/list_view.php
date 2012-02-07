@@ -11,7 +11,6 @@
 					
 					foreach($posts as $post): 
 					
-					//var_dump($post);
 
 					$title = str_replace("_"," ",$post->post_title);
 					$date = explode("-",$post->post_date);
@@ -20,12 +19,12 @@
 					$day =	substr($date[2],0,2);
 					$url_title = url_title($post->post_title,"underscore");
 					
-					$thumb = $post->post_thumb;
-
-					if($post->post_type == 'project'){
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"710\" height=\"280\" alt=\"{$title}\" title=\"{$title}\" />";
+					
+					if($post->post_thumb === NULL){
+						$thumb = false;
 					}else{
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"170\" height=\"170\" alt=\"{$title}\" title=\"{$title}\" />";
+						$thumb = $post->post_thumb;
+						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
 					}
 					
 					$teaser = $post->post_teaser;
@@ -56,31 +55,29 @@
 								<span class="category"><?php echo $post->post_category; ?></span>
 								<?php endif; ?>
 								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
-									<span class="month"><?php echo $months[$month]; ?></span>
 									<span class="day"><?php echo $day; ?></span>
+									<span class="month"><?php echo $months[$month]; ?></span>
 									<span class="year"><?php echo $year; ?></span>
 								</span>
 								<?php if($post->post_category != 'project'): ?>
 									<span class="comm_count"><?php echo $comm_count; ?></span>
 								<?php endif; ?>
-							</p>
-							<h2>
-								<?php
-									if($post->post_category == 'project'){
-										echo anchor("project/".$url_title, $thumb, array('title' => $title));
-									}else{
-										echo anchor("article/".$url_title, $thumb, array('title' => $title,'class'=>"thumb"));
-									}
+
+								<?php 
+									if($post->post_category == 'project'): 
+									$meta_info = json_decode($post->meta_content, true);
 								?>
-							</h2>
-							<?php
-								if($post->post_category != 'project'):
-							?>
-								<div class="summary">
+									<span class="client"><?php echo anchor(prep_url($meta_info['link']),$meta_info['client']); ?></span>
+								<?php endif; ?>
+							</p>
+							<?php if($thumb): ?>
+								<h2>
+									<?php echo anchor("article/".$url_title, $thumb, array('title' => $title));?>
+								</h2>
+							<?php endif;?>
+								<div class="summary <?php if(!$thumb){echo "nothumb";} ?>">
 										<?php echo $teaser; ?>
 								</div>
-								
-							<?php endif; ?>
 							<footer>
 								<?php
 									if($post->post_category == 'project'){

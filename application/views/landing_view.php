@@ -3,22 +3,27 @@
 		<div class="list">
 			<h1 class="page_title">Latest articles</h1>
 			<?php 
-				if(isset($tutorials)):
-					foreach($tutorials as $tutorial): 
+				if(isset($posts)):
+					foreach($posts as $post): 
 				
-					$title = str_replace("_"," ",$tutorial->post_title);
-					$date = explode("-",$tutorial->post_date);
+					$title = str_replace("_"," ",$post->post_title);
+					$date = explode("-",$post->post_date);
 					$year = $date[0];
 					$month = $date[1];
 					$day =	substr($date[2],0,2);
-					$url_title = url_title($tutorial->post_title,"underscore");
+					$url_title = url_title($post->post_title,"underscore");
 					
-					$thumb = $tutorial->post_thumb;
-					$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"472\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
-					$teaser = $tutorial->post_teaser;
+					if($post->post_thumb === NULL){
+						$thumb = false;
+					}else{
+						$thumb = $post->post_thumb;
+						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
+					}
+
+					$teaser = $post->post_teaser;
 
 			?>
-				<article class="<?php echo $tutorial->post_category; ?> post">
+				<article class="<?php echo $post->post_category; ?> post">
 					<p class="meta">
 						<span class="category"><?php //echo $tutorial->post_category; ?></span>
 						<span class="date">
@@ -38,7 +43,9 @@
 						?>
 					</div>
 					<?php
-						echo anchor("article/".$url_title, $thumb, array('title' => $title));
+						if($thumb){
+							echo anchor("article/".$url_title, $thumb, array('title' => $title));
+						}
 					?>
 				</article>
 			<?php

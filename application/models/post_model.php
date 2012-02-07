@@ -23,8 +23,16 @@ class Post_model extends CI_Model {
 
         public function getPostByTitle($post_title)
         {   
+                /*$this->db->select('*');
+                $this->db->from('posts');
+                $this->db->where(array('post_title'=>$post_title, 'post_status'=>'published'));
+
+                $results = $this->db->get();
+                return $results;*/
+
                 $this->db->select('*');
                 $this->db->from('posts');
+                $this->db->join('meta','posts.post_id = meta.post_id');
                 $this->db->where(array('post_title'=>$post_title, 'post_status'=>'published'));
 
                 $results = $this->db->get();
@@ -71,6 +79,28 @@ class Post_model extends CI_Model {
 
                 $results = $this->db->get();
 		return $results;    	
+        }
+
+        public function getProjectPost($post_title){
+                $this->db->select('*');
+                $this->db->from('posts');
+                $this->db->join('meta','posts.post_id = meta.post_id');
+                $this->db->where(array('post_title'=>$post_title, 'post_status'=>'published','post_type'=>'project'));
+
+                $results = $this->db->get();
+                return $results;
+        }
+
+        public function getProjectPosts($limit, $offset = 0){
+                $this->db->select('*');
+                $this->db->from('posts');
+                $this->db->join('meta','posts.post_id = meta.post_id');
+                $this->db->where(array('post_status'=>'published','post_type'=>'project'));
+                $this->db->limit($limit, $offset);
+                $this->db->group_by('posts.post_id');
+                $this->db->order_by('post_date', 'desc');
+                $results = $this->db->get();
+                return $results;
         }
 
 }

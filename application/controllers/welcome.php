@@ -10,34 +10,13 @@ class Welcome extends CI_Controller {
 		$data['categories'] = $this->_getCategories();
 
 
-		$projects = $this->_getPostsByType('project',4);
-
-		if($projects){
-			$data['projects'] = $projects;
-		}else{
-			//$this->load->view('error_404_view');
-		}
-
-		$tutorials = $this->_getPostsByCategory('tutorial',6);
-		if($tutorials){
-			$data['tutorials'] = $tutorials;
+		$posts = $this->_getPosts(6);
+		if($posts){
+			$data['posts'] = $posts;
 		}else{
 			//$this->load->view('error_404_view');
 		}
 		
-		$quicktips = $this->_getPostsByCategory('quicktip',3);
-		if($quicktips){
-			$data['quicktips'] = $quicktips;
-		}else{
-			//$this->load->view('error_404_view');
-		}
-
-		$questions = $this->_getPostsByCategory('question',3);
-		if($questions){
-			$data['questions'] = $questions;
-		}else{
-			//$this->load->view('error_404_view');
-		}
 
 
 		$data['months'] =array('01'=>'jan','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'july
@@ -62,6 +41,24 @@ class Welcome extends CI_Controller {
 		
 		if(isset($projects)){
 			return $projects;
+		}else{
+			return false;
+		}
+	}
+
+	private function _getPosts($limit)
+	{
+		
+		$this->load->model('Post_model');
+		
+		$results = $this->Post_model->getPosts($limit);
+		foreach($results->result() as $post){
+			
+			$posts[] = $post;
+		}
+		
+		if(isset($posts)){
+			return $posts;
 		}else{
 			return false;
 		}

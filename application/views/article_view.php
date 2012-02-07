@@ -5,31 +5,37 @@
 			<header class="">
 				<h1 title="<?php if(isset($page_title)){echo $page_title;}else{echo " ";}?>"><?php if(isset($page_title)){echo $page_title;}else{echo " ";}?></h1>
 				<?php
-					$thumb = $article['post_thumb'];
-					$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"170\" height=\"170\" alt=\"{$page_title}\" title=\"{$page_title}\" />";
+					if($article['post_thumb'] === NULL){
+						$thumb = false;
+					}else{
+						$thumb = $article['post_thumb'];
+					$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$page_title}\" title=\"{$page_title}\" />";
+					}
 				?>
 				<p class="post_info">
-					<span class="category"><?php echo $article['post_category']; ?></span>
+					<!-- <span class="category"><?php echo $article['post_category']; ?></span> -->
 					<span class="date <?php if($article['post_category'] == "project"){echo "nobrd";} ?>">
-						<span class="month"><?php echo $article['date']['month']; ?></span>
 						<span class="day"><?php echo $article['date']['day']; ?></span>
+						<span class="month"><?php echo $article['date']['month']; ?></span>
 						<span class="year"><?php echo $article['date']['year']; ?></span>
 					</span>
 				<?php if($article['post_category'] != "project"): ?>
 					<span class="comm_count"><?php echo $article['comm_count']; ?></span>
 				<?php endif; ?>
 				</p>
-				<?php echo $thumb; ?>
-				<div class="summary">
-					<?php
-						echo $article['post_teaser'];
-					?>
-				</div>
-				<section class="post_meta">
+				<section class="post_meta <?php if(!$thumb){echo "nothumb";}?>">
 					<dl>
 						<?php if(isset($article['post_category'])): ?>
 							<dt class="category">Category:</dt>
 								<dd><?php echo $article['post_category']; ?></dd>
+						<?php endif; ?>
+						<?php if(isset($article['post_reading'])): ?>
+							<dt class="reading">Reading time:</dt>
+								<dd><?php echo $article['post_reading']; ?> min</dd>
+						<?php endif; ?>
+						<?php if(isset($article['post_difficulty'])): ?>
+							<dt class="reading">Difficulty:</dt>
+								<dd><?php echo $article['post_difficulty']; ?></dd>
 						<?php endif; ?>
 						<?php if(isset($article['post_terms'])):?>
 						<dt class="tags">Tags:</dt>
@@ -41,8 +47,14 @@
 						<?php endif; ?>
 					</dl>
 				</section>
+				<?php echo $thumb;?>
+				<div class="summary">
+					<?php
+						echo $article['post_teaser'];
+					?>
+				</div>
 			</header>
-			<section class="project_body">
+			<section class="post_body">
 				<?php
 					echo $article['post_content'];
 				?>
@@ -97,7 +109,7 @@
 					<article class="comment">
 						<p class="comm_meta">
 							<span class="comm_thumb">
-								<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />
+								U<!--<img src="<?php echo asset_url('img');?>user.jpg" height="32" widht="32" />-->
 							</span>
 							<?php
 								echo anchor($comment['comm_author_url'],$comment['comm_author_name'],array("class"=>"comm_author","target"=>"_blank"))

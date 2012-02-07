@@ -11,8 +11,8 @@ class Project extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/projects/page";
-		$config['total_rows'] = 5;
-		$config['per_page'] = 2;
+		$config['total_rows'] = 6;
+		$config['per_page'] = 6;
 
 
 		$config['full_tag_open'] = '<ul>';
@@ -46,10 +46,11 @@ class Project extends CI_Controller {
 		}
 
 		$data['categories'] = $this->_getCategories();
-		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
+
+		$data['months'] =array('01'=>'jan','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'jul','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
 		$data['nav_item'] = "work";
 		$this->load->view('header_view', $data);
-		$this->load->view('list_view', $data);
+		$this->load->view('projects_view', $data);
 		$this->load->view('footer_view');
 	}
 	
@@ -63,24 +64,28 @@ class Project extends CI_Controller {
 			$data['page_title'] = str_replace("_"," ",$project->post_title);
 			$data['nav_item'] = "work";
 			//make a helper to get the name of the month when given the number of the month
-			
+
 			$date = explode("-",$project->post_date);
-			$months =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
+
+			$months =array('01'=>'jan','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 			
 			$data['project']['thumb'] = $project->post_thumb;
 			$data['project']['date']['day'] = substr($date[2], 0,2);
 			$data['project']['date']['month'] = $months[$date[1]];
 			$data['project']['date']['year'] = $date[0];
 
-			$data['project']['meta']['id'] = 3;
-			$data['project']['meta']['link'] = "http://www.danielmois.com";
+			$meta_info = json_decode($project->meta_content, true);
+
+			$data['project']['meta']['id'] = (int)$project->post_id;
+			$data['project']['meta']['link'] = $meta_info['link'];
 
 			//get the category title from the categories table not the name of the category
 			
-			$data['project']['meta']['category'] = $project->cat_title;
-			$data['project']['meta']['client'] = "Myself";
-			$data['project']['meta']['tags'] = json_decode($project->post_terms, true);
+			$data['project']['meta']['category'] = $project->post_category;
+			$data['project']['meta']['client'] = $meta_info['client'];
 
+			$data['project']['meta']['tags'] = json_decode($project->post_terms, true);
+			
 			$data['project']['data']['teaser'] = $project->post_teaser;
 
 			$data['project']['data']['body'] = $project->post_content;
@@ -100,7 +105,8 @@ class Project extends CI_Controller {
 	{
 		$this->load->model('Post_model');
 		
-		$results = $this->Post_model->getPostsByType('project',$limit, $offset);
+		//$results = $this->Post_model->getPostsByType('project',$limit, $offset);
+		$results = $this->Post_model->getProjectPosts($limit, $offset);
 
 		foreach($results->result() as $project_item){
 			
@@ -119,10 +125,10 @@ class Project extends CI_Controller {
 		//check if there is an item with that title in the first place
 		$this->load->model('Post_model');
 		
-		$results = $this->Post_model->getPostByTitle($title);
+		$results = $this->Post_model->getProjectPost($title);
 
 		$project = $results->result();
-
+		//var_dump($project);
 		if(isset($project)){
 			return $project[0];
 		}else{

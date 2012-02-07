@@ -70,13 +70,13 @@ class Article extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 		
-			$article = $this->_getArticle($title);
 			
-			$data['headers']['css'][] = "<link type=\"text/css\" rel=\"stylesheet\" href=\"".asset_url('css')."desert.css\" media=\"screen\" />";
+			//$data['headers']['css'][] = "<link type=\"text/css\" rel=\"stylesheet\" href=\"".asset_url('css')."desert.css\" media=\"screen\" />";
 
-			$data['headers']['js'][] = "<script src=". asset_url('js')."prettify.js></script>";
-			$data['headers']['js'][] = "<script src=". asset_url('js')."main.js></script>";
+			//$data['headers']['js'][] = "<script src=". asset_url('js')."prettify.js></script>";
+			//$data['headers']['js'][] = "<script src=". asset_url('js')."main.js></script>";
 
+			$article = $this->_getArticle($title);
 
 			if($article){
 				$data['page_title'] = str_replace("_"," ",$article->post_title);
@@ -100,6 +100,13 @@ class Article extends CI_Controller {
 				$data['article']['date']['day'] = substr($date[2], 0,2);
 				$data['article']['date']['month'] = $months[$date[1]];
 				$data['article']['date']['year'] = $date[0];
+
+				$meta_info = json_decode($article->meta_content, true);
+				
+				foreach ($meta_info as $key => $value) {
+					$data['article']['post_'.$key] = $value;
+				}
+				
 
 				$data['article']['post_category'] = $article->post_category;
 				$data['article']['post_terms'] = json_decode($article->post_terms, true);

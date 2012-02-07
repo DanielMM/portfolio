@@ -58,13 +58,16 @@
 .list article 	{margin-top: 50px;}
 
 .list article h1	{overflow: hidden;}
-.list article h1>a	{color: rgb(50,75,16); display: inline-block; font-weight: 700; font-size: 2em; padding: 2px 4px; text-decoration: none;}
+.list article h1>a	{color: rgb(50,75,16); display: inline-block; font-weight: 700; font-size: 2em; text-decoration: none;}
 .list article h1>a:hover	{color: rgb(153,190,105); /*border-radius: 2px; color: rgb(255,255,255);*/}
 
-h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; margin-top: 10px; padding: 0 4px; text-transform: uppercase;}
-
+h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; margin-top: 10px; text-transform: uppercase;}
+h1+.post_info+img 			{margin-top: 15px; outline: 1px solid rgb(68,68,68);}
 h1+.post_info .category,
-h1+.post_info .comm_count 	{border-right: 1px solid rgb(215,215,215); color: rgb(175,175,175);}
+h1+.post_info .comm_count 		{border-right: 1px solid rgb(215,215,215); color: rgb(175,175,175);}
+
+h1+.post_info .client a 		{color: rgb(175,175,175); font-weight: bold; text-decoration: none;}
+h1+.post_info .client a:hover 	{color: rgb(153,190,105);}
 
 h1+.post_info .category,
 h1+.post_info .date,
@@ -73,15 +76,16 @@ h1+.post_info .date 		{padding-right: 3px;}
 h1+.post_info .date.nobrd	{border: 0 solid transparent;}
 h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
-.list article h2				{display: inline-block; float: left; margin-top: 15px; width: 170px;}
-.list article h2 a				{display: inline-block;}
-.list article a>img 			{outline: 1px solid rgb(175,175,175);}
+.list article h2				{display: inline-block; float: left; margin-top: 15px; width: 190px;}
+.list article h2 a				{display: inline-block; height: 190px;}
+.list article a>img 			{/*outline: 1px solid rgb(175,175,175);*/}
 
 .list .project .summary			{margin-left: 0; min-height: 100px;}
 /*FOR BLOG*/
 
 .list article .thumb			{}
-.list article .summary			{margin: 10px 0 0 185px; min-height: 170px;}
+.list article .summary			{margin: 10px 0 0 285px; min-height: 170px;}
+.list article .summary.nothumb	{margin-left: 0; min-height: initial;}
 
 /*--------*/
 
@@ -95,32 +99,43 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 /*-----------------------
 POST PAGE
 ------------------------*/
+.article_page header>h1		{color: rgb(50,75,16); font-weight: 700; font-size: 2em;}
 
-.project_page header>h1		{color: rgb(50,75,16); font-weight: 700; font-size: 2em;}
-.post_meta					{clear: both;}
-.post_meta dl 				{color: rgb(175,175,175); border-bottom: 1px solid rgb(245,245,245); font-size: 0.8em; margin: 20px 0; min-height: 80px; padding: 10px 225px 10px 0; position: relative;}
+.article 					{position: relative;}
+
+.article_page .post_info+img	{float: left; height: 190px; margin: 15px 0; width: 270px;}
+
+
+.post_meta					{float: left; height: 190px; margin: 15px 0; width: 310px;}
+.post_meta dl 				{color: rgb(175,175,175); font-size: 0.9em;}
 
 .post_meta dt,
 .post_meta dd  				{display: inline-block; margin-bottom: 10px;}
 
-.post_meta dt 				{font-weight: bold; width: 80px;}
-.post_meta dd 				{width: 400px;}
-.post_meta .link+dd>h2 a 	{color: rgb(175,175,175); font-weight: bold; text-decoration: none;}
-.post_meta .link+dd>h2 a:hover 	{color: rgb(153,190,105);}
+.post_meta dt 				{font-weight: bold; width: 100px;}
+.post_meta dd 				{text-transform: capitalize; width: 185px;}
+/*NO THUMB*/
 
-.post_meta .category+dd 	{text-transform: capitalize;}
+.post_meta.nothumb			{height: initial; width: 710px;}
+
+.post_meta.nothumb dd 		{width: 550px;}
+/**/
+.post_meta .link+dd>a 	 	{color: rgb(175,175,175); font-weight: bold; text-decoration: none; text-transform: initial;}
+.post_meta .link+dd>a:hover {color: rgb(153,190,105);}
+
+.post_meta .category+dd 	{}
 
 
 .post_meta .tags+dd>a.tag		{background: rgb(175,175,175); border-radius: 2px; color: rgb(105,105,105); display: inline-block; font-weight: bold; margin: 0 10px 10px 0; padding: 4px; text-decoration: none;}
 
 .post_meta .tags+dd>a.tag:hover		{background: rgb(153,190,105); color: rgb(252,252,252);}
 
-/*.post_meta .tags,
-.post_meta .tags+dd 	{float: right;}
+.article_page .thumb	{float: right;}
 
-.post_meta .tags		{position: absolute; right: 160px; top: 10px;}
-.post_meta .tags+dd 	{max-width: 190px; min-width: 120px; position: absolute; right: 0; top: 10px;}
-*/
+.article_page .summary	{border-top: 1px solid rgb(245,245,245); clear: both; padding: 15px 0;}
+
+.post_body				{margin-bottom: 20px;}
+
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
 
 .share					{float: left; height: 100px; width: 400px;}
@@ -155,18 +170,6 @@ POST PAGE
 .post_footer .author_info img		{position: absolute; right: 10px; top: 33px;}
 .post_footer .author_info a 		{color: rgb(175,175,175); display: inline-block; margin-top: 5px; text-decoration: none;}
 .post_footer .author_info a:hover 	{color: rgb(153,190,105);}
-
-/*-----------------------
-ARTICLE PAGE
-------------------------*/
-
-.article_page header>h1		{color: rgb(50,75,16); font-weight: 700; font-size: 2em;}
-.article 				{position: relative;}
-
-/*.article_page .post_meta dl 	{min-height: inherit;}*/
-.article_page .post_info+img	{float: left; height: 170px; margin-top: 20px; width: 170px;}
-
-.article_page .summary			{float: left; margin-left: 10px; margin-top: 20px; min-height: 170px; width: 530px;}
 
 /*COMMENT FORM*/
 .add_comm_toggle			{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; float: right; font-weight: bold; margin-top: -4px; padding: 3px 9px; text-transform: none; text-decoration: none;}
@@ -237,7 +240,7 @@ ARTICLE PAGE
 .comments .comm_body p a		{color: rgb(153,190,105); text-decoration: none;}
 
 
-.comments .comm_thumb		{height: 32px; margin: 0 4px 0 0;}
+.comments .comm_thumb		{font-family: 'websymbols'; font-size: 1em; height: 32px; margin: 0 4px 0 0;}
 .comments .comm_author		{color: rgb(175,175,175); font-size: 0.9em; text-decoration: none;}
 .comments .comm_author:hover{color: rgb(153,190,105);}
 .comments .comm_date		{font-size: 0.7em; padding: 9px 4px 0 0; text-transform: uppercase;}
@@ -282,10 +285,35 @@ ARTICLE PAGE
 .pagination>ul>li.active a,
 .pagination>ul>li>a:hover	{color: rgb(252,252,252);}
 
-/* PROJECT PAGE*/
+/* PROJECTS PAGE*/
 
-article.project			{overflow: hidden; position: relative;}
+.tile .col_title		{margin-bottom: 30px;}
+article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,205); border-radius: 2px; float: left; height: 310px; margin: 0 30px 30px 0; overflow: hidden; padding: 13px; position: relative; width: 270px;}
 
+.project:nth-child(4),
+.project:nth-child(7)	{margin-right: 0;}
+
+.project h1				{height: 30px; margin-bottom: 15px;}
+.project h1 a			{color: rgb(50,75,16); font-weight: 700; text-decoration: none;}
+.project h1 a:hover		{color: rgb(153,190,105);}
+.project h2 a .thumb 	{outline: 1px solid rgb(68,68,68);}
+.project .post_info		{color: rgb(68,68,68); font-size: 0.8em; margin: 15px 0; text-transform: capitalize;}
+.project .date 			{text-transform: uppercase;}
+.post_info .client,
+.view_online			{float: right;}
+.read_more				{float: left;}
+
+.project footer 		{font-size: 0.8em; margin-top: 10px; overflow: hidden;}
+.read_more,
+.view_online			{padding: 3px 6px;}
+.tile .pagination 		{clear: both;}
+
+.project_page .project_header 		{border-bottom: 1px solid rgb(245,245,245);}
+.project_page .post_body			{margin-top: 20px;}
+.project_page h1		{color: rgb(50,75,16); font-size: 2em; font-weight: 700;}
+
+.project_page .post_meta 		{float: none; height: initial; width: 710px;}
+.project_page .post_meta dd 	{width: 550px;}
 /*INLINE IMAGE PLACEHOLDER*/
 
 .img_placeholder		{background: rgb(252,252,252); border: 1px solid rgb(175,175,175); border-radius: 2px; margin: 15px 0; padding: 35px 0 10px 0; width: 708px;}

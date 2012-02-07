@@ -62,7 +62,8 @@ nav>ul>li>h3>a.selected	{/*background: rgb(3,3,3);*/ border-top: 5px solid rgba(
 /*----------*/
 
 .main>.col_title,
-.widget h3				{border-bottom: 1px solid rgb(215,215,215); color: rgb(175,175,175); font-size: 0.9em; margin-bottom: 10px; padding: 0 0 5px; text-transform: uppercase;}
+.widget h3,
+.tile>.col_title		{border-bottom: 1px solid rgb(215,215,215); color: rgb(175,175,175); font-size: 0.9em; margin-bottom: 10px; padding: 0 0 5px; text-transform: uppercase;}
 
 /*FOOTER*/
 

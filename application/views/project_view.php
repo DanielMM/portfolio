@@ -7,23 +7,21 @@
 				<p class="post_info">
 					<span class="category">Project</span>
 					<span class="date nobrd">
-						<span class="month"><?php echo $project['date']['month']; ?></span>
 						<span class="day"><?php echo $project['date']['day']; ?></span>
+						<span class="month"><?php echo $project['date']['month']; ?></span>
 						<span class="year"><?php echo $project['date']['year']; ?></span>
 					</span>
 				</p>
-				
-				<img src="../images/slide.jpg" width="710" height="280" />
+				<img src="<?php echo asset_url('img').$project['thumb']; ?>" width="710" height="463" />
 				<section class="post_meta">
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>
 							<dt class="link">Link:</dt>
 								<dd>
-									<h2>
-										<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blanck")); ?>
-									</h2>
+									<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blanck")); ?>
 								</dd>
 						<?php endif; ?>
+
 						<?php if(isset($project['meta']['client'])): ?>
 							<dt class="client">Client:</dt>
 								<dd><?php echo $project['meta']['client']; ?></dd>
@@ -43,7 +41,7 @@
 					</dl>
 				</section>
 			</header>
-			<section class="project_body">
+			<section class="post_body">
 				<?php
 					echo $project['data']['teaser'];
 				?>
