@@ -18,7 +18,6 @@
 				}
 			}
 		?>
-
 		<!--[if IE 8]>
 			<link href="<?php echo asset_url('css'); ?>ie7.css" type="text/css" rel="stylesheet" media="screen">
 		<![endif]-->

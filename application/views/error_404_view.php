@@ -19,11 +19,6 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
-		<?php
-			if(isset($headers)){
-				echo $headers;
-			}
-		?>
 	</head>
 	<body>
 		<div id="header_wrapp">
@@ -40,22 +35,22 @@
 					<ul>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>projects">Work</a>
+								<a href="<?php echo site_url(); ?>projects" <?php if(isset($nav_item) && $nav_item=="work"){echo "class=\"selected\" ";}?>>Work</a>
 							</h3>
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>blog">Blog</a>
+								<a href="<?php echo site_url(); ?>articles" <?php if(isset($nav_item) && $nav_item=="blog"){echo "class=\"selected\" ";}?>>Articles</a>
 							</h3>
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>about">About</a>
+								<a href="<?php echo site_url(); ?>about" <?php if(isset($nav_item) && $nav_item=="about"){echo "class=\"selected\" ";}?>>About</a>
 							</h3>
 						</li>
 						<li>
 							<h3>
-								<a href="<?php echo site_url(); ?>contact" class="last">Contact</a>
+								<a href="<?php echo site_url(); ?>contact" class="last <?php if(isset($nav_item) && $nav_item=="contact"){echo "selected";}?>">Contact</a>
 							</h3>
 						</li>
 					</ul>
@@ -71,9 +66,11 @@
 						<?php echo anchor("","Go Home");?>
 					</section>
 				</article>
+				<!-- 
 				<aside class="sidebar">
 					<?php $this->load->view('categories_widget_view'); ?>
-				</aside>
+				</aside> 
+				-->
 			</div><!--content-->
 		</div><!--content_wrapp-->
 		<div id="footer_wrapp">

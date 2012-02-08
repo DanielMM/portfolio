@@ -84,7 +84,6 @@ class Post extends CI_Controller {
 			$data['categories'] = $this->_getCategories();
 		}
 		
-
 		//Load pagination library
 		$this->load->library('pagination');
 		
