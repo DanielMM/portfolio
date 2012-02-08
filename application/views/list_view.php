@@ -40,7 +40,7 @@
 						}
 					}
 			?>
-						<article class="<?php echo $post->post_category; ?>">
+						<article>
 							<h1>
 								<?php
 									if($post->post_category == 'project'){
@@ -51,23 +51,29 @@
 								?>
 							</h1>
 							<p class="post_info">
-								<?php if($post->post_category != 'project'): ?>
+								
 								<span class="category"><?php echo $post->post_category; ?></span>
-								<?php endif; ?>
+								
 								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
+									
 									<span class="day"><?php echo $day; ?></span>
 									<span class="month"><?php echo $months[$month]; ?></span>
 									<span class="year"><?php echo $year; ?></span>
+								
 								</span>
+								
 								<?php if($post->post_category != 'project'): ?>
 									<span class="comm_count"><?php echo $comm_count; ?></span>
 								<?php endif; ?>
 
 								<?php 
-									if($post->post_category == 'project'): 
+									if($post->post_category == 'project' && isset($post->meta_content)): 
 									$meta_info = json_decode($post->meta_content, true);
 								?>
-									<span class="client"><?php echo anchor(prep_url($meta_info['link']),$meta_info['client']); ?></span>
+									<span class="client">
+										<?php echo anchor(prep_url($meta_info['link']),$meta_info['client']); ?>
+									</span>
+
 								<?php endif; ?>
 							</p>
 							<?php if($thumb): ?>
@@ -75,9 +81,11 @@
 									<?php echo anchor("article/".$url_title, $thumb, array('title' => $title));?>
 								</h2>
 							<?php endif;?>
+
 								<div class="summary <?php if(!$thumb){echo "nothumb";} ?>">
 										<?php echo $teaser; ?>
 								</div>
+
 							<footer>
 								<?php
 									if($post->post_category == 'project'){
@@ -85,7 +93,7 @@
 									}else{
 										echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
 									}
-									?>
+								?>
 							</footer>
 						</article>
 			<?php

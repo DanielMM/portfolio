@@ -352,12 +352,11 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 /*--------*/
 /*ABOUT*/
 
-#skills, 
-#toolkit, 
-#keypoints					{margin-top: 20px;}
+.about section 				{margin: 25px 0;}
+.about section h2			{margin-bottom: 15px;}
 
 #skills						{float: left;}
-#skills, #toolkit			{padding: 10px 0 30px 20px;}
+#skills, #toolkit			{padding-left: 20px;}
 #skills dl,
 #toolkit dl					{background: rgb(232,232,232); border: 1px solid rgb(222,222,222); margin-top: 10px; overflow: hidden; width: 350px;}
 #skills dt, #skills dd 		{display: inline; float: left; padding: 10px 0;}
@@ -368,9 +367,11 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 #skills dd:nth-child(6),
 #skills dt:nth-child(9),
 #skills dd:nth-child(10)	{background: rgb(252,252,252);}
+
 #skills dt,
 #skills dd .score,
 #toolkit dd					{display: inline-block; font-size: 1.2em; line-height: 1.6em; width: 80px;}
+
 #skills dd .score			{text-align: center;}
 #skills dd .rating 			{display: inline-block; height: 18px; width: 180px;}
 #skills dd .rating li 		{border: 1px solid rgb(114,114,114); display:inline-block; height: 20px; margin: 0 3px; width: 9px;}
@@ -391,7 +392,7 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 #toolkit dd:nth-child(10)	{background: rgb(252,252,252);}
 
 #keypoints					{clear: both;}
-#keypoints ul 	 			{margin: 0 0 5px 25px;padding: 4px 0;}
+#keypoints ul 	 			{margin: 0 0 0 25px;}
 #keypoints ul li 			{list-style: inherit; list-style-type: circle; margin: 0 0 0 20px; padding: 10px 0;}
 
 .cv .col_title				{text-transform: none;}

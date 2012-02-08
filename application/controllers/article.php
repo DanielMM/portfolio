@@ -15,11 +15,18 @@ class Article extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/articles/page";
-		$config['total_rows'] = 4;
-		$config['per_page'] = 2;
+		$config['per_page'] = 1;
 		
+		$posts = $this->_getArticles($config['per_page'], $offset);
+
+		$config['total_rows'] = $posts['count'];
+
 		$config['full_tag_open'] = '<ul>';
 		$config['full_tag_close'] = '</ul>';
+
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="first">';
+		$config['first_tag_close'] = '</li>';
 
 		$config['prev_link'] = '&laquo;';
 		$config['prev_tag_open'] = '<li class="next" title="Previous">';
@@ -35,14 +42,18 @@ class Article extends CI_Controller {
 		$config['next_tag_open'] = '<li class="prev" title="Next">';
 		$config['next_tag_close'] = '</li>';
 
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="last">';
+		$config['last_tag_close'] = '</li>';
+
+	
 		$this->pagination->initialize($config);
 
 		$data['pagination'] = $this->pagination->create_links();
 
-		$posts = $this->_getArticles($config['per_page'], $offset);
-		if($posts){
-			//var_dump($posts);
-			$data['posts'] = $posts;
+		if($posts['data']){
+			
+			$data['posts'] = $posts['data'];
 
 			$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 			$data['nav_item'] = "blog";
@@ -180,9 +191,15 @@ class Article extends CI_Controller {
 		$results = $this->Post_model->getPosts($limit, $offset);
 		foreach($results->result() as $article_item){
 			
-			$articles[] = $article_item;
+			$articles['data'][] = $article_item;
 		}
-		if(isset($articles)){
+
+		$count_results = $this->Post_model->getPosts('all', $offset);
+
+		$articles['count'] = $count_results->num_rows();
+		 
+
+		if(isset($articles['data'])){
 			return $articles;
 		}else{
 			return false;

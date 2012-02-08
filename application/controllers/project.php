@@ -11,12 +11,18 @@ class Project extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/projects/page";
-		$config['total_rows'] = 6;
 		$config['per_page'] = 6;
-
+		$config['num_links'] = 4;
+		
+		$posts = $this->_getProjects($config['per_page'], $offset);
+		$config['total_rows'] = $posts['count'];
 
 		$config['full_tag_open'] = '<ul>';
 		$config['full_tag_close'] = '</ul>';
+
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="first">';
+		$config['first_tag_close'] = '</li>';
 
 		$config['prev_link'] = '&laquo;';
 		$config['prev_tag_open'] = '<li class="next" title="Previous">';
@@ -32,15 +38,19 @@ class Project extends CI_Controller {
 		$config['next_tag_open'] = '<li class="prev" title="Next">';
 		$config['next_tag_close'] = '</li>';
 
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="last">';
+		$config['last_tag_close'] = '</li>';
+
 		$this->pagination->initialize($config);
 
 		$data['pagination'] = $this->pagination->create_links();
 	
 		$data['page_title'] = "Projects";
 
-		$posts = $this->_getProjects($config['per_page'], $offset);
-		if($posts){
-			$data['posts'] = $posts;
+
+		if($posts['data']){
+			$data['posts'] = $posts['data'];
 		}else{
 			$this->load->view('error_404_view');
 		}
@@ -105,15 +115,18 @@ class Project extends CI_Controller {
 	{
 		$this->load->model('Post_model');
 		
-		//$results = $this->Post_model->getPostsByType('project',$limit, $offset);
 		$results = $this->Post_model->getProjectPosts($limit, $offset);
 
 		foreach($results->result() as $project_item){
 			
-			$projects[] = $project_item;
+			$projects['data'][] = $project_item;
 		}
 		
-		if(isset($projects)){
+		$count_results = $this->Post_model->getProjectPosts('all', $offset);
+		
+		$projects['count'] = $count_results->num_rows();
+		
+		if(isset($projects['data'])){
 			return $projects;
 		}else{
 			return false;

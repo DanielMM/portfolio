@@ -1,6 +1,6 @@
 <div id="content_wrapp">
 	<div id="content">
-		<section class="main">
+		<section class="main about">
 			<h1 class="col_title">About myself</h1>
 			<section id="personal_info">
 				<p>I am <?php echo $age; ?> and I love to design and develop. </p>
@@ -44,7 +44,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>When away from the keyboard</h3>
+				<h2>When away from the keyboard</h2>
 				<p>Web development is what I love to do, but when I need to take a break from it, I like to do others things like photography, reading, DIY projects or hiking in the forest, just to name a few. On the opposite side of my love for technology, lays the love for cooking, which can only be explained by my wish to always create new things.
 				
 				</p>

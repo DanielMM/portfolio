@@ -11,7 +11,7 @@ class Post extends CI_Controller {
 		$this->load->view('footer_view');
 	}
 
-	public function category($category){
+	public function category($category, $offset = 0){
 		$data['page_title'] 	= "Category: ".$category;
 
 		//Select all posts that belong to a category
@@ -20,13 +20,54 @@ class Post extends CI_Controller {
 			$data['categories'] = $this->_getCategories();
 		}
 
-		$posts = $this->_getPostsByCategory($category);
+		//Load pagination library
+		$this->load->library('pagination');
 
-		if($posts){
-			$data['posts'] = $posts;
+		//Set config settings for pagination
+		$config['base_url'] = "http://portfolio/category/".$category."/page";
+		$config['per_page'] = 2;
+		$config['num_links'] = 4;
+		$config['uri_segment'] = 4;
+
+		$posts = $this->_getPostsByCategory($category, $config['per_page'], $offset);
+
+		$config['total_rows'] = $posts['count'];
+
+		$config['full_tag_open'] = '<ul>';
+		$config['full_tag_close'] = '</ul>';
+
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+
+		$config['prev_link'] = '&laquo;';
+		$config['prev_tag_open'] = '<li class="next" title="Previous">';
+		$config['prev_tag_close'] = '</li>';
+
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+
+		$config['next_link'] = '&raquo;';
+		$config['next_tag_open'] = '<li class="prev" title="Next">';
+		$config['next_tag_close'] = '</li>';
+
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+
+		$this->pagination->initialize($config);
+
+		$data['pagination'] = $this->pagination->create_links();
+
+		if($posts['data']){
+			$data['posts'] = $posts['data'];
 		}else{
-			$this->load->view('error_404_view', $data);
+			$this->load->view('error_404_view');
 		}
+
 		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 		
 		$this->load->view('header_view', $data);
@@ -42,17 +83,20 @@ class Post extends CI_Controller {
 		if($this->_getCategories()){
 			$data['categories'] = $this->_getCategories();
 		}
+		
 
 		//Load pagination library
 		$this->load->library('pagination');
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/tag/".$tag."/page";
-		$config['total_rows'] = 9;
-		$config['per_page'] = 3;
+		$config['per_page'] = 5;
 		$config['num_links'] = 4;
 		$config['uri_segment'] = 4;
 
+		$posts = $this->_getPostsByTag($tag, $config['per_page'], $offset);
+		
+		$config['total_rows'] = $posts['count'];
 
 		$config['full_tag_open'] = '<ul>';
 		$config['full_tag_close'] = '</ul>';
@@ -84,11 +128,11 @@ class Post extends CI_Controller {
 
 		$data['pagination'] = $this->pagination->create_links();
 
-		$posts = $this->_getPostsByTag($tag, $config['per_page'], $offset);
+		
 		//var_dump($posts);
 
-		if($posts){
-			$data['posts'] = $posts;
+		if($posts['data']){
+			$data['posts'] = $posts['data'];
 		}else{
 			$this->load->view('error_404_view');
 		}
@@ -124,26 +168,36 @@ class Post extends CI_Controller {
 		$results = $this->Post_model->getPostsByTag($tag, $limit, $offset);
 		foreach($results->result() as $post){
 			
-			$posts[] = $post;
+			$posts['data'][] = $post;
 		}
-		if(isset($posts)){
+
+		$count_results = $this->Post_model->getPostsByTag($tag, 'all', $offset);
+		
+		$posts['count'] = $count_results->num_rows();
+
+		if(isset($posts['data'])){
 			return $posts;
 		}else {
 			return false;
 		}
 	}
 
-	private function _getPostsByCategory($category)
+	private function _getPostsByCategory($category, $limit, $offset)
 	{
 		
 		$this->load->model('Post_model');
 		
-		$results = $this->Post_model->getPostsByCategory($category);
+		$results = $this->Post_model->getPostsByCategory($category, $limit, $offset);
 		foreach($results->result() as $post){
 			
-			$posts[] = $post;
+			$posts['data'][] = $post;
 		}
-		if(isset($posts)){
+
+		$count_results = $this->Post_model->getPostsByCategory($category, 'all', $offset);
+		
+		$posts['count'] = $count_results->num_rows();
+
+		if(isset($posts['data'])){
 			return $posts;
 		}else {
 			return false;
