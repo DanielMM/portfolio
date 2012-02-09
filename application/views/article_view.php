@@ -70,7 +70,7 @@
 				<!--Add author bio for google author SEO -->
 				<footer>
 					<section class="share">
-						<a href="" class="btn"><span>O</span>Appreciate</a>
+						<a href="" class="btn appreciate"><span>O</span>Appreciate</a>
 						<div class="sharing">
 							<a href="" class="btn">Share<span>></span></a>
 							<ul class="social">

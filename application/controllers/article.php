@@ -15,7 +15,7 @@ class Article extends CI_Controller {
 		
 		//Set config settings for pagination
 		$config['base_url'] = "http://portfolio/articles/page";
-		$config['per_page'] = 1;
+		$config['per_page'] = 5;
 		
 		$posts = $this->_getArticles($config['per_page'], $offset);
 

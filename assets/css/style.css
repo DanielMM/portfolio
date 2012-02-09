@@ -62,7 +62,7 @@
 .list article h1>a:hover	{color: rgb(153,190,105); /*border-radius: 2px; color: rgb(255,255,255);*/}
 
 h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; margin-top: 10px; text-transform: uppercase;}
-h1+.post_info+img 			{margin-top: 15px; outline: 1px solid rgb(68,68,68);}
+h1+.post_info+img 			{margin: 15px 0 0 1px; outline: 1px solid rgb(68,68,68);}
 h1+.post_info .category,
 h1+.post_info .comm_count 		{border-right: 1px solid rgb(215,215,215); color: rgb(175,175,175);}
 
@@ -85,7 +85,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .list article .thumb			{}
 .list article .summary			{margin: 10px 0 0 285px; min-height: 170px;}
-.list article .summary.nothumb	{margin-left: 0; min-height: initial;}
+.list article .summary.nothumb	{margin-left: 0; min-height: inherit;}
 
 /*--------*/
 
@@ -106,21 +106,21 @@ POST PAGE
 .article_page .post_info+img	{float: left; height: 190px; margin: 15px 0; width: 270px;}
 
 
-.post_meta					{float: left; height: 190px; margin: 15px 0; width: 310px;}
+.post_meta					{float: left; height: 190px; margin: 15px 0; width: 400px;}
 .post_meta dl 				{color: rgb(175,175,175); font-size: 0.9em;}
 
 .post_meta dt,
 .post_meta dd  				{display: inline-block; margin-bottom: 10px;}
 
 .post_meta dt 				{font-weight: bold; width: 100px;}
-.post_meta dd 				{text-transform: capitalize; width: 185px;}
+.post_meta dd 				{text-transform: capitalize; width: 290px;}
 /*NO THUMB*/
 
-.post_meta.nothumb			{height: initial; width: 710px;}
+.post_meta.nothumb			{height: inherit; width: 710px;}
 
 .post_meta.nothumb dd 		{width: 550px;}
 /**/
-.post_meta .link+dd>a 	 	{color: rgb(175,175,175); font-weight: bold; text-decoration: none; text-transform: initial;}
+.post_meta .link+dd>a 	 	{color: rgb(175,175,175); font-weight: bold; text-decoration: none; text-transform: none;}
 .post_meta .link+dd>a:hover {color: rgb(153,190,105);}
 
 .post_meta .category+dd 	{}
@@ -137,8 +137,10 @@ POST PAGE
 .post_body				{margin-bottom: 20px;}
 
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
+.post_footer footer 	{overflow: hidden;}
+.share					{float: left; height: 100px; position: relative; width: 400px;}
 
-.share					{float: left; height: 100px; width: 400px;}
+.share .appreciate		{left: 0; position: absolute; top: 15px;}
 .share .appreciate,
 .share .sharing_btn		{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
 
@@ -149,7 +151,7 @@ POST PAGE
 .share .sharing>a>span		{font-family: 'websymbols';}
 .share .appreciate>span		{margin-right: 4px;}
 
-.share .sharing 			{display: inline-block; height: 39px; margin-top: 15px; overflow: hidden; position: relative; width: 85px;}
+.share .sharing 			{display: inline-block; height: 39px; left: 143px; overflow: hidden; position: absolute; top: 15px; width: 85px;}
 .share .sharing:hover		{width: 265px;}
 .share .sharing_btn 		{display: inline-block; height: 20px; margin-bottom: 2px; width: 59px;}
 .share .sharing_btn>span	{margin-left: 6px;}
@@ -312,7 +314,7 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 .project_page .post_body			{margin-top: 20px;}
 .project_page h1		{color: rgb(50,75,16); font-size: 2em; font-weight: 700;}
 
-.project_page .post_meta 		{float: none; height: initial; width: 710px;}
+.project_page .post_meta 		{float: none; height: inherit; width: 710px;}
 .project_page .post_meta dd 	{width: 550px;}
 /*INLINE IMAGE PLACEHOLDER*/
 
@@ -459,7 +461,7 @@ span.lowcase			{text-transform: none;}
 /*hCard*/
 #hcard-Daniel-Mois			{padding: 0 10px;}
 .hcard a 					{color: rgb(50,50,50); text-decoration: none;}
-#hcard-Daniel-Mois a:hover	{color: rgb(153,190,105); text-decoration: underline;}
+#hcard-Daniel-Mois a:hover	{color: rgb(153,190,105);}
 
 .fn, .email, .tel, .adr,
 .vcard						{font-size: 0.9em; margin: 0 0 5px;}
