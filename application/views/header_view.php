@@ -3,8 +3,12 @@
 <html>
 	<head>
 		<title><?php if(isset($page_title)){echo $page_title;}else{echo "Portfolio";}?> - Daniel Mois - Web Developer</title>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-		<meta name="language" content="en"> 
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en" />
+		<?php if(isset($meta_description)):?>
+		<meta name="description" content="<?php echo $meta_description;?>" />
+		<?php endif;?>
+
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
 		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>reset.css" media="screen" />

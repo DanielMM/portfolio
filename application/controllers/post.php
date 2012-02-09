@@ -2,17 +2,11 @@
 
 class Post extends CI_Controller {
 
-	public function index()
-	{
-		$data['page_title'] 	= "Nada";
-
-		$this->load->view('header_view', $data);
-		$this->load->view('list_view', $data);
-		$this->load->view('footer_view');
-	}
 
 	public function category($category, $offset = 0){
 		$data['page_title'] 	= "Category: ".$category;
+
+		$data['meta_description'] = "All my ".$category."s on web development.";
 
 		//Select all posts that belong to a category
 				
@@ -77,6 +71,8 @@ class Post extends CI_Controller {
 
 	public function tag($tag, $offset = 0){
 		$data['page_title'] 	= "Tag: ".$tag;
+
+		$data['meta_description'] = "A list of all the content tagged with ".$tag;
 
 		//Select all posts that have the tag
 				

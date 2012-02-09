@@ -5,6 +5,8 @@ class Article extends CI_Controller {
 	public function page($offset = 0)
 	{	//Select all articles
 		$data['page_title'] = "Articles";
+
+		$data['meta_description'] = "A list of my articles on web development topics.";
 		
 		if($this->_getCategories()){
 			$data['categories'] = $this->_getCategories();
@@ -92,11 +94,7 @@ class Article extends CI_Controller {
 			if($article){
 				$data['page_title'] = str_replace("_"," ",$article->post_title);
 
-				if($article->post_category == 'project'){
-					$data['nav_item'] = "work";
-				}else{
-					$data['nav_item'] = "blog";
-				}
+				$data['nav_item'] = "blog";
 
 				$data['categories'] = $this->_getCategories();
 
@@ -115,9 +113,15 @@ class Article extends CI_Controller {
 				$meta_info = json_decode($article->meta_content, true);
 				
 				foreach ($meta_info as $key => $value) {
-					$data['article']['post_'.$key] = $value;
+					if($key == "meta_description"){
+						$data['meta_description'] = $value;
+					}else{
+						$data['article']['post_'.$key] = $value;
+						$data['meta_description'] = $data['page_title'];
+					}
 				}
 				
+				//$data['meta_description'] = ;
 
 				$data['article']['post_category'] = $article->post_category;
 				$data['article']['post_terms'] = json_decode($article->post_terms, true);

@@ -5,6 +5,7 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 		$data['page_title'] = "Contact ";
+		$data['meta_description'] = "Send me a message and let me know what you think about my work or what can I do for your project.";
 		$data['nav_item'] = "contact";
 		
 		$this->load->view('header_view', $data);

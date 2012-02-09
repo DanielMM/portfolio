@@ -48,6 +48,7 @@ class Project extends CI_Controller {
 	
 		$data['page_title'] = "Projects";
 
+		$data['meta_description'] = "Collection of my projects developed for different clients.";
 
 		if($posts['data']){
 			$data['posts'] = $posts['data'];
@@ -85,6 +86,12 @@ class Project extends CI_Controller {
 			$data['project']['date']['year'] = $date[0];
 
 			$meta_info = json_decode($project->meta_content, true);
+
+			if(isset($meta_info['meta_description'])){
+				$data['meta_description'] = $meta_info['meta_description'];
+			}else{
+				$data['meta_description'] = $data['page_title'];
+			}
 
 			$data['project']['meta']['id'] = (int)$project->post_id;
 			$data['project']['meta']['link'] = $meta_info['link'];

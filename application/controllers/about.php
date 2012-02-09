@@ -5,6 +5,7 @@ class About extends CI_Controller {
 	public function index()
 	{
 		$data['page_title'] 	= "About ";
+		$data['meta_description'] = "Learn more about Daniel Mois, his professional background, hobbies and passions.";
 		$data['age'] 	= date('Y') - 1987;
 		$data['nav_item'] = "about";
 
