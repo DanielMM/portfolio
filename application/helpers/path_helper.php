@@ -11,6 +11,7 @@ if (!function_exists('asset_url'))
     {
         //get an instance of CI so we can access our configuration
         $CI =& get_instance();  
+        
         //return the full asset path to the type of resource
         return base_url() . $CI->config->item($type.'_'.'path');
     }

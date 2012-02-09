@@ -1,0 +1,9 @@
+/*ABOUT*/
+#skills dt,
+#skills dd .score,
+#tollkit dd 			{line-height: 1.59em;}
+
+#keypoints ul li 		{font-family: "arial";}
+
+/*LIST*/
+.list footer			{margin-top: 30px;}

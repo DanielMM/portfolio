@@ -4,7 +4,7 @@
 	<head>
 		<title><?php if(isset($page_title)){echo $page_title;}else{echo "Portfolio";}?> - Daniel Mois - Web Developer</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-		<meta name="language" content="english"> 
+		<meta name="language" content="en"> 
 		<link rel="icon" href="<?php echo asset_url('img'); ?>favicon.ico" type="image/x-icon" />
 		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli|Open+Sans:400,700" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo asset_url('css'); ?>reset.css" media="screen" />
@@ -26,6 +26,9 @@
 		<![endif]-->
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link href="<?php echo asset_url('css'); ?>ie9.css" type="text/css" rel="stylesheet" media="screen">
 		<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 		<!--LOAD CUSTOM JS LINK HEADER ITEMS DEFINED IN CONTROLLER-->
