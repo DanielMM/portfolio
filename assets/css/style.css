@@ -62,6 +62,8 @@ h1+.post_info				{color: rgb(215,215,215); font-size: 0.8em; margin-top: 10px; t
 
 h1+.post_info+img 			{margin: 15px 0 0 1px; outline: 1px solid rgb(68,68,68);}
 
+.post_info+img+a 			{color: rgb(205, 205, 205); float: right; font-size: 0.7em; margin-top: 2px; text-decoration: none; width: 50px; text-align: right;}
+
 h1+.post_info .category,
 
 h1+.post_info .comm_count 		{border-right: 1px solid rgb(215,215,215); color: rgb(175,175,175);}
@@ -98,9 +100,9 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 /*FOR BLOG*/
 
-.list article .thumb			{}
+.list article .thumb			{margin-right: 1px; outline: 1px solid rgb(68,68,68);}
 
-.list article .summary			{margin: 10px 0 0 285px; min-height: 170px;}
+.list article .summary			{margin: 10px 0 0 285px; min-height: 185px;}
 
 .list article .summary.nothumb	{margin-left: 0; min-height: inherit;}
 
@@ -170,12 +172,12 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .article_page .thumb	{float: right;}
 
+.article_page .thumb+a 	{color: rgb(205, 205, 205); float: right; font-size: 0.7em; margin-top: 2px; text-decoration: none; width: 50px; text-align: right;}
 
 .article_page .summary	{border-top: 1px solid rgb(245,245,245); clear: both; padding: 15px 0;}
 
 
 .post_body				{margin-bottom: 20px;}
-
 
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
 
@@ -425,11 +427,10 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 .project .date 			{text-transform: uppercase;}
 
+.view_online			{float: left;}
+
 .post_info .client,
-
-.view_online			{float: right;}
-
-.read_more				{float: left;}
+.read_more				{float: right;}
 
 
 .project footer 		{font-size: 0.8em; margin-top: 10px; overflow: hidden;}
@@ -498,7 +499,7 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 #skills						{float: left;}
 
-#skills, #toolkit			{padding-left: 20px;}
+#toolkit					{margin-left: 40px;}
 
 #skills dl,
 
@@ -576,7 +577,7 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 span.lowcase			{text-transform: none;}
 
-#contact_form					{margin-top: 40px; overflow: hidden; padding: 0 0 0 10px;}
+#contact_form			{margin-top: 40px; overflow: hidden;}
 
 #contact_form label,
 
@@ -602,7 +603,7 @@ span.lowcase			{text-transform: none;}
 
 #contact_form textarea				{padding: 5px; width: 680px;}
 
-#contact_form input[type=submit]	{background: rgb(242,242,242); float: right; font-size: 0.9em; font-weight: bold; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
+#contact_form input[type=submit]	{background: rgb(242,242,242); float: right; font-size: 0.9em; font-weight: bold; margin: 20px 17px; padding: 10px 20px; text-transform: uppercase; width: auto;}
 
 #contact_form input[type=submit]:hover	{background: rgb(153,190,105); color: rgb(255,255,255); font-weight: bold;}
 
@@ -655,13 +656,13 @@ span.lowcase			{text-transform: none;}
 
 #hcard-Daniel-Mois			{padding: 0 10px;}
 
-.hcard a 					{color: rgb(50,50,50); text-decoration: none;}
+.hcard a 					{color: rgb(68,68,68); text-decoration: none;}
 
 #hcard-Daniel-Mois a:hover	{color: rgb(153,190,105);}
 
 .fn, .email, .tel, .adr,
 
-.vcard						{font-size: 0.9em; margin: 0 0 5px;}
+.vcard						{color: rgb(68,68,68); font-size: 0.9em; margin: 0 0 5px;}
 
 .fn, .email					{font-size: 1em;}
 

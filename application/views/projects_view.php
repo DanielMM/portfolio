@@ -23,7 +23,7 @@
 					$thumb = $post->post_thumb;
 
 					if($post->post_type == 'project'){
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
+						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
 					}
 					
 					$teaser = $post->post_teaser;
@@ -47,14 +47,6 @@
 								</span>
 								<span class="client"><?php echo $meta_info['client']; ?></span>
 							</p>
-							<?php
-								if($post->post_category != 'project'):
-							?>
-								<div class="summary">
-										<?php echo $teaser; ?>
-								</div>
-								
-							<?php endif; ?>
 							<footer>
 								<?php
 									echo anchor("project/".$url_title, "Read more",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more btn"));

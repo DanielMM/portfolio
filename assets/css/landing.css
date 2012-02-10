@@ -19,7 +19,7 @@
 
 .post 				{border-bottom: 1px solid rgb(205,205,205); overflow: hidden; padding: 40px 0; position: relative;}
 
-.list .summary		{float: left; margin: 15px 0 0 15px; min-height: 150px; width: 500px;}
+.list .summary		{float: left; margin: 15px 0 0 15px; min-height: 150px; width: 630px;}
 
 
 /*LIST*/
@@ -33,10 +33,16 @@
 .list .thumb			{}
 
 .list .meta				{color: rgb(205,205,205); display: block; float: left; height: 140px; position: relative; width: 24px;}
+
 .list .category			{display: block;}
 .list .category			{font-weight: normal; text-transform: capitalize;}
 .list .date .day 		{font-size: 1.1em; left: 2px; position: absolute; top: 0;}
 .list .date .month		{display: block; font-size: 0.7em; height: 20px; text-transform: uppercase; position: absolute; top: 14px;}
+/*nothumb*/
+.list .nothumb .meta	{height: 40px;}
+.list .nothumb .summary {min-height: inherit;}
+/*-------*/
+
 /*----*/
 
 .all_articles			{float: right; margin-top: 20px; padding: 3px 6px;}

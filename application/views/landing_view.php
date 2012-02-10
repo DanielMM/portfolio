@@ -17,13 +17,13 @@
 						$thumb = false;
 					}else{
 						$thumb = $post->post_thumb;
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
+						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
 					}
 
 					$teaser = $post->post_teaser;
 
 			?>
-				<article class="<?php echo $post->post_category; ?> post">
+				<article class="post <?php echo $post->post_category; if(!$thumb){echo " nothumb";}?>">
 					<p class="meta">
 						<span class="category"><?php //echo $tutorial->post_category; ?></span>
 						<span class="date">

@@ -82,12 +82,6 @@ class Article extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-		
-			
-			//$data['headers']['css'][] = "<link type=\"text/css\" rel=\"stylesheet\" href=\"".asset_url('css')."desert.css\" media=\"screen\" />";
-
-			//$data['headers']['js'][] = "<script src=". asset_url('js')."prettify.js></script>";
-			//$data['headers']['js'][] = "<script src=". asset_url('js')."main.js></script>";
 
 			$article = $this->_getArticle($title);
 
@@ -117,14 +111,16 @@ class Article extends CI_Controller {
 						$data['meta_description'] = $value;
 					}else{
 						$data['article']['post_'.$key] = $value;
-						$data['meta_description'] = $data['page_title'];
+
+						if(!isset($data['meta_description'])){
+							$data['meta_description'] = $data['page_title'];
+						}
 					}
 				}
 				
-				//$data['meta_description'] = ;
-
-				$data['article']['post_category'] = $article->post_category;
 				$data['article']['post_terms'] = json_decode($article->post_terms, true);
+				
+				$data['article']['post_category'] = $article->post_category;
 				
 				$data['article']['post_thumb'] = $article->post_thumb;
 				$data['article']['post_content'] = $article->post_content;

@@ -24,7 +24,7 @@
 						$thumb = false;
 					}else{
 						$thumb = $post->post_thumb;
-						$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
+						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
 					}
 					
 					$teaser = $post->post_teaser;

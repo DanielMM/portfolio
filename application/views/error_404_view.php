@@ -119,7 +119,6 @@
 							<li><?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blank"');?></li>
 							<li><?php echo anchor('http://www.webresourcesdepot.com/','Web Resources Depot','title="Web Resources Depot" target="_blank"');?></li>
 							<li><?php echo anchor('http://www.webdesignerdepot.com/','Web Designer Depot','title="Web Designer Depot" target="_blank"');?></li>
-							<li><?php echo anchor('http://webdesignledger.com/','Web Design Ledger','title="Web Design Ledger" target="_blank"');?></li>
 						</ul>
 					</section>
 					<section>
@@ -153,7 +152,7 @@
 				</article>
 			</footer>
 			<div id="copyleft">
-				Copyleft <span>&copy;</span>2011 Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://www.codeigniter.com','Codeigniter','title="Codeigniter PHP framework"');?>.
+				<p>Copyleft 2010 - <?php echo date('Y');?> Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://www.codeigniter.com','Codeigniter','title="Codeigniter PHP framework"');?></p>
 			</div>
 		</div><!--footer_wrapp-->
 		<script type="text/javascript">

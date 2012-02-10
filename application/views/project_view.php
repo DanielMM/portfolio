@@ -12,7 +12,12 @@
 						<span class="year"><?php echo $project['date']['year']; ?></span>
 					</span>
 				</p>
-				<img src="<?php echo asset_url('img').$project['thumb']; ?>" width="710" height="463" alt="<?php echo $page_title; ?>" title="<?php echo $page_title; ?>" />
+				<img src="<?php echo asset_url('post_img').$project['thumb']; ?>" width="710" height="463" alt="<?php echo $page_title; ?>" title="<?php echo $page_title; ?>" />
+				<?php 
+					if(isset($project['meta']['thumb_source'])){
+						echo anchor(prep_url($project['meta']['thumb_source']),'Source', array("target"=>"_blank")); 
+					}
+				?>
 				<section class="post_meta">
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>

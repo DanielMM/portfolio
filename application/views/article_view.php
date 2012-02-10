@@ -9,12 +9,14 @@
 						$thumb = false;
 					}else{
 						$thumb = $article['post_thumb'];
-					$thumb = "<img class=\"thumb\" src=".asset_url('img').$thumb." width=\"270\" height=\"190\" alt=\"{$page_title}\" title=\"{$page_title}\" />";
+						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$page_title}\" title=\"{$page_title}\" />";
+						if(isset($article['post_thumb_source'])){
+							$thumb .= anchor(prep_url($article['post_thumb_source']),'Source',array("target"=>"_blank"));
+						}
 					}
 				?>
 				<p class="post_info">
-					<!-- <span class="category"><?php echo $article['post_category']; ?></span> -->
-					<span class="date <?php if($article['post_category'] == "project"){echo "nobrd";} ?>">
+					<span class="date">
 						<span class="day"><?php echo $article['date']['day']; ?></span>
 						<span class="month"><?php echo $article['date']['month']; ?></span>
 						<span class="year"><?php echo $article['date']['year']; ?></span>
@@ -37,11 +39,13 @@
 							<dt class="reading">Difficulty:</dt>
 								<dd><?php echo $article['post_difficulty']; ?></dd>
 						<?php endif; ?>
+
 						<?php if(isset($article['post_terms'])):?>
 						<dt class="tags">Tags:</dt>
 							<dd>
 								<?php foreach($article['post_terms'] as $tag){
-									echo anchor('tag/'.$tag, $tag, array('title' => $tag, 'class'=>'tag'));
+									$tag_human = str_replace("_"," ",$tag);
+									echo anchor('tag/'.$tag, $tag_human, array('title' => $tag, 'class'=>'tag'));
 								}?>
 							</dd>
 						<?php endif; ?>
@@ -50,21 +54,18 @@
 				<?php echo $thumb;?>
 				<div class="summary">
 					<?php
+						if(isset($article['post_teaser'])){
 						echo $article['post_teaser'];
+					}
 					?>
 				</div>
 			</header>
 			<section class="post_body">
 				<?php
-					echo $article['post_content'];
+					if(isset($article['post_content'])){
+						echo $article['post_content'];
+					}
 				?>
-				<pre class="prettyprint linenums:2" onclick="prettyPrint()">
-					<span class="nocode">This is code to be formated.</span>
-					//testing prettyprint on js code
-					$data['article']['date']['day'] = substr($date[2], 0,2);
-					$data['article']['date']['month'] = $months[$date[1]];
-					$data['article']['date']['year'] = $date[0];
-				</pre>
 			</section><!--post_body-->
 			<section class="post_footer">
 				<!--Add author bio for google author SEO -->

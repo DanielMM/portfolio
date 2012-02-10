@@ -74,6 +74,7 @@ class Project extends CI_Controller {
 		if($project){
 			$data['page_title'] = str_replace("_"," ",$project->post_title);
 			$data['nav_item'] = "work";
+
 			//make a helper to get the name of the month when given the number of the month
 
 			$date = explode("-",$project->post_date);
@@ -87,19 +88,23 @@ class Project extends CI_Controller {
 
 			$meta_info = json_decode($project->meta_content, true);
 
-			if(isset($meta_info['meta_description'])){
-				$data['meta_description'] = $meta_info['meta_description'];
-			}else{
-				$data['meta_description'] = $data['page_title'];
+			foreach ($meta_info as $key => $value) {
+				if($key == "meta_description"){
+					$data['meta_description'] = $value;
+				}else{
+					$data['project']['meta'][$key] = $value;
+					
+					if(!isset($data['meta_description'])){
+						$data['meta_description'] = $data['page_title'];
+					}
+				}
 			}
 
 			$data['project']['meta']['id'] = (int)$project->post_id;
-			$data['project']['meta']['link'] = $meta_info['link'];
 
 			//get the category title from the categories table not the name of the category
 			
 			$data['project']['meta']['category'] = $project->post_category;
-			$data['project']['meta']['client'] = $meta_info['client'];
 
 			$data['project']['meta']['tags'] = json_decode($project->post_terms, true);
 			

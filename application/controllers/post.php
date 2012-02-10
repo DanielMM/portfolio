@@ -70,7 +70,8 @@ class Post extends CI_Controller {
 	}
 
 	public function tag($tag, $offset = 0){
-		$data['page_title'] 	= "Tag: ".$tag;
+		$tag_human = str_replace("_"," ",$tag);
+		$data['page_title'] 	= "Tag: ".$tag_human;
 
 		$data['meta_description'] = "A list of all the content tagged with ".$tag;
 
@@ -123,19 +124,22 @@ class Post extends CI_Controller {
 
 		$data['pagination'] = $this->pagination->create_links();
 
+		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 		
 		//var_dump($posts);
 
 		if($posts['data']){
+			
 			$data['posts'] = $posts['data'];
+			
+			$this->load->view('header_view', $data);
+			$this->load->view('list_view', $data);
+			$this->load->view('footer_view');
+
 		}else{
 			$this->load->view('error_404_view');
 		}
-		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 		
-		$this->load->view('header_view', $data);
-		$this->load->view('list_view', $data);
-		$this->load->view('footer_view');
 	}
 
 	public function addComment($post_link){
