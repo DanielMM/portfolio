@@ -16,7 +16,7 @@
 					$title = str_replace("_"," ",$post->post_title);
 					$date = explode("-",$post->post_date);
 					$year = $date[0];
-					$month = $date[1];
+					$month = get_month($date[1], 'short');
 					$day =	substr($date[2],0,2);
 					$url_title = url_title($post->post_title,"underscore");
 					$meta_info = json_decode($post->meta_content, true);
@@ -42,7 +42,7 @@
 							</h2>
 							<p class="post_info">
 								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
-									<span class="month"><?php echo $months[$month]; ?></span>
+									<span class="month"><?php echo $month; ?></span>
 									<span class="year"><?php echo $year; ?></span>
 								</span>
 								<span class="client"><?php echo $meta_info['client']; ?></span>

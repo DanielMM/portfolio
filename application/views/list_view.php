@@ -11,11 +11,10 @@
 					
 					foreach($posts as $post): 
 					
-
 					$title = str_replace("_"," ",$post->post_title);
 					$date = explode("-",$post->post_date);
 					$year = $date[0];
-					$month = $date[1];
+					$month = get_month($date[1]);
 					$day =	substr($date[2],0,2);
 					$url_title = url_title($post->post_title,"underscore");
 					
@@ -28,6 +27,7 @@
 					}
 					
 					$teaser = $post->post_teaser;
+
 					if(isset($post->comm_count)){
 						if($post->comm_count > 0){
 							if($post->comm_count == 1){
@@ -40,62 +40,53 @@
 						}
 					}
 			?>
-						<article>
-							<h1>
-								<?php
-									if($post->post_category == 'project'){
-										echo anchor("project/".$url_title, $title, array('title' => $title));
-									}else{
-										echo anchor("article/".$url_title, $title, array('title' => $title));
-									}
-								?>
-							</h1>
-							<p class="post_info">
-								
-								<span class="category"><?php echo $post->post_category; ?></span>
-								
-								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
-									
-									<span class="day"><?php echo $day; ?></span>
-									<span class="month"><?php echo $months[$month]; ?></span>
-									<span class="year"><?php echo $year; ?></span>
-								
-								</span>
-								
-								<?php if($post->post_category != 'project'): ?>
-									<span class="comm_count"><?php echo $comm_count; ?></span>
-								<?php endif; ?>
+			<article>
+				<h1>
+					<?php
+						if($post->post_category == 'project'){
+							echo anchor("project/".$url_title, $title, array('title' => $title));
+						}else{
+							echo anchor("article/".$url_title, $title, array('title' => $title));
+						}
+					?>
+				</h1>
+				<p class="post_info">
+					
+					<span class="category"><?php echo $post->post_category; ?></span>
+					
+					<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
+						
+						<span class="day"><?php echo $day; ?></span>
+						<span class="month"><?php echo $month; ?></span>
+						<span class="year"><?php echo $year; ?></span>
+					
+					</span>
+					
+					<?php if($post->post_category != 'project'): ?>
+						<span class="comm_count"><?php echo $comm_count; ?></span>
+					<?php endif; ?>
 
-								<?php 
-									if($post->post_category == 'project' && isset($post->meta_content)): 
-									$meta_info = json_decode($post->meta_content, true);
-								?>
-									<span class="client">
-										<?php echo anchor(prep_url($meta_info['link']),$meta_info['client']); ?>
-									</span>
+				</p>
+				<?php if($thumb): ?>
+					<h2>
+						<?php echo anchor("article/".$url_title, $thumb, array('title' => $title));?>
+					</h2>
+				<?php endif;?>
 
-								<?php endif; ?>
-							</p>
-							<?php if($thumb): ?>
-								<h2>
-									<?php echo anchor("article/".$url_title, $thumb, array('title' => $title));?>
-								</h2>
-							<?php endif;?>
+					<div class="summary <?php if(!$thumb){echo "nothumb";} ?>">
+							<?php echo $teaser; ?>
+					</div>
 
-								<div class="summary <?php if(!$thumb){echo "nothumb";} ?>">
-										<?php echo $teaser; ?>
-								</div>
-
-							<footer>
-								<?php
-									if($post->post_category == 'project'){
-										echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
-									}else{
-										echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
-									}
-								?>
-							</footer>
-						</article>
+				<footer>
+					<?php
+						if($post->post_category == 'project'){
+							echo anchor("project/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
+						}else{
+							echo anchor("article/".$url_title, "Continue &raquo;",array('title' => "Continue reading ".strtolower($title), 'class'=>"read_more"));
+						}
+					?>
+				</footer>
+			</article>
 			<?php
 				endforeach; 
 				endif;
@@ -107,7 +98,9 @@
 					}
 				?>
 			</div><!--pagination-->
+			
 		</section><!--main-->
+
 		<aside class="sidebar">
 			<?php 
 				if(isset($categories)){

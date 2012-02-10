@@ -4,6 +4,7 @@ class Article extends CI_Controller {
 
 	public function page($offset = 0)
 	{	//Select all articles
+
 		$data['page_title'] = "Articles";
 
 		$data['meta_description'] = "A list of my articles on web development topics.";
@@ -57,10 +58,6 @@ class Article extends CI_Controller {
 			
 			$data['posts'] = $posts['data'];
 
-			$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
-			$data['nav_item'] = "blog";
-
-
 			$this->load->view('header_view', $data);
 			$this->load->view('list_view', $data);
 			$this->load->view('footer_view');
@@ -73,7 +70,9 @@ class Article extends CI_Controller {
 
 	public function article_by_title($title){
 
+
 		$this->load->library('form_validation');
+
 		$this->form_validation->set_error_delimiters('<span class="error">', '</span>');
 		$this->form_validation->set_rules('name', 'name', 'trim|required');
 		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
@@ -94,14 +93,12 @@ class Article extends CI_Controller {
 
 				$date = explode("-", $article->post_date);
 
-				$months =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
-				
 				$data['article']['link'] = $article->post_title;
 				$data['article']['post_type'] = $article->post_type;
 				$data['article']['post_id'] = $article->post_id;
 
 				$data['article']['date']['day'] = substr($date[2], 0,2);
-				$data['article']['date']['month'] = $months[$date[1]];
+				$data['article']['date']['month'] = get_month($date[1]);
 				$data['article']['date']['year'] = $date[0];
 
 				$meta_info = json_decode($article->meta_content, true);
@@ -119,7 +116,7 @@ class Article extends CI_Controller {
 				}
 				
 				$data['article']['post_terms'] = json_decode($article->post_terms, true);
-				
+
 				$data['article']['post_category'] = $article->post_category;
 				
 				$data['article']['post_thumb'] = $article->post_thumb;

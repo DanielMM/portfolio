@@ -58,8 +58,8 @@ class Project extends CI_Controller {
 
 		$data['categories'] = $this->_getCategories();
 
-		$data['months'] =array('01'=>'jan','02'=>'feb','03'=>'mar','04'=>'apr','05'=>'may','06'=>'iun','07'=>'jul','08'=>'aug','09'=>'sep','10'=>'oct','11'=>'nov','12'=>'dec');
 		$data['nav_item'] = "work";
+		
 		$this->load->view('header_view', $data);
 		$this->load->view('projects_view', $data);
 		$this->load->view('footer_view');
@@ -79,11 +79,9 @@ class Project extends CI_Controller {
 
 			$date = explode("-",$project->post_date);
 
-			$months =array('01'=>'jan','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
-			
 			$data['project']['thumb'] = $project->post_thumb;
 			$data['project']['date']['day'] = substr($date[2], 0,2);
-			$data['project']['date']['month'] = $months[$date[1]];
+			$data['project']['date']['month'] = get_month($date[1]);
 			$data['project']['date']['year'] = $date[0];
 
 			$meta_info = json_decode($project->meta_content, true);

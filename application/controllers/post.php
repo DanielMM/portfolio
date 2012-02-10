@@ -61,8 +61,6 @@ class Post extends CI_Controller {
 		}else{
 			$this->load->view('error_404_view');
 		}
-
-		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
 		
 		$this->load->view('header_view', $data);
 		$this->load->view('list_view', $data);
@@ -123,10 +121,6 @@ class Post extends CI_Controller {
 		$this->pagination->initialize($config);
 
 		$data['pagination'] = $this->pagination->create_links();
-
-		$data['months'] =array('01'=>'january','02'=>'february','03'=>'march','04'=>'april','05'=>'may','06'=>'iune','07'=>'july','08'=>'august','09'=>'september','10'=>'october','11'=>'november','12'=>'december');
-		
-		//var_dump($posts);
 
 		if($posts['data']){
 			

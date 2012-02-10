@@ -92,7 +92,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .list article h2				{display: inline-block; float: left; margin-top: 15px; width: 190px;}
 
-.list article h2 a				{display: inline-block; height: 190px;}
+.list article h2 a				{display: inline-block; height: 190px; margin-left: 1px;}
 
 
 .list .project .summary			{margin-left: 0; min-height: 100px;}
