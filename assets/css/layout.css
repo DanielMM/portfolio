@@ -1,4 +1,4 @@
-﻿ 
+﻿ /*
 	LAYOUT SETTINGS
  */
 
@@ -51,8 +51,8 @@ article ul li			{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size:
 #logo h2>a				{font-size: 1.85em; padding: 0 2px;}
 #logo h1>a,
 #logo h1>a .special,
-#logo h2>a				{color: rgba(254,254,254,1); font-family: 'Open Sans', sans-serif; font-weight: 700; text-decoration: none;}
-#logo h1>a .special		{color: rgba(153,190,105,1); font-weight: 700;}
+#logo h2>a				{color: rgb(254,254,254); font-family: 'Open Sans', sans-serif; font-weight: 700; text-decoration: none;}
+#logo h1>a .special		{color: rgb(153,190,105); font-weight: 700;}
 
 /*----------*/
 
@@ -60,11 +60,11 @@ article ul li			{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size:
 nav						{float: right; position: relative; z-index: 110;}
 nav>ul					{overflow: hidden;}
 nav>ul>li				{float: left;}
-nav>ul>li>h3			{border-left: 1px solid rgba(25,25,25,1); text-align: center; text-transform: uppercase;}
-nav>ul>li>h3>a			{color: rgba(250,250,250,1);  display: inline-block; font-size: 1.4em; font-family: 'Open Sans', sans-serif; font-weight: 700; padding: 30px 22px 40px 19px; text-decoration: none; width: 90px;}
-nav>ul>li>h3>a.last		{border-right: 1px solid rgba(25,25,25,1);}
+nav>ul>li>h3			{border-left: 1px solid rgb(25,25,25); text-align: center; text-transform: uppercase;}
+nav>ul>li>h3>a			{color: rgb(250,250,250);  display: inline-block; font-size: 1.4em; font-family: 'Open Sans', sans-serif; font-weight: 700; padding: 30px 22px 40px 19px; text-decoration: none; width: 90px;}
+nav>ul>li>h3>a.last		{border-right: 1px solid rgb(25,25,25);}
 nav>ul>li>h3>a:hover,
-nav>ul>li>h3>a.selected	{/*background: rgb(3,3,3);*/ border-top: 5px solid rgba(153,190,105,1); /*border-bottom: 5px solid rgba(153,190,105,1);*/ color: rgb(153,190,105); padding: 25px 22px 35px 19px;}
+nav>ul>li>h3>a.selected	{border-top: 5px solid rgb(153,190,105); color: rgb(153,190,105); padding: 25px 22px 35px 19px;}
 
 /*----------*/
 
@@ -75,7 +75,7 @@ nav>ul>li>h3>a.selected	{/*background: rgb(3,3,3);*/ border-top: 5px solid rgba(
 /*FOOTER*/
 
 #footer_wrapp			{background: url('../images/footer_bg.png') repeat-x; }
-#footer_wrapp footer	{background: rgba(10,10,10,0.5); border-right: 1px solid rgba(25,25,25,1); border-left: 1px solid rgba(25,25,25,1); color: rgba(252,252,252,1);  height: 299px; padding-top: 0px; position: relative;}
+#footer_wrapp footer	{background: rgb(10,10,10); border-right: 1px solid rgb(25,25,25); border-left: 1px solid rgb(25,25,25); color: rgb(252,252,252);  height: 299px; padding-top: 0px; position: relative;}
 
 footer article			{width: 960px;}
 footer article section	{float: left; margin-left: 30px;}
@@ -86,7 +86,7 @@ footer article ul li 	{list-style: none;}
 /*TWEETS*/
 
 #tweets					{display: block; height: 250px; padding: 0; width: 450px;}
-#tweets>li				{background: rgba(30,30,30,0.8); border: 1px solid rgba(100,100,100,0.2); font-size: 1em; list-style: none; margin: 0 0 10px 0; padding: 0 3px;}
+#tweets>li				{background: rgb(30,30,30); border: 1px solid rgb(100,100,100); font-size: 1em; list-style: none; margin: 0 0 10px 0; padding: 0 3px;}
 #tweets>li>h6			{font-size: 0.8em; position: relative;}
 #tweets>li>p			{color: rgb(90,90,90); font-size: 1em; line-height: 1em; margin: 3px 0;}
 #tweets>li>h6>span		{color: rgb(254,254,254); font-size: 0.8em; font-weight: normal; position:absolute; right: 1px; text-align: right; top: 2px;}
@@ -120,7 +120,7 @@ footer article ul li 	{list-style: none;}
 
 /*COPYRiGHT*/
 
-#copyleft p				{background: rgba(33,33,33,1); color: rgb(90,90,90); font-family: helvetica, arial, sans-serif; font-size: 0.7em; margin-top: 1px; padding: 5px 0; text-align: center;}
+#copyleft p				{background: rgb(33,33,33); color: rgb(90,90,90); font-family: helvetica, arial, sans-serif; font-size: 0.7em; margin-top: 1px; padding: 5px 0; text-align: center;}
 #copyleft a				{color: rgb(90,90,90); text-decoration: none;}
 #copyleft a:hover		{color: rgb(153,190,105);}
 
@@ -153,4 +153,4 @@ blockquote a	{color: rgb(153,190,105); text-decoration: none;}
 
 .error_404		{min-height: 200px;}
 
-/*---------
+/*--------*/
