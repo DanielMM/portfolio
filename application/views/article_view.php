@@ -215,11 +215,11 @@
 						echo form_label('Name*', 'name');
 						echo form_label('Email*', 'email'); 
 						echo form_label('URL', 'url'); 
-						echo form_input(array('name'=>"name",'value'=>set_value('name'), 'placeholder'=>"Name"));
+						echo form_input(array('name'=>"name",'value'=>set_value('name'),'id'=>'name', 'placeholder'=>"Name"));
 						
-						echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Email address"));
+						echo form_input(array('name'=>"email",'value'=>set_value('email'),'id'=>'email', 'placeholder'=>"Email address"));
 						
-						echo form_input(array('name'=>"url",'value'=>set_value('url'), 'placeholder'=>"URL"));
+						echo form_input(array('name'=>"url",'value'=>set_value('url'),'id'=>'url', 'placeholder'=>"URL"));
 						
 						echo form_error('name'); 
 						echo form_error('email');
@@ -227,7 +227,7 @@
 						
 						echo form_label('Your comments', 'comment'); 
 						echo form_error('comment');
-						echo form_textarea(array('name'=>"comment",'value'=>set_value('comment'), 'placeholder'=>"Your comments",'rows'=>"12",'cols'=>"52"));
+						echo form_textarea(array('name'=>"comment",'value'=>set_value('comment'),'id'=>'comment', 'placeholder'=>"Your comments",'rows'=>"12",'cols'=>"52"));
 
 						echo form_hidden(array('article_id'=>$article['post_id']));
 

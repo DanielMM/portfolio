@@ -1,4 +1,4 @@
-﻿/* 
+﻿ 
 	LAYOUT SETTINGS
  */
 
@@ -77,17 +77,24 @@ footer section h4		{border-bottom: 2px solid rgb(153,190,105); font-size: 1.2em;
 /*TWEETS*/
 
 #tweets					{display: block; height: 250px; width: 450px;}
-#tweets>li				{background: rgba(30,30,30,0.8); margin-bottom: 5px; border: 1px solid rgba(100,100,100,0.2); padding: 2px;}
-#tweets>li>h6			{font-size: 0.8em; margin: 2px 0; position: relative;}
-#tweets>li>p			{font-size: 0.8em; line-height: 1em; margin: 3px 0;}
-#tweets>li>h6>span		{font-size: 0.9em; font-weight: normal; position:absolute; right: 1px; text-align: right; top: 2px;}
+#tweets>li				{background: rgba(30,30,30,0.8); margin-bottom: 10px; border: 1px solid rgba(100,100,100,0.2); padding: 0 3px;}
+#tweets>li>h6			{font-size: 0.8em; position: relative;}
+#tweets>li>p			{color: rgb(90,90,90); font-size: 1em; line-height: 1em; margin: 3px 0;}
+#tweets>li>h6>span		{color: rgb(254,254,254); font-size: 0.8em; font-weight: normal; position:absolute; right: 1px; text-align: right; top: 2px;}
 
 /*-----*/
+
+/*SUBSCRIBE*/
+
+#footer_wrapp .subscribe 		{min-height: inherit; width: 370px;}
+#footer_wrapp .subscribe label 	{color: rgb(90,90,90); margin-bottom: 10px;}
+
+/*---------*/
 
 /*FAVORITES*/
 
 #favorites				{height: 250px; width: 370px;}
-#favorites li			{float: left; margin: 0 5px 15px 5px; width: 165px;}
+#favorites li			{float: left; margin: 0 5px 5px 5px; width: 165px;}
 #favorites li a			{color: rgb(90,90,90);}
 #favorites li a:hover	{color: rgb(114,114,114);}
 
@@ -137,4 +144,4 @@ blockquote a	{color: rgb(153,190,105); text-decoration: none;}
 
 .error_404		{float: left;}
 
-/*---------*/
+/*---------

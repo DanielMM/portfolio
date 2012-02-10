@@ -19,15 +19,16 @@
 
 .post 				{border-bottom: 1px solid rgb(205,205,205); overflow: hidden; padding: 40px 0; position: relative;}
 
-.post .summary		{float: left; margin: 15px 0 0 15px; min-height: 150px; width: 430px;}
+.list .summary		{float: left; margin: 15px 0 0 15px; min-height: 150px; width: 500px;}
 
 
 /*LIST*/
+.list article 			{margin: 0;}
+.list article h2		{display: block; float: none; font-size: 1.3em; margin: 0 0 0 39px; width: inherit;}
+.list article h2>a		{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; height: inherit; text-decoration: none; width: 500px;}
 
-.list h2				{font-size: 1.3em; margin-left: 39px; width: 430px;}
-.list h2>a				{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; text-decoration: none; width: 430px;}
-
-.list h2>a:hover		{color: rgb(153,190,105);/* color: rgb(255,255,255); text-decoration: underline;*/}
+.list h2>a:hover		{color: rgb(153,190,105);}
+.list article .summary 	{margin: 10px 0 0 15px; min-height: 150px;}
 .list .summary+a 		{position: absolute; right: 0; top: 40px;}
 .list .thumb			{}
 

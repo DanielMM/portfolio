@@ -8,13 +8,13 @@
 					echo form_open('contact/sendmessage');
 					echo form_label('What is your Name', 'name');
 					echo form_error('name'); 
-					echo form_input(array('name'=>"name",'value'=>set_value('name'), 'placeholder'=>"Your name"));
+					echo form_input(array('name'=>"name",'value'=>set_value('name'),'id'=>'name', 'placeholder'=>"Your name"));
 					echo form_label('What is your Email', 'email'); 
 					echo form_error('email');
-					echo form_input(array('name'=>"email",'value'=>set_value('email'), 'placeholder'=>"Your email address"));
+					echo form_input(array('name'=>"email",'value'=>set_value('email'),'id'=>'email', 'placeholder'=>"Your email address"));
 					echo form_label('What do you want to tell me', 'message'); 
 					echo form_error('message');
-					echo form_textarea(array('name'=>"message",'value'=>set_value('message'), 'placeholder'=>"Your message to me",'rows'=>"12",'cols'=>"52"));
+					echo form_textarea(array('name'=>"message",'value'=>set_value('message'),'id'=>'message' , 'placeholder'=>"Your message to me",'rows'=>"12",'cols'=>"52"));
 					echo form_submit('submit', 'Send');
 					echo form_close();
 				?>
@@ -35,11 +35,11 @@
 		<aside class="sidebar">
 			<article id="personal_info" class="widget" >
 				<section class="personal_portrait">
-					<h3 class="col_title">always smiling</h4>
+					<h3 class="col_title">always smiling</h3>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="230" height="312" />
 				</section>
 				<section class="hcard">
-					<h3 class="col_title">Download <span class="lowcase">vCard</span></h4>
+					<h3 class="col_title">Download <span class="lowcase">vCard</span></h3>
 					<div id="hcard-Daniel-Mois" class="vcard">
 						<?php echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
 						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>

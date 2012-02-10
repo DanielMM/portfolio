@@ -179,7 +179,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
 
-.post_footer footer 	{overflow: hidden;}
+.post_footer footer 	{overflow: hidden; padding: 10px 0;}
 
 .share					{float: left; height: 100px; position: relative; width: 400px;}
 
@@ -217,7 +217,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .share .s_icon:hover	{color: rgb(255,255,255);}
 
-.post_footer .author_info 			{border-radius: 2px; box-shadow: 0 3px 12px 1px rgb(205,205,205); color: rgb(105,105,105); font-size: 0.7em;}
+.post_footer .author_info 			{border-radius: 2px; box-shadow: 0 1px 4px 1px rgb(205,205,205); color: rgb(105,105,105); font-size: 0.7em;}
 
 .post_footer .author_info			{float: right; margin-right: 5px; padding: 10px; position: relative; width: 200px;}
 
@@ -602,7 +602,7 @@ span.lowcase			{text-transform: none;}
 
 #contact_form textarea				{padding: 5px; width: 680px;}
 
-#contact_form input[type=submit]	{float: right; font-size: 0.9em; font-weight: bold; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
+#contact_form input[type=submit]	{background: rgb(242,242,242); float: right; font-size: 0.9em; font-weight: bold; margin: 20px 10px; padding: 10px 20px; text-transform: uppercase; width: auto;}
 
 #contact_form input[type=submit]:hover	{background: rgb(153,190,105); color: rgb(255,255,255); font-weight: bold;}
 
@@ -678,3 +678,33 @@ span.lowcase			{text-transform: none;}
 .stefan ul li		{color: rgb(252,252,252);background: rgb(65,65,65); margin: 0 0 5px; padding: 5px;}
 
 .stefan ul li:hover	{background: rgb(105,105,105);}
+
+/*SUBSCRIBE*/
+
+.subscribe 			{min-height: 200px;}
+
+.subscribe h1,
+.subscribe h2		{margin-bottom: 20px;}
+
+.subscribe form 	{margin-top: 20px;}
+
+.subscribe label 	{display: block; font-size: 0.9em; margin-bottom: 10px;}
+
+.subscribe p.error 	{color: rgb(242,142,142); font-size: 0.8em;}
+
+
+.subscribe input[type=submit],
+.subscribe input[type=text]		{border-width: 0; border-color: transparent;  border-radius: 2px; font-family: arial, sans-serif; font-size: 1em; margin: 0; padding: 0;}
+
+.subscribe input[type=submit],
+.subscribe input[type=text]		{border: 1px solid rgb(242,242,242);}
+
+.subscribe input[type=text] 	{padding: 3px; width: 260px;}
+
+.subscribe input[type=submit]	{background: rgb(242,242,242); font-size: 0.9em; font-weight: bold; padding: 4px 8px; width: auto;}
+
+.subscribe input[type=submit]:hover	{background: rgb(153,190,105); color: rgb(255,255,255); font-weight: bold;}
+
+.subscribe input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(0,0,0);}
+
+/*--------*/

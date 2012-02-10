@@ -10,22 +10,27 @@ class Subscribe extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['page_title'] 	= "Error during the subscription process";
-		
-			$this->load->view('countdown_view', $data);
+			$data['page_title'] 		= "Error during the subscription process";
+			$data['feedback']			= false;
+			$data['feedback_message']	= "An error occured during the subscription process, please try again.";
+			$data['source'] 			= $this->input->post('source', TRUE);
+
+			$this->load->view('subscribe_view', $data);
 		}
 		else
 		{
-			$email = $this->input->post('email', TRUE);
+			$email = $this->input->post('email_subscriber', TRUE);
 
 			$subscriber = array('email'=> $email);
 			$this->db->insert('subscribe', $subscriber);
 
-			$data['email']			= $email;
-			$data['feedback']		= "Thank you for subscribing with the email address: ".$email;
-			$data['page_title'] 	= "Successful subscription";
-		
-			$this->load->view('countdown_view', $data);
+			$data['email']				= $email;
+			$data['page_title'] 		= "Successful subscription";
+			$data['feedback']			= true;
+			$data['feedback_message']	= "Thank you for subscribing with the email address: ".$email;
+			$data['source'] 			= $this->input->post('source', TRUE);
+			
+			$this->load->view('subscribe_view', $data);
 		}
 	}
 }

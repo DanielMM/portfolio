@@ -12,13 +12,13 @@
 						<span class="year"><?php echo $project['date']['year']; ?></span>
 					</span>
 				</p>
-				<img src="<?php echo asset_url('img').$project['thumb']; ?>" width="710" height="463" />
+				<img src="<?php echo asset_url('img').$project['thumb']; ?>" width="710" height="463" alt="<?php echo $page_title; ?>" title="<?php echo $page_title; ?>" />
 				<section class="post_meta">
 					<dl>
 						<?php if(isset($project['meta']['link'])): ?>
 							<dt class="link">Link:</dt>
 								<dd>
-									<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blanck")); ?>
+									<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blank")); ?>
 								</dd>
 						<?php endif; ?>
 

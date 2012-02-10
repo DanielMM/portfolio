@@ -4,7 +4,6 @@
 	<head>
 		<title><?php if(isset($page_title)){echo $page_title;}else{echo "Portfolio";}?> - Daniel Mois - Web Developer</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<meta http-equiv="Content-Language" content="en" />
 		<?php if(isset($meta_description)):?>
 		<meta name="description" content="<?php echo $meta_description;?>" />
 		<?php endif;?>
