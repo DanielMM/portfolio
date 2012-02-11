@@ -37,7 +37,7 @@
 						<h4>Subscribe</h4>
 						<?php
 							echo form_open('subscribe');
-							echo form_label('Enter your email address to subscribe', 'email_subscriber'); 
+							echo form_label('Enter your email address to subscribe and get updates', 'email_subscriber'); 
 							echo form_error('email_subscriber');
 							echo form_input(array('name'=>"email_subscriber",'value'=>set_value('email_subscriber'),'id'=>'email_subscriber' ,'placeholder'=>"Your email address"));
 							echo form_hidden(array('source'=>$this->uri->uri_string()));
@@ -60,21 +60,29 @@
 						<h4>Things</h4>
 						<ul>
 							<li>
-								<?php echo anchor('http://net.tutsplus.com/','Nettuts+','title="Nettuts+" target="_blank"');?>
+								<?php echo anchor('http://http://www.informationarchitects.jp//','Information Arhitecs','title="Information Arhitects" target="_blank"');?>
 							</li>
 							<li>
-								<?php echo anchor('http://webdesign.tutsplus.com/','Webdesigntuts+','title="Webdesigntuts+" target="_blank"');?>
+								<?php echo anchor('http://net.tutsplus.com/','Nettuts Plus','title="Nettuts+" target="_blank"');?>
+							</li>
+							<li>
+								<?php echo anchor('http://www.webresourcesdepot.com/','Web Resources','title="Web Resources Depot" target="_blank"');?>
+							</li>
+							<li>
+								<?php echo anchor('http://37signals.com/svn','37 Signals','title="37 Signals" target="_blank"');?>
+							</li>
+							<li>
+								<?php echo anchor('http://webdesign.tutsplus.com/','Webdesigntuts +','title="Webdesigntuts Plus" target="_blank"');?>
+							</li>
+							<li>
+								<?php echo anchor('http://www.alistapart.com/','A List Apart','title="A List Apart" target="_blank"');?>
 							</li>
 							<li>
 								<?php echo anchor('http://sixrevisions.com/','Six Revisions','title="Six Revisions" target="_blank"');?>
 							</li>
 							<li>
-								<?php echo anchor('http://www.alistapart.com/','A List Apart','title="A List Apart" target="_blank"');?>
+								<?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blank"');?>
 							</li>
-							<li><?php echo anchor('http://37signals.com/svn','37 Signals','title="37 Signals" target="_blank"');?></li>
-							<li><?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blank"');?></li>
-							<li><?php echo anchor('http://www.webresourcesdepot.com/','Web Resources Depot','title="Web Resources Depot" target="_blank"');?></li>
-							<li><?php echo anchor('http://www.webdesignerdepot.com/','Web Designer Depot','title="Web Designer Depot" target="_blank"');?></li>
 						</ul>
 					</section>
 					<section>

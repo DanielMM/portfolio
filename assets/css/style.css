@@ -702,7 +702,7 @@ span.lowcase			{text-transform: none;}
 
 .subscribe input[type=text] 	{padding: 3px; width: 260px;}
 
-.subscribe input[type=submit]	{background: rgb(242,242,242); font-size: 0.9em; font-weight: bold; margin-left: 8px; padding: 4px 8px; width: auto;}
+.subscribe input[type=submit]	{background: rgb(242,242,242); border-width: 0; font-size: 0.9em; font-weight: bold; float: right; margin-left: 8px; padding: 5px 8px; width: auto;}
 
 .subscribe input[type=submit]:hover	{background: rgb(153,190,105); color: rgb(255,255,255); font-weight: bold;}
 

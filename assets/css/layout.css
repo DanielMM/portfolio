@@ -81,7 +81,7 @@ footer article			{width: 960px;}
 footer article section	{float: left; margin-left: 30px;}
 footer section h4		{border-bottom: 2px solid rgb(153,190,105); font-size: 1.2em; margin: 15px 0 15px; padding-bottom: 3px;}
 
-footer article ul 	 	{padding: 0;}
+footer article ul 	 	{overflow: hidden; padding: 0;}
 footer article ul li 	{list-style: none;}
 
 /*TWEETS*/
@@ -102,7 +102,7 @@ footer article ul li 	{list-style: none;}
 /*FAVORITES*/
 
 #favorites				{margin-top: 20px; width: 370px;}
-#favorites li			{font-size: 1em; float: left; margin: 0 5px 5px 5px; width: 165px;}
+#favorites li			{font-size: 1em; float: left; margin: 0 5px 5px 5px; width: 175px;}
 #favorites li a			{color: rgb(190,190,190); text-decoration: none;}
 #favorites li a:hover	{color: rgb(153,190,105);}
 
@@ -110,7 +110,7 @@ footer article ul li 	{list-style: none;}
 
 /*SOCIAL MEDIA*/
 
-#social_media			{position: absolute; top: 20px; right: 0; width: 36px;}
+#social_media			{position: absolute; top: 20px; right: 0; width: 65px;}
 #social_media li		{float: right; height: 52px; margin: 0 0 20px 2px; width: 53px;}
 #social_media li>a		{height: 52px; width: 52px;}
 #social_media li:hover	{margin-right: 10px; width: 52px;}
