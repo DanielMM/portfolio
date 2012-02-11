@@ -79,26 +79,36 @@
 		<div id="footer_wrapp">
 			<footer>
 				<article>
-					<section>
-						<h4>Latest tweets</h4>
-						<ul id="tweets">
-							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>Sunday 12:34</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
-							</li>
-							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>5 hours ago</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
-							</li> 
-							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>12.10.11 16:12</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
-							</li>
-							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>12.10.11 16:12</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
-							</li>
-						</ul>
+					<section id="tweets">
+						<!-- <h4>Latest tweets</h4> -->
+						<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<script>
+						new TWTR.Widget({
+						  version: 2,
+						  type: 'profile',
+						  rpp: 4,
+						  interval: 30000,
+						  width: 450,
+						  height: 210,
+						  theme: {
+						    shell: {
+						      background: 'transparent',
+						      color: 'rgb(190,190,190)'
+						    },
+						    tweets: {
+						      background: 'transparent',
+						      color: 'rgb(190,190,190)',
+						      links: 'rgb(64,153,255)'
+						    }
+						  },
+						  features: {
+						    scrollbar: false,
+						    loop: false,
+						    live: false,
+						    behavior: 'all'
+						  }
+						}).render().setUser('danmois').start();
+						</script>
 					</section>
 					<section class="subscribe">
 						<h4>Subscribe</h4>
@@ -123,9 +133,9 @@
 						</div>
 						<?php endif; ?>
 					</section>
-					<section>
-						<h4>Favorites</h4>
-						<ul id="favorites">
+					<section id="favorites">
+						<h4>Things</h4>
+						<ul>
 							<li>
 								<?php echo anchor('http://net.tutsplus.com/','Nettuts+','title="Nettuts+" target="_blank"');?>
 							</li>
