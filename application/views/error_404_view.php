@@ -100,6 +100,29 @@
 							</li>
 						</ul>
 					</section>
+					<section class="subscribe">
+						<h4>Subscribe</h4>
+						<?php
+							echo form_open('subscribe');
+							echo form_label('Enter your email address to subscribe', 'email_subscriber'); 
+							echo form_error('email_subscriber');
+							echo form_input(array('name'=>"email_subscriber",'value'=>set_value('email_subscriber'),'id'=>'email_subscriber' ,'placeholder'=>"Your email address"));
+							echo form_hidden(array('source'=>$this->uri->uri_string()));
+							echo form_submit('submit', 'Subscribe');
+							echo form_close();
+						?>
+						<?php
+							if(isset($feedback) && $feedback):
+						?>
+						<div id="feedback" class="success">
+							<span class="success"><?php echo $success;?></span>
+						</div>
+						<?php elseif(isset($feedback) && !$feedback): ?>
+						<div id="feedback" class="error">
+							<span class="error"><?php echo $error;?></span>
+						</div>
+						<?php endif; ?>
+					</section>
 					<section>
 						<h4>Favorites</h4>
 						<ul id="favorites">

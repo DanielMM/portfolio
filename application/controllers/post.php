@@ -57,14 +57,17 @@ class Post extends CI_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 
 		if($posts['data']){
+			
 			$data['posts'] = $posts['data'];
-		}else{
+			
+			$this->load->view('header_view', $data);
+			$this->load->view('list_view', $data);
+			$this->load->view('footer_view');
+		
+	}else{
 			$this->load->view('error_404_view');
 		}
 		
-		$this->load->view('header_view', $data);
-		$this->load->view('list_view', $data);
-		$this->load->view('footer_view');
 	}
 
 	public function tag($tag, $offset = 0){

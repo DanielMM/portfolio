@@ -33,7 +33,7 @@
 		<!--[if IE 9]>
 			<link href="<?php echo asset_url('css'); ?>ie9.css" type="text/css" rel="stylesheet" media="screen">
 		<![endif]-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
 		<!--LOAD CUSTOM JS LINK HEADER ITEMS DEFINED IN CONTROLLER-->
 		<?php
 			if(isset($headers['js'])){

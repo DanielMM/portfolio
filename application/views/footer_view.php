@@ -6,16 +6,22 @@
 						<h4>Latest tweets</h4>
 						<ul id="tweets">
 							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>Sunday 12:34</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								<article>
+									<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>Sunday 12:34</span></h6>
+									<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								</article>
 							</li>
 							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>5 hours ago</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								<article>
+									<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>5 hours ago</span></h6>
+									<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								</article>
 							</li> 
 							<li>
-								<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>12.10.11 16:12</span></h6>
-								<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								<article>
+									<h6><?php echo anchor('http://twitter.com/#!/danmois','@danmois','title="Fallow me onTwitter" target="_blank"'); ?><span>12.10.11 16:12</span></h6>
+									<p>Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi susp</p>
+								</article>
 							</li>
 						</ul>
 					</section>
