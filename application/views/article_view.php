@@ -104,7 +104,7 @@
 					<?php echo $article['comm_count']; ?>
 					<?php
 						if($article['post_settings']['add_comments']):?>
-							<a class="add_comm_toggle" href="#addComment">Add Comment<span>{</span></a>
+							<a class="add_comm_toggle btn" href="#addComment">Add Comment<span>{</span></a>
 						<?php endif; ?>
 				</h2>
 				<section class="comments">
@@ -237,7 +237,7 @@
 
 						echo form_hidden(array('article_id'=>$article['post_id']));
 
-						echo form_submit('submit', 'Add comment');
+						echo form_submit(array("name"=>"submit", "value"=>"Add comment", "class"=>"btn"));
 						
 						echo form_close();
 					?>

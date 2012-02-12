@@ -9,6 +9,8 @@ class Article extends CI_Controller {
 
 		$data['meta_description'] = "A list of my articles on web development topics.";
 		
+		$data['nav_item'] = "blog";
+		
 		if($this->_getCategories()){
 			$data['categories'] = $this->_getCategories();
 		}

@@ -41,11 +41,11 @@
 								?>
 							</h2>
 							<p class="post_info">
+								<span class="client"><?php echo $meta_info['client']; ?></span>
 								<span class="date <?php if($post->post_category == 'project'){echo "nobrd";} ?>">
 									<span class="month"><?php echo $month; ?></span>
 									<span class="year"><?php echo $year; ?></span>
 								</span>
-								<span class="client"><?php echo $meta_info['client']; ?></span>
 							</p>
 							<footer>
 								<?php

@@ -86,7 +86,7 @@ footer article ul li 	{list-style: none;}
 
 /*TWEETS*/
 
-#tweets					{height: 295px;}
+#tweets					{height: 290px;}
 
 #tweets p				{font-family: Helvetica, sans-serif;}
 
@@ -134,8 +134,11 @@ footer article ul li 	{list-style: none;}
 /*--------*/
 
 /*BTN*/
-.btn 		{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
+/*.btn 		{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
 .btn:hover	{background: rgb(205,205,205); color: rgb(105,105,105);}
+*/
+.btn 		{background: rgb(255,255,255); border-radius: 2px; border: 1px solid rgb(153,190,105); color: rgb(153,190,105); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
+.btn:hover	{background: rgb(153, 190, 105); border: 1px solid rgb(153, 190, 105); color: rgb(255,255,255); cursor: pointer;}
 /*---*/
 
 

@@ -15,7 +15,7 @@
 					echo form_label('What do you want to tell me', 'message'); 
 					echo form_error('message');
 					echo form_textarea(array('name'=>"message",'value'=>set_value('message'),'id'=>'message' , 'placeholder'=>"Your message to me",'rows'=>"12",'cols'=>"52"));
-					echo form_submit('submit', 'Send');
+					echo form_submit(array("name"=>"submit", "value"=>"Send", "class"=>"btn"));
 					echo form_close();
 				?>
 					
