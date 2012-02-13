@@ -66,7 +66,8 @@
 			<section class="post_body">
 				<?php
 					if(isset($article['post_content'])){
-						echo $article['post_content'];
+						$post_content = auto_link($article['post_content'], 'url', TRUE);
+						echo $post_content;
 					}
 				?>
 			</section><!--post_body-->

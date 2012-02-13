@@ -1,1 +1,2 @@
 Sitemap: http://www.danielmois.com/Sitemap.xml
+Sitemap: http://www.danielmois.com/Sitemap_artickes.xml

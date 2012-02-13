@@ -38,27 +38,29 @@
 					<h3 class="col_title">always smiling</h3>
 					<img src="<?php echo asset_url('img');  ?>daniel_mois.jpg" title="Daniel Mois - Web developer" alt="Daniel Mois - Web developer" width="230" height="312" />
 				</section>
-				<section class="hcard">
+				<section class="vcard">
 					<h3 class="col_title">Download <span class="lowcase">vCard</span></h3>
-					<div id="hcard-Daniel-Mois" class="vcard">
-						<?php echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
-						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>
-						<div class="adr">
-							<span class="locality">Aarhus</span>
-							<span class="postal-code">8260</span>,
-							<span class="country-name">Denmark</span>
-						</div>
-						<div class="tel">(+45) 60 61 79 57</div>
-						<?php
-							echo anchor('http://www.wikipedia.org/wiki/VCard',"Find more about vCard !",array('class'=>"find_more"));
-						?>
-					</div>
 					<div class="vcard_download">
 						<?php
 							$vcard = "<img src=".asset_url('img')."vcard_download.png"." width=\"48\" height=\"48\" alt=\"vCard icon\" title=\"Daniel Mois vCard\" />";
 							$vcard .= "<span class=\"bt_text\">Download vCard</span>";
 							$vcard .= "<span class=\"arrow\">;</span>";
 							echo anchor("download/file/daniel_mois.vcf",$vcard,array('title'=>"Download my vCard as a VCF file",'class'=>"download"));
+						?>
+					</div>
+					<div id="hcard-Daniel-Mois" class="vcard">
+						<?php //echo anchor("http://www.danielmois.com","Daniel Mois",array('class'=>"url fn",'title'=>"Daniel Mois")) ;?>
+						<div class="fn organization">Daniel Mois</div>
+						<div class="role">Web Developer</div>
+						<?php echo safe_mailto('daniel@danielmois.com','daniel@danielmois.com',array('class'=>"email",'title'=>"Email to Daniel Mois")) ;?>
+						<div class="adr">
+							<span class="location">Aarhus</span>
+							<span class="postal-code">8260</span>,
+							<span class="country-name">Denmark</span>
+						</div>
+						<div class="tel">(+45) 60 61 79 57</div>
+						<?php
+							echo anchor('http://www.wikipedia.org/wiki/VCard',"Find out more about vCard !",array('class'=>"find_more"));
 						?>
 					</div>
 				</section>

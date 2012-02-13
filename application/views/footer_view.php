@@ -101,8 +101,8 @@
 							</li>
 							<li>
 								<?php 
-									$tw = "<img src=".asset_url('img')."tweet.png"." width=\"52\" height=\"52\" title=\"Tweeter - Fallow me\" alt=\"Tweeter - Fallow me\" />";
-									echo anchor("http://twitter.com/#!/danmois", $tw, array('title' => "Tweeter - Fallow me",'target'=>"_blank"));
+									$tw = "<img src=".asset_url('img')."tweet.png"." width=\"52\" height=\"52\" title=\"Tweeter - Follow me\" alt=\"Tweeter - Follow me\" />";
+									echo anchor("http://twitter.com/#!/danmois", $tw, array('title' => "Tweeter - Follow me",'target'=>"_blank"));
 								?>
 							</li>
 							<li>

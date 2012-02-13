@@ -19,7 +19,10 @@ article section			{overflow: hidden;}
 
 article p+p,
 article ul+p			{margin-top: 30px;}
-
+article p a,
+article li a 			{color: rgb(175,175,175); font-size: 0.9em; text-decoration: none;}
+article p a:hover,
+article li a:hover		{color: rgb(153,190,105); text-decoration: underline;}
 article ul 				{padding-left: 40px;}
 
 article ul li			{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; list-style: disc; margin: 10px;}
