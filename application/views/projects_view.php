@@ -11,7 +11,6 @@
 					
 					foreach($posts as $post): 
 					
-					//var_dump($post);
 
 					$title = str_replace("_"," ",$post->post_title);
 					$date = explode("-",$post->post_date);
@@ -21,7 +20,7 @@
 					$url_title = url_title($post->post_title,"underscore");
 					$meta_info = json_decode($post->meta_content, true);
 					$thumb = $post->post_thumb;
-
+					
 					if($post->post_type == 'project'){
 						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";
 					}

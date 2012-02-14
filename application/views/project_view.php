@@ -31,10 +31,10 @@
 							<dt class="client">Client:</dt>
 								<dd><?php echo $project['meta']['client']; ?></dd>
 						<?php endif; ?>
-						<?php if(isset($project['meta']['category'])): ?>
-							<dt class="category">Category:</dt>
-								<dd><?php echo $project['meta']['category']; ?></dd>
-						<?php endif; ?>
+						<?php //if(isset($project['meta']['category'])): ?>
+							<!-- <dt class="category">Category:</dt> -->
+								<!-- <dd><?php //echo $project['meta']['category']; ?></dd> -->
+						<?php //endif; ?>
 						<?php if(isset($project['meta']['tags'])):?>
 						<dt class="tags">Tags:</dt>
 							<dd>
@@ -58,13 +58,17 @@
 				<!--Add author bio for google author SEO -->
 				<footer>
 					<section class="share">
-						<a href="" class="appreciate"><span>O</span>Appreciate</a>
+						<a href="" class="btn appreciate"><span>O</span>Appreciate</a>
 						<div class="sharing">
-							<a href="" class="sharing_btn">Share<span>></span></a>
+							<span href="" class="btn">Share<span>></span></span>
 							<ul class="social">
-								<li><a href="" class="s_icon">g</a></li>
-								<li><a href="" class="s_icon">t</a></li>
-								<li><a href="" class="s_icon">f</a></li>
+								<li class="google+">
+									<div class="g-plusone" data-size="medium" data-annotation="none" data-href="<?php echo current_url(); ?>"></div>
+
+								</li>
+								<li class="twitter">
+									<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo current_url();?>" data-via="danmois" data-count="none">Tweet</a>
+								</li>
 							</ul>
 						</div>
 					</section>
@@ -84,3 +88,11 @@
 		</aside>
 	</div>
 </div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

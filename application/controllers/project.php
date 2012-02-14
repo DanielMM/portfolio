@@ -48,7 +48,7 @@ class Project extends CI_Controller {
 	
 		$data['page_title'] = "Projects";
 
-		$data['meta_description'] = "Collection of my projects developed for different clients.";
+		$data['meta_description'] = "Collection of my projects developed for different clients. You can visit the live version and read about the process behind each one along with more technical details.";
 
 		if($posts['data']){
 			$data['posts'] = $posts['data'];

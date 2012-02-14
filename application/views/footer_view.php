@@ -60,7 +60,7 @@
 						<h4>Things</h4>
 						<ul>
 							<li>
-								<?php echo anchor('http://http://www.informationarchitects.jp//','Information Arhitecs','title="Information Arhitects" target="_blank"');?>
+								<?php echo anchor('http://www.informationarchitects.jp','Information Arhitecs','title="Information Arhitects" target="_blank"');?>
 							</li>
 							<li>
 								<?php echo anchor('http://net.tutsplus.com/','Nettuts Plus','title="Nettuts+" target="_blank"');?>
@@ -81,7 +81,7 @@
 								<?php echo anchor('http://sixrevisions.com/','Six Revisions','title="Six Revisions" target="_blank"');?>
 							</li>
 							<li>
-								<?php echo anchor('http://codeingniter.com','Codeigniter','title="Codeigniter" target="_blank"');?>
+								<?php echo anchor('http://codeigniter.com/','Codeigniter','title="Codeigniter" target="_blank"');?>
 							</li>
 						</ul>
 					</section>
@@ -116,7 +116,7 @@
 				</article>
 			</footer>
 			<div id="copyleft">
-				<p>Copyleft 2010 - <?php echo date('Y');?> Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://www.codeigniter.com','Codeigniter','title="Codeigniter PHP framework"');?></p>
+				<p>Copyleft 2010 - <?php echo date('Y');?> Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://codeigniter.com/','Codeigniter','title="Codeigniter PHP framework"');?></p>
 			</div>
 		</div><!--footer_wrapp-->
 		<script type="text/javascript">

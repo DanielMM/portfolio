@@ -35,7 +35,7 @@
 								<dd><?php echo $article['post_category']; ?></dd>
 						<?php endif; ?>
 						<?php if(isset($article['post_reading'])): ?>
-							<dt class="reading">Reading time:</dt>
+							<dt class="reading">Read in:</dt>
 								<dd><?php echo $article['post_reading']; ?> min</dd>
 						<?php endif; ?>
 						<?php if(isset($article['post_difficulty'])): ?>

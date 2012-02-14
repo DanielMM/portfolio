@@ -1,5 +1,5 @@
 ﻿ /*
-	LAYOUT SETTINGS
+|	LAYOUT SETTINGS
  */
 
  /* GENERAL */
@@ -7,22 +7,22 @@
 body,p, ol,ul,li,a,
 span, div, section, 
 table, tr,th,td, form,
-fieldset,legend,label 		{font-size: 1em; font-weight: normal;}
+fieldset,legend,label 	{font-size: 1em; font-weight: normal;}
 
-h1,h2,h3,h4,h5,h6			{font-weight: 700;}
-p							{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; line-height: 1.5em;}
-li							{list-style: none;}
+h1,h2,h3,h4,h5,h6		{font-weight: 700;}
+p						{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; line-height: 1.5em;}
+li						{list-style: none;}
 
-pre							{margin: 20px 0; padding: 10px 0;}
+pre						{margin: 20px 0; padding: 10px 0;}
 
 article section			{overflow: hidden;}
 
 article p+p,
 article ul+p			{margin-top: 30px;}
 article p a,
-article li a 			{color: rgb(175,175,175); font-size: 0.9em; text-decoration: none;}
+article li a 			{color: rgb(153,190,105); font-size: 0.9em; text-decoration: underline;}
 article p a:hover,
-article li a:hover		{color: rgb(153,190,105); text-decoration: underline;}
+article li a:hover		{text-decoration: none;}
 article ul 				{padding-left: 40px;}
 
 article ul li			{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; list-style: disc; margin: 10px;}
@@ -136,13 +136,10 @@ footer article ul li 	{list-style: none;}
 
 /*--------*/
 
-/*BTN*/
-/*.btn 		{background: rgb(153,190,105); border-radius: 2px; color: rgb(255,255,255); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
-.btn:hover	{background: rgb(205,205,205); color: rgb(105,105,105);}
-*/
+/*Button class*/
 .btn 		{background: rgb(255,255,255); border-radius: 2px; border: 1px solid rgb(153,190,105); color: rgb(153,190,105); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
 .btn:hover	{background: rgb(153, 190, 105); border: 1px solid rgb(153, 190, 105); color: rgb(255,255,255); cursor: pointer;}
-/*---*/
+/*-----------*/
 
 
 /*BLOCKQUOTE*/

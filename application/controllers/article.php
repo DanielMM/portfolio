@@ -7,7 +7,7 @@ class Article extends CI_Controller {
 
 		$data['page_title'] = "Articles";
 
-		$data['meta_description'] = "A list of my articles on web development topics.";
+		$data['meta_description'] = "A list of my articles on web development topics groupped in several categories: tutorials, quicktips, tools and questions.";
 		
 		$data['nav_item'] = "blog";
 		
