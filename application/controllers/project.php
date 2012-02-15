@@ -81,6 +81,7 @@ class Project extends CI_Controller {
 			$date = explode("-",$project->post_date);
 
 			$thumb_info = json_decode($project->post_thumb, true);
+			//var_dump($thumb_info);
 			foreach ($thumb_info as $key => $value) {
 				if($key == "thumb"){
 					$data['project']['thumb'] = $value;

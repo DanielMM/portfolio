@@ -19,7 +19,8 @@
 					$day =	substr($date[2],0,2);
 					$url_title = url_title($post->post_title,"underscore");
 					$meta_info = json_decode($post->meta_content, true);
-					$thumb = $post->post_thumb;
+					$thumb = json_decode($post->post_thumb, true);
+					$thumb = $thumb['thumb'];
 					
 					if($post->post_type == 'project'){
 						$thumb = "<img class=\"thumb\" src=".asset_url('post_img').$thumb." width=\"270\" height=\"190\" alt=\"{$title}\" title=\"{$title}\" />";

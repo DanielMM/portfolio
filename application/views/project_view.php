@@ -12,6 +12,7 @@
 						<span class="year"><?php echo $project['date']['year']; ?></span>
 					</span>
 				</p>
+				<?php if(isset($project['screens'])): ?>
 				<div class="slider_wrapp">
 					<div id="slider">
 						<ul>
@@ -23,6 +24,9 @@
 						</ul>
 					</div>
 				</div>
+				<?php else: ?>
+					<img src="<?php echo asset_url('post_img').$project['thumb']; ?>" width="960" height="340" alt="<?php echo $page_title; ?>" title="<?php echo $page_title; ?>" />
+				<?php endif; ?>
 			</header>
 			<section class="post_meta">
 				<dl>

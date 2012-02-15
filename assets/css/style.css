@@ -436,6 +436,8 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 #slider li 				{height: 340px; overflow:hidden; width:960px;}
 
+#slider li img 			{outline: 1px solid rgb(68,68,68);}
+
 .controles				{margin: 15px 0; text-align: center;}
 
 .controles span 		{margin: 0 5px;}
