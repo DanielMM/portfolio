@@ -132,7 +132,7 @@ footer article ul li 	{list-style: none;}
 
 .widget					{margin: 0 10px 15px;}
 .widget .col_title		{margin: 15px 0;}
-.widget a 				{color: rgb(0,0,0); display: inline-block; text-decoration: none;}
+.widget a 				{text-decoration: none;}
 
 /*--------*/
 

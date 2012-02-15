@@ -622,9 +622,9 @@ span.lowcase			{text-transform: none;}
 
 						 font-size: 1em; margin: 20px 0; padding: 2px; text-align: center; width: 600px;}
 
-#feedback.success		{background: rgb(153,190,105);}
+#feedback.success			{background: rgb(153,190,105);}
 
-#feedback.error			{background: rgb(242,64,64);}
+#feedback.error				{background: rgb(242,64,64);}
 
 #feedback span				{display: block; height: 20px; padding:6px 0;}
 
@@ -634,13 +634,13 @@ span.lowcase			{text-transform: none;}
 
 /*CV*/
 
- .download				{background: rgb(50,74,16); border: 1px solid rgb(153,190,105); border-radius: 10px; display: block; height: 42px; margin: 0 auto 10px; position: relative; width: 200px;}
+ .download				{background: rgb(50,74,16); border: 1px solid rgb(153,190,105); border-radius: 10px; display: block; height: 42px; margin: 0 auto 10px; position: relative; width: 228px;}
 
- .download:hover			{background: rgb(30,54,0); border: 1px solid rgb(42,42,42); text-decoration: none;}
+ .download:hover		{background: rgb(30,54,0); border: 1px solid rgb(42,42,42); text-decoration: none;}
 
  .download img			{left: 10px ;position: absolute; top: 5px;}
 
- .download .bt_text		{color: rgb(252,252,252); font-size: 0.9em; padding: 9px 10px 0 60px; position: absolute; top: 4px; width: 120px; z-index: 10;}
+ .download .bt_text		{color: rgb(252,252,252); font-size: 0.9em; height: 44px; position: absolute; text-align: center; top: 12px; width: 227px;}
 
  .download .bt_text:hover	{color: rgb(153,190,105);}
 
@@ -663,11 +663,13 @@ span.lowcase			{text-transform: none;}
 
 .fn, .email					{font-size: 1em;}
 
+.vcard .col_title			{margin-top: 0;}
+
+.vcard .role				{margin-bottom: 20px;}
+
 .vcard_download				{height: 50px; margin: 5px 0 0; overflow: hidden; position: relative;}
 
 .vcard_download .download>img		{position:absolute; top: -9px; left: 5px;}
-
-.vcard_download .download .bt_text	{padding: 9px 26px 0 54px;}
 
 .vcard .find_more				{color: rgb(50,50,50); font-size: 0.7em;}
 
