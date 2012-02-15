@@ -75,11 +75,20 @@ class Project extends CI_Controller {
 			$data['page_title'] = str_replace("_"," ",$project->post_title);
 			$data['nav_item'] = "work";
 
-			//make a helper to get the name of the month when given the number of the month
+			$data['headers']['js'][] = "<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>";
+			$data['headers']['js'][] = "<script type=\"text/javascript\" src=\"http://portfolio/assets/js/easySlider1.7.js\"></script>";
 
 			$date = explode("-",$project->post_date);
 
-			$data['project']['thumb'] = $project->post_thumb;
+			$thumb_info = json_decode($project->post_thumb, true);
+			foreach ($thumb_info as $key => $value) {
+				if($key == "thumb"){
+					$data['project']['thumb'] = $value;
+				}else{
+					$data['project']['screens'][$key] = $value;
+				}
+			}
+
 			$data['project']['date']['day'] = substr($date[2], 0,2);
 			$data['project']['date']['month'] = get_month($date[1]);
 			$data['project']['date']['year'] = $date[0];

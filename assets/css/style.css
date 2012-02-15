@@ -1,4 +1,4 @@
-/**
+/*
 |--------------------------------------------------------------------------
 | CSS 2.0/3.0
 |--------------------------------------------------------------------------
@@ -158,7 +158,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .post_meta .link+dd>a:hover {color: rgb(153,190,105);}
 
-.post_meta .tags+dd>a.tag		{background: rgb(175,175,175); border-radius: 2px; color: rgb(105,105,105); display: inline-block; font-weight: bold; margin: 0 10px 10px 0; padding: 4px; text-decoration: none;}
+.post_meta .tags+dd>a.tag		{background: rgb(175,175,175); border-radius: 2px; color: rgb(105,105,105); display: inline-block; font-weight: bold; margin: 0 10px 10px 0; padding: 4px 4px 2px; text-decoration: none;}
 
 
 .post_meta .tags+dd>a.tag:hover		{background: rgb(153,190,105); color: rgb(252,252,252);}
@@ -422,18 +422,40 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 .tile .pagination 		{clear: both;}
 
+/*Project page*/
 
 .project_page .project_header 		{border-bottom: 1px solid rgb(245,245,245);}
 
-.project_page .post_body			{margin-top: 20px;}
-
 .project_page h1		{color: rgb(50,75,16); font-size: 2em; font-weight: 700;}
 
+.project_page .post_info{margin: 10px 0;}
 
-.project_page .post_meta 		{float: none; height: 125px; width: 710px;}
+#slider 				{margin: 0 auto;}
 
-.project_page .post_meta dd 	{width: 550px;}
+#slider ul, #slider li 	{list-style:none; margin:0; padding:0;}
 
+#slider li 				{height: 340px; overflow:hidden; width:960px;}
+
+.controles				{margin: 15px 0; text-align: center;}
+
+.controles span 		{margin: 0 5px;}
+
+.controles a 			{color: rgb(105,105,105); font-family: 'websymbols'; font-size: 1.7em; text-decoration: none;}
+.controles a:hover		{color: rgb(153,190,105);}
+
+
+
+.project_page .post_meta 		{float: right; height: inherit; width: 230px;}
+
+.project_page .post_meta dt 	{font-weight: normal; margin-bottom: 5px;}
+
+.project_page .post_meta dd 	{font-weight: bold;}
+
+.project_page .post_meta .client,
+.project_page .post_meta .tags 	{margin-top: 15px;}
+.project_page .post_body		{float: left; margin-top: 20px; width: 710px;}
+
+.project_page .post_footer 		{clear: both;}
 
 /*INLINE IMAGE PLACEHOLDER*/
 
@@ -681,4 +703,4 @@ span.lowcase			{text-transform: none;}
 
 .subscribe input[type=submit]:active	{background: rgb(242,242,242); box-shadow: 0 0 5px 1px rgb(142,142,142); color: rgb(0,0,0);}
 
-/*--------*/
+/*--------

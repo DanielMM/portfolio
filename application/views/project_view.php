@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <div id="content_wrapp">
 	<div id="content">
-		<article class="project_page main">
+		<article class="project_page">
 			<header class="project_header">
 				<h1 title="<?php if(isset($page_title)){echo $page_title;}else{echo " ";}?>"><?php if(isset($page_title)){echo $page_title;}else{echo " ";}?></h1>
 				<p class="post_info">
@@ -12,40 +12,41 @@
 						<span class="year"><?php echo $project['date']['year']; ?></span>
 					</span>
 				</p>
-				<img src="<?php echo asset_url('post_img').$project['thumb']; ?>" width="710" height="463" alt="<?php echo $page_title; ?>" title="<?php echo $page_title; ?>" />
-				<?php 
-					if(isset($project['meta']['thumb_source'])){
-						echo anchor(prep_url($project['meta']['thumb_source']),'Source', array("target"=>"_blank")); 
-					}
-				?>
-				<section class="post_meta">
-					<dl>
-						<?php if(isset($project['meta']['link'])): ?>
-							<dt class="link">Link:</dt>
-								<dd>
-									<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blank")); ?>
-								</dd>
-						<?php endif; ?>
-
-						<?php if(isset($project['meta']['client'])): ?>
-							<dt class="client">Client:</dt>
-								<dd><?php echo $project['meta']['client']; ?></dd>
-						<?php endif; ?>
-						<?php //if(isset($project['meta']['category'])): ?>
-							<!-- <dt class="category">Category:</dt> -->
-								<!-- <dd><?php //echo $project['meta']['category']; ?></dd> -->
-						<?php //endif; ?>
-						<?php if(isset($project['meta']['tags'])):?>
-						<dt class="tags">Tags:</dt>
-							<dd>
-								<?php foreach($project['meta']['tags'] as $tag){
-									echo anchor('tag/'.$tag, $tag, array('title' => $tag, 'class'=>'tag'));
-								}?>
-							</dd>
-						<?php endif; ?>
-					</dl>
-				</section>
+				<div class="slider_wrapp">
+					<div id="slider">
+						<ul>
+							<?php foreach($project['screens'] as $title => $source):?>
+							<li>
+								<img src="<?php echo asset_url('post_img').$source; ?>" width="960" height="340" alt="<?php echo $title; ?>" title="<?php echo $title; ?>" />
+							</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+				</div>
 			</header>
+			<section class="post_meta">
+				<dl>
+					<?php if(isset($project['meta']['link'])): ?>
+						<dt class="link">Link:</dt>
+							<dd>
+								<?php echo anchor($project['meta']['link'],$project['meta']['link'],array('title' => $page_title, 'target'=>"_blank")); ?>
+							</dd>
+					<?php endif; ?>
+
+					<?php if(isset($project['meta']['client'])): ?>
+						<dt class="client">Client:</dt>
+							<dd><?php echo $project['meta']['client']; ?></dd>
+					<?php endif; ?>
+					<?php if(isset($project['meta']['tags'])):?>
+					<dt class="tags">Tags:</dt>
+						<dd>
+							<?php foreach($project['meta']['tags'] as $tag){
+								echo anchor('tag/'.$tag, $tag, array('title' => $tag, 'class'=>'tag'));
+							}?>
+						</dd>
+					<?php endif; ?>
+				</dl>
+			</section>
 			<section class="post_body">
 				<?php
 					echo $project['data']['teaser'];
@@ -82,12 +83,21 @@
 				</footer>
 			</section>
 		</article>
-		<aside class="sidebar">
-			<?php //$this->load->view('related_content_widget_view'); ?>
-			<?php $this->load->view('categories_widget_view'); ?>
-		</aside>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#slider").easySlider({
+			auto: false, 
+			continuous: true,
+			speed: 1000,
+			controlsBefore:	'<p class="controles">',
+			controlsAfter:	'</p>',
+			prevText: 		'(',
+			nextText: 		')'
+		});
+	});	
+</script>
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
