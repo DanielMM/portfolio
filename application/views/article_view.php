@@ -99,7 +99,7 @@
 				</footer>
 			</section><!--post_footer-->
 
-			<?php if($article['post_settings']['comments']): ?>
+			<?php if(isset($article['post_settings']['comments']) && $article['post_settings']['comments']): ?>
 			<section class="comm_wrapp">
 				<h2 class="col_title">
 					<?php echo $article['comm_count']; ?>
@@ -212,7 +212,7 @@
 				</section>
 			</section>
 			<?php endif; ?>
-			<?php if($article['post_settings']['add_comments']): ?>
+			<?php if(isset($article['post_settings']['add_comments']) && $article['post_settings']['add_comments']): ?>
 				<article class="comm_form" id="addComment">
 					<h3>Add your own comments!</h3>
 					<?php

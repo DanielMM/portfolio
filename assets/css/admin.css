@@ -1,0 +1,180 @@
+/*LAYOUT SETTINGS*/
+
+@font-face
+
+			{
+
+			font-family: websymbols;
+
+			src: url('websymbols-regular-webfont.eot');
+			src: url('/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+				 
+				 url('websymbols-regular-webfont.ttf'),
+
+			     url('websymbols-regular-webfont.svg'),
+
+			     url('websymbols-regular-webfont.woff')
+			}
+
+ /* GENERAL */
+
+body,p, ol,ul,li,a,
+span, div, section, 
+table, tr,th,td, form,
+fieldset,legend,label 	{font-size: 1em; font-weight: normal;}
+
+h1,h2,h3,h4,h5,h6		{font-weight: 700;}
+p						{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; line-height: 1.5em;}
+li						{list-style: none;}
+
+pre						{margin: 20px 0; padding: 10px 0;}
+
+article section			{overflow: hidden;}
+
+article p a,
+article li a 			{color: rgb(153,190,105); font-size: 0.9em; text-decoration: underline;}
+
+article p a:hover,
+article li a:hover		{text-decoration: none;}
+
+article ul 				{padding-left: 40px;}
+
+article ul li			{color: rgb(68,68,68); font-family: "Georgia, serif"; font-size: 1.2em; list-style: disc; margin: 10px;}
+
+#header_wrapp header,
+#footer_wrapp footer, 
+#content_wrapp #content	{margin: 0 auto; overflow: hidden; width: 960px;}
+
+#header_wrapp			{background: url('../images/header_bg.png') repeat-x; overflow: hidden;}
+
+#content_wrapp			{clear: both;}
+
+#header_wrapp header	{height: 100px; position: relative;}
+
+#content				{padding-top: 20px;}
+
+.main 					{float: left; width: 710px;}
+
+.sidebar 				{float: right; padding-left: 2px; width: 246px;}
+
+/*----------*/
+
+/*HEADER LOGO*/
+
+#logo					{background: url('../images/beta.png') no-repeat 21px 22px;float: left; margin: 0 0 0 10px; position:relative; width: 240px; z-index: 10;}
+#logo h2 				{line-height: 2.5em;}
+#logo h1>a				{font-size: 2.5em;}
+#logo h2>a				{font-size: 1.85em; padding: 0 2px;}
+#logo h1>a,
+#logo h1>a .special,
+#logo h2>a				{color: rgb(254,254,254); font-family: 'Open Sans', sans-serif; font-weight: 700; text-decoration: none;}
+#logo h1>a .special		{color: rgb(153,190,105); font-weight: 700;}
+
+/*----------*/
+
+/*HEADER NAV*/
+nav						{float: right; position: relative; z-index: 110;}
+nav>ul					{overflow: hidden;}
+nav>ul>li				{float: left;}
+nav>ul>li>h3			{border-left: 1px solid rgb(25,25,25); text-align: center;}
+nav>ul>li>h3>a			{color: rgb(250,250,250);  display: inline-block; font-size: 1.4em; font-family: 'Open Sans', sans-serif; font-weight: 700; padding: 30px 22px 40px 19px; text-decoration: none;}
+nav>ul>li>h3>a.last		{border-right: 1px solid rgb(25,25,25);}
+nav>ul>li>h3>a:hover,
+nav>ul>li>h3>a.selected	{border-top: 5px solid rgb(153,190,105); color: rgb(153,190,105); padding: 25px 22px 35px 19px;}
+
+/*----------*/
+
+/*Dashboard*/
+.dashboard .list h1		{border-bottom: 2px solid rgb(153,190,105); color: rgb(153,190,105); font-size: 1em; margin-bottom: 30px; text-transform: uppercase;}
+
+.dashboard .list h1:hover{cursor: pointer;}
+
+.dashboard .list h1 .toggle{float: right; font-family: 'websymbols';}
+/*---------*/
+
+/*Dashboard lists*/
+
+
+.dashboard .list .item	{border-bottom: 1px solid rgb(245,245,245); border-top: 1px solid rgb(245,245,245); margin-bottom: 30px; padding: 8px 0 3px;}
+
+.dashboard .item h2 a	{color: rgb(68,68,68); text-decoration: none;}
+
+.dashboard .item h2 a:hover	{color: rgb(153,190,105);}
+
+.item .controles 		{text-align: right;}
+
+.item .controles .edit 	{display: inline; font-size: 0.8em; padding: 6px 9px;}
+
+.dashboard footer 		{margin-top: 10px;}
+
+.dashboard footer p 	{color: rgb(205,205,205); font-family: Helvetica, sans-serif; font-size: 0.7em; text-transform: uppercase;}
+
+.dashboard footer .date {border-right: 1px solid rgb(205,205,205); padding-right: 2px;}
+
+.dashboard footer .category {padding-left: 4px;}
+
+
+/*---------------*/
+
+/*COPYRiGHT*/
+
+#copyleft p				{background: rgb(33,33,33); color: rgb(90,90,90); font-family: helvetica, arial, sans-serif; font-size: 0.7em; margin-top: 1px; padding: 5px 0; text-align: center;}
+#copyleft a				{color: rgb(90,90,90); text-decoration: none;}
+#copyleft a:hover		{color: rgb(153,190,105);}
+
+/*---------*/
+/*Admin edit form*/
+.edit_form form 		{padding-left: 2px;}
+/*.edit_form label,*/
+
+.edit_form input[type=text],
+
+.edit_form textarea		{border-width: 0; border-color: transparent;  border-radius: 3px; display: block; font-family: arial, sans-serif; font-size: 1em;}
+
+.edit_form input[type=text],
+
+.edit_form textarea		{border: 1px solid rgb(142,142,142); margin: 0 0 40px 0;}
+
+.edit_form label		{color: rgb(114,114,114); display: inline-block; font-size: 0.9em; margin: 0 0 5px 0;}
+
+.edit_form input		{margin: 0 0 20px 2px; padding: 5px; /*width: 350px;*/}
+
+
+.edit_form input:focus,
+
+.edit_form textarea:focus		{box-shadow: 0 0 5px 1px rgb(142,142,142);}
+
+.edit_form textarea				{margin-left: 2px; padding: 5px;}
+
+.edit_form input[type=submit]	{float: right; font-size: 0.9em; margin: 20px 17px; padding: 10px 20px; text-transform: uppercase; width: 100px;}
+
+.edit_form span.error			{color: rgb(240,128,128); font-size: 0.8em; font-style: italic;}
+
+.edit_form input[name=title]	{width: 645px;}
+
+div.ui-datepicker		{font-size: 0.68em;}
+
+.ui-buttonset, .ui-button				{font-size: 0.6em; margin-bottom: 10px;}
+.ui-buttonset label						{display: inline-block;}
+.ui-buttonset label.ui-state-default,
+#settings label.ui-state-default		{background: rgb(245,245,245); color: rgb(68,68,68);}
+
+.ui-buttonset label.ui-state-active,
+#settings label.ui-state-active			{background: rgb(69,158,0); border: 1px solid rgb(50,126,4); color: rgb(255,255,255);}
+.ui-buttonset .ui-button,
+.ui-button 					{width: 59px;}
+
+.ui-button-text-only .ui-button-text		{font-weight: bold; padding: 7px 4px; text-transform: capitalize;}
+
+#settings .ui-button 						{width: 114px;}
+#settings .ui-button-text 					{font-size: 0.8em;}
+
+
+/*--------------*/
+
+/*snippets*/
+
+.btn 		{background: rgb(255,255,255); border-radius: 2px; border: 1px solid rgb(153,190,105); color: rgb(153,190,105); display: inline-block; font-weight: bold; padding: 9px 12px; text-decoration: none;}
+.btn:hover	{background: rgb(153, 190, 105); border: 1px solid rgb(153, 190, 105); color: rgb(255,255,255); cursor: pointer;}
+
+/*--------*/

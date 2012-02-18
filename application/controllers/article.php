@@ -105,16 +105,20 @@ class Article extends CI_Controller {
 
 				$meta_info = json_decode($article->meta_content, true);
 				
-				foreach ($meta_info as $key => $value) {
-					if($key == "meta_description"){
-						$data['meta_description'] = $value;
-					}else{
-						$data['article']['post_'.$key] = $value;
+				if(is_array($meta_info)){
+					foreach ($meta_info as $key => $value) {
+						if($key == "meta_description"){
+							$data['meta_description'] = $value;
+						}else{
+							$data['article']['post_'.$key] = $value;
 
-						if(!isset($data['meta_description'])){
-							$data['meta_description'] = $data['page_title'];
+							if(!isset($data['meta_description'])){
+								$data['meta_description'] = $data['page_title'];
+							}
 						}
 					}
+				}else{
+					$data['meta_description'] = $data['page_title'];
 				}
 				
 				$data['article']['post_terms'] = json_decode($article->post_terms, true);
