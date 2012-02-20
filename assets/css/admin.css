@@ -91,11 +91,11 @@ nav>ul>li>h3>a.selected	{border-top: 5px solid rgb(153,190,105); color: rgb(153,
 
 .dashboard .list h1 .toggle{float: right; font-family: 'websymbols';}
 /*---------*/
-
+.ui-tabs	{width: inherit;}
 /*Dashboard lists*/
 
 
-.dashboard .list .item	{border-bottom: 1px solid rgb(245,245,245); border-top: 1px solid rgb(245,245,245); margin-bottom: 30px; padding: 8px 0 3px;}
+.dashboard .list .item	{border-bottom: 1px solid rgb(245,245,245); border-top: 1px solid rgb(245,245,245); /*margin-bottom: 30px;*/ padding: 8px 0 3px;}
 
 .dashboard .item h2 a	{color: rgb(68,68,68); text-decoration: none;}
 
@@ -105,7 +105,7 @@ nav>ul>li>h3>a.selected	{border-top: 5px solid rgb(153,190,105); color: rgb(153,
 
 .item .controles .edit 	{display: inline; font-size: 0.8em; padding: 6px 9px;}
 
-.dashboard footer 		{margin-top: 10px;}
+.dashboard footer 		{/*margin-top: 10px;*/}
 
 .dashboard footer p 	{color: rgb(205,205,205); font-family: Helvetica, sans-serif; font-size: 0.7em; text-transform: uppercase;}
 

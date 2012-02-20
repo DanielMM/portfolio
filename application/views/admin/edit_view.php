@@ -20,6 +20,7 @@
 				<?php
 					if(isset($post))
 					{	
+						$post_id = $post->post_id;
 						$post_title = $post->post_title;
 						$post_terms = $post->post_terms;
 						$post_thumb = $post->post_thumb;
@@ -177,7 +178,9 @@
 					echo form_label('Post update date', 'update_date'); 
 					echo form_error('update_date');
 					echo form_input(array('name'=>"update_date",'value'=>$post_modified,'id'=>'update_date', 'placeholder'=>"Post update date"));
-					
+					if(isset($post_id)){
+						echo form_hidden('post_id',$post_id);
+					}
 
 					if(isset($post)){
 						echo form_submit(array("name"=>"submit", "value"=>"Update"));

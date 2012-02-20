@@ -6,6 +6,7 @@ application/logs
 #Assets
 assets/images
 assets/download
+assets/css/south-street/images/
 
 #Miscellanious
 .htaccess

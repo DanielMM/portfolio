@@ -163,6 +163,15 @@ class Post_model extends CI_Model {
                 return $result;
         }
 
+        /*public function updatePost($post){
+
+                $this->db->where('post_id', $post['data']['post_id']);
+
+                $result =$this->db->update('posts', $post['data']);
+                
+                return $result;
+        }*/
+
         //public function setPostMeta($post_id, $post['meta']){
                 
 

@@ -151,7 +151,7 @@ class Admin extends CI_Controller {
 		else
 		{
 
-			
+			$post['data']['post_id']		= $this->input->post('post_id', TRUE);
 			$post['data']['post_title']  	= $this->input->post('title', TRUE);
 			$post['data']['post_title']  	= url_title($post['data']['post_title'],'undersoce');
 			$post['data']['post_content'] 	= $this->input->post('post_content', TRUE);
@@ -167,7 +167,15 @@ class Admin extends CI_Controller {
 			
 			$post['meta']['meta_content']	= $this->input->post('meta', TRUE);
 
-			$result = $this->_setPost($post);
+			if($this->input->post('submit', TRUE) == 'Save'){
+			
+				$result = $this->_setPost($post);
+				
+			}/*elseif($this->input->post('submit', TRUE) == 'Update') {
+
+				$result = $this->_updatePost($post);
+
+			}*/
 
 			if($result){
 				$data['feedback'] = $result;
@@ -248,6 +256,14 @@ class Admin extends CI_Controller {
 
 		return $result;
 	}
+
+	/*private function _updatePost($post){
+
+		$this->load->model('Post_model');
+		$result = $this->Post_model->updatePost($post);
+		//var_dump($post);
+		return $result;
+	}*/
 }
 
 /* End of file admin.php */
