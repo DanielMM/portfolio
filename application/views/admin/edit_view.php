@@ -175,12 +175,11 @@
 					echo form_error('creation_date');
 					echo form_input(array('name'=>"creation_date",'value'=>$post_date,'id'=>'creation_date', 'placeholder'=>"Post creation date"));
 
-					echo form_label('Post update date', 'update_date'); 
-					echo form_error('update_date');
-					echo form_input(array('name'=>"update_date",'value'=>$post_modified,'id'=>'update_date', 'placeholder'=>"Post update date"));
-					if(isset($post_id)){
-						echo form_hidden('post_id',$post_id);
-					}
+					echo form_label('Post update date', 'update_date');  echo
+					form_error('update_date'); echo form_input(array('name'=>"
+					update_date",'value'=>$post_modified,'id'=>'update_date',
+					'placeholder'=>"Post update date")); if(isset($post_id)){
+					echo form_hidden('post_id',$post_id); }
 
 					if(isset($post)){
 						echo form_submit(array("name"=>"submit", "value"=>"Update"));

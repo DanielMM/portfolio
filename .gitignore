@@ -1,7 +1,8 @@
 #Application
 application/cache
-application/config
 application/logs
+application/config
+application/config/!index.html
 
 #Assets
 assets/images
