@@ -44,17 +44,7 @@
 							echo form_submit('submit', 'Subscribe');
 							echo form_close();
 						?>
-						<?php
-							if(isset($feedback) && $feedback):
-						?>
-						<div id="feedback" class="success">
-							<span class="success"><?php echo $success;?></span>
-						</div>
-						<?php elseif(isset($feedback) && !$feedback): ?>
-						<div id="feedback" class="error">
-							<span class="error"><?php echo $error;?></span>
-						</div>
-						<?php endif; ?>
+						
 					</section>
 					<section id="favorites">
 						<h4>Things</h4>
