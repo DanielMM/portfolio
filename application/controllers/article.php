@@ -88,7 +88,9 @@ class Article extends CI_Controller {
 
 			if($article){
 				$data['page_title'] = str_replace("_"," ",$article->post_title);
-
+				if($article->post_category == 'question'){
+					$data['page_title'] .= '?';
+				}
 				$data['nav_item'] = "blog";
 
 				$data['categories'] = $this->_getCategories();

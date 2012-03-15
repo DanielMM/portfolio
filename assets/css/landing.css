@@ -25,7 +25,7 @@
 /*LIST*/
 .list article 			{margin: 0;}
 .list article h2		{display: block; float: none; font-size: 1.3em; margin: 0 0 0 39px; width: inherit;}
-.list article h2>a		{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-weight: 700; height: inherit; text-decoration: none; width: 500px;}
+.list article h2>a		{color: rgb(50,74,16); border-radius: 2px; display: inline-block; font-size: 1.7em; font-weight: 700; height: inherit; text-decoration: none; width: 500px;}
 
 .list h2>a:hover		{color: rgb(153,190,105);}
 .list article .summary 	{margin: 10px 0 0 15px; min-height: 150px;}

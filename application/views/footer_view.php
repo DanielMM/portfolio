@@ -106,7 +106,7 @@
 				</article>
 			</footer>
 			<div id="copyleft">
-				<p>Copyleft 2010 - <?php echo date('Y');?> Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://codeigniter.com/','Codeigniter','title="Codeigniter PHP framework"');?></p>
+				<p>Copyleft 2009 - <?php echo date('Y');?> Daniel Mois. No rights reserved. Powered by <?php echo anchor('http://codeigniter.com/','Codeigniter','title="Codeigniter PHP framework"');?></p>
 			</div>
 		</div><!--footer_wrapp-->
 		<script type="text/javascript">

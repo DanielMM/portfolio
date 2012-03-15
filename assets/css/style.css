@@ -173,6 +173,10 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .post_body				{margin-bottom: 20px;}
 
+.post_body h1,
+.post_body h2,
+.post_body h3			{color: rgb(153,190,105); font-size: 1.4em; margin: 35px 0;}
+
 .post_footer			{border-bottom: 1px solid rgb(215,215,215); border-top: 1px solid rgb(215,215,215); margin-bottom:20px; padding: 20px 0;}
 
 .post_footer footer 	{overflow: hidden; padding: 10px 0;}
@@ -479,7 +483,7 @@ article.project			{background: rgb(245,245,245); border: 2px solid rgb(205,205,2
 
 /* CATEGORY WIDGET */
 
-#categories.widget li			{overflow: hidden;}
+#categories.widget li			{margin: 5px 0; overflow: hidden;}
 
 #categories.widget li a			{color: rgb(175,175,175); font-weight: bold; height: 20px; padding: 5px 10px;}
 

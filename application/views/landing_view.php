@@ -7,6 +7,9 @@
 					foreach($posts as $post): 
 				
 					$title = str_replace("_"," ",$post->post_title);
+					if($post->post_category == 'question'){
+						$title .= '?';
+					}
 					$date = explode("-",$post->post_date);
 					$year = $date[0];
 					$month = $date[1];
