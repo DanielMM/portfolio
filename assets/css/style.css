@@ -181,9 +181,7 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .post_footer footer 	{overflow: hidden; padding: 10px 0;}
 
-.share					{float: left; height: 100px; position: relative; width: 400px;}
-
-.share .appreciate		{left: 0; position: absolute; top: 15px;}
+.share					{float: left;}
 
 .share .appreciate,
 
@@ -191,7 +189,8 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .share .appreciate:hover,
 
-.share .sharing .btn:hover	{background: rgb(153,190,105); color: rgb(255,255,255);}
+.share .sharing .btn:hover,
+.share .appreciate.appreciated	{background: rgb(153,190,105); color: rgb(255,255,255);}
 
 .share>a>span,
 
@@ -199,19 +198,13 @@ h1+.post_info .comm_count	{border-right: 0 solid transparent;}
 
 .share .appreciate>span		{margin-right: 4px;}
 
-.share .sharing 			{display: inline-block; height: 40px; left: 143px; overflow: hidden; position: absolute; top: 15px; width: 90px;}
-
-.share .sharing:hover		{cursor: default; width: 235px;}
-
 .share .sharing_btn 		{display: inline-block; height: 20px; margin-bottom: 2px; width: 59px;}
 
 .share .sharing_btn>span	{margin-left: 6px;}
 
-.share .social				{display: inline-block; height: 18px; margin-left: 15px; padding: 10px; position: absolute; width: 102px;}
+.share .social				{display: block; margin: 10px 0;}
 
-.share .social li			{display: inline; margin: 0;}
-
-.share .social .twitter 	{margin-left: 10px;}
+.twitter-share-button		{margin-left: 10px;}
 
 .post_footer .author_info 			{border-radius: 2px; box-shadow: 0 1px 4px 1px rgb(205,205,205); color: rgb(105,105,105); font-size: 0.7em;}
 

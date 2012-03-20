@@ -87,6 +87,10 @@ class Article extends CI_Controller {
 			$article = $this->_getArticle($title);
 
 			if($article){
+
+				$data['headers']['js'][] = "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js\"></script>";
+				$data['headers']['js'][] = "<script src=" . asset_url('js') . "ajax.js type='text/javascript'></script>";
+
 				$data['page_title'] = str_replace("_"," ",$article->post_title);
 				if($article->post_category == 'question'){
 					$data['page_title'] .= '?';
@@ -169,6 +173,15 @@ class Article extends CI_Controller {
 			$this->comments->addComment($this->input->post());
 			
 		}
+	}
+
+	public function appreciate($item_id){
+		$this->load->model('Post_model');
+
+		$results = $this->Post_model->appreciateItem($item_id);
+
+		echo $results;
+		//echo $item_id;
 	}
 
 	private function _getArticle($title)

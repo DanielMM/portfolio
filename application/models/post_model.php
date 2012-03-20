@@ -147,6 +147,13 @@ class Post_model extends CI_Model {
                 return $results;
         }
 
+        public function appreciateItem($item_id){
+                $data = array('item_id'=>$item_id);
+                $query = $this->db->insert_string('appreciate',$data);
+                $result = $this->db->query($query);
+                return $result;
+        }
+
         public function setPost($post){
 
                 $query = $this->db->insert_string('posts',$post['data']);

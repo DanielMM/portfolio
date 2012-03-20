@@ -75,19 +75,11 @@
 				<!--Add author bio for google author SEO -->
 				<footer>
 					<section class="share">
-						<a href="" class="btn appreciate"><span>O</span>Appreciate</a>
-						<div class="sharing">
-							<span href="" class="btn">Share<span>></span></span>
-							<ul class="social">
-								<li class="google+">
-									<div class="g-plusone" data-size="medium" data-annotation="none" data-href="<?php echo current_url(); ?>"></div>
-
-								</li>
-								<li class="twitter">
-									<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo $twitter_msg;?>" data-via="danmois" data-count="none">Tweet</a>
-								</li>
-							</ul>
-						</div>
+						<a href="appreciate/<?php echo $article['post_id'];?>" rel="<?php echo $article['post_id'];?>" class="btn appreciate">Appreciate</a>
+						<section class="social">
+							<div class="g-plusone" data-size="medium" data-annotation="none" data-href="<?php echo current_url(); ?>"></div>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo $twitter_msg;?>" data-via="danmois" data-count="none">Tweet</a>
+						</section>
 					</section>
 					<section class="author_info">
 						<h5>Author</h5>
